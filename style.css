@@ -1690,3 +1690,15 @@ input[type="checkbox"], input[type="radio"] {
 .complaint-cta.video-band .btn{padding:.75rem 1.3rem}
 .video-band .service-card i{font-size:1.35rem}
 @media(max-width:767px){.video-band .service-grid{grid-template-columns:repeat(2,1fr)!important;gap:.75rem}.video-band .service-card,.video-band .service-card:hover{min-height:118px;padding:.8rem}.video-band .service-card span{font-size:.92rem}}
+/* ---- One continuous cinematic shot behind Assistant Commissioners, Mukhtiarkars and Superintendents ---- */
+.officers-band{color:inherit}
+.officers-band::before{display:none}
+.officers-band>.vb-media{position:sticky;top:0;height:100vh;margin-bottom:-100vh;z-index:-2}
+.officers-band>.vb-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,40,26,.86),rgba(6,40,26,.78) 50%,rgba(6,40,26,.88))}
+.officers-band>.section{background:transparent!important;position:relative}
+.officers-band .section-heading h2{color:#fff}
+.officers-band .section-heading p{color:rgba(255,255,255,.86)}
+.officers-band .section-heading .section-kicker{color:#f2c94c}
+.officers-band>.vb-toggle{position:sticky;top:calc(100vh - 60px);margin-left:calc(100% - 56px);margin-bottom:-38px;display:grid}
+.officers-band{overflow:clip}
+.officers-band>.vb-toggle{margin-left:16px}
