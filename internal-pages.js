@@ -385,7 +385,7 @@
       ]
     },
     "adc-2": {
-      "photo": "ADC II.jpeg",
+      "photo": null,
       "office": "the office of the Additional Deputy Commissioner-II",
       "roleText": [
         "Supports the Deputy Commissioner in keeping public order across the district.",
