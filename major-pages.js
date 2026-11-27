@@ -12,9 +12,9 @@ const pageInfo = {
     badge: "Public Facilitation"
   },
   news: {
-    title: "News & Press Releases",
-    subtitle: "Latest official updates and activities from District Central Karachi.",
-    breadcrumb: "News & Press Releases",
+    title: "News & Events",
+    subtitle: "Latest news from District Central, Commissioner Karachi and the Government of Sindh.",
+    breadcrumb: "News & Events",
     badge: "Official Updates"
   },
   jurisdiction: {
@@ -108,7 +108,7 @@ function header(page) {
               <li class="nav-item"><a class="nav-link" href="deputy-commissioner.html">Deputy Commissioner</a></li>
               <li class="nav-item dropdown position-static">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Administrative Team</a>
-                <div class="dropdown-menu mega-menu"><div class="mega-grid wide"><a href="deputy-commissioner.html">Deputy Commissioner</a><a href="adc-1.html">ADC-I</a><a href="adc-2.html">ADC-II</a><a href="ac-1.html">Assistant Commissioner Liaquatabad</a><a href="ac-2.html">Assistant Commissioner Gulberg</a><a href="ac-3.html">Assistant Commissioner Nazimabad</a><a href="ac-4.html">Assistant Commissioner North Nazimabad</a><a href="ac-5.html">Assistant Commissioner New Karachi</a><a href="ac-6.html">Assistant Commissioner Revenue</a><a href="mukhtiarkar-liaquatabad.html">Mukhtiarkar Liaquatabad</a><a href="mukhtiarkar-gulberg.html">Mukhtiarkar Gulberg</a><a href="mukhtiarkar-nazimabad.html">Mukhtiarkar Nazimabad</a><a href="mukhtiarkar-north-nazimabad.html">Mukhtiarkar North Nazimabad</a><a href="mukhtiarkar-new-karachi.html">Mukhtiarkar New Karachi</a><a href="superintendent-bilal-ahmed.html">Superintendent Bilal Ahmed</a><a href="superintendent-maria-shah.html">Superintendent Maria Shah</a></div></div>
+                <div class="dropdown-menu mega-menu"><div class="mega-grid wide"><a href="deputy-commissioner.html">Deputy Commissioner</a><a href="adc-1.html">ADC-I</a><a href="adc-2.html">ADC-II</a><a href="ac-1.html">Assistant Commissioner Liaquatabad</a><a href="ac-2.html">Assistant Commissioner Gulberg</a><a href="ac-3.html">Assistant Commissioner Nazimabad</a><a href="ac-4.html">Assistant Commissioner North Nazimabad</a><a href="ac-5.html">Assistant Commissioner New Karachi</a><a href="ac-6.html">Assistant Commissioner Revenue</a><a href="mukhtiarkar-liaquatabad.html">Mukhtiarkar Liaquatabad</a><a href="mukhtiarkar-gulberg.html">Mukhtiarkar Gulberg</a><a href="mukhtiarkar-nazimabad.html">Mukhtiarkar Nazimabad</a><a href="mukhtiarkar-north-nazimabad.html">Mukhtiarkar North Nazimabad</a><a href="mukhtiarkar-new-karachi.html">Mukhtiarkar New Karachi</a><a href="superintendent-revenue.html">Office Superintendent (Revenue)</a></div></div>
               </li>
               <li class="nav-item dropdown position-static">
                 <a class="nav-link dropdown-toggle" href="branches.html" data-bs-toggle="dropdown">Branches</a>
@@ -256,7 +256,7 @@ function servicesPage() {
 }
 
 function newsPage() {
-  const cats = ["Notifications", "Circulars", "Government Orders", "Tender Notices", "Public Announcements"];
+  const cats = ["Commissioner Karachi", "Government of Sindh"];
   const sourcedNews = [
     ["District Coordination Meeting Held", "Public facilitation counters and service improvement priorities were reviewed by officials.", "District Update"],
     ["Price Monitoring Campaign Continues", "Field teams inspected markets across District Central to support fair pricing and consumer protection.", "Price Control"],
@@ -273,9 +273,9 @@ function newsPage() {
     "Applicants whose CNIC is registered outside Karachi must contact the branch in-charge before applying."
   ];
   return `${header("news")}<main>${hero("news")}
-    <!-- Content sourced from: content/DC OFFICE CONTENT.docx -->
-    <section class="section"><div class="container">${sectionHead("Featured", "Featured News")}<article class="feature-card"><div class="placeholder-image"><i class="bi bi-newspaper"></i></div><div><span class="section-kicker">${sourcedNews[0][2]}</span><h2>${sourcedNews[0][0]}</h2><p><strong>Category:</strong> ${sourcedNews[0][2]}</p><p>${sourcedNews[0][1]}</p><a class="btn btn-primary-gradient" href="#newsCards">Read More</a></div></article></div></section>
-    <section class="section muted-section"><div class="container">${sectionHead("Latest", "Latest News")}<div class="row g-4" id="newsCards">${sourcedNews.map((item, i) => `<div class="col-md-6 col-lg-4 news-entry" data-title="${item[0].toLowerCase()}" data-category="${item[2]}" data-year=""><article class="news-card"><div class="news-img placeholder-image"><i class="bi bi-newspaper"></i></div><div><span class="section-kicker">${item[2]}</span><h3>${item[0]}</h3><p>${item[1]}</p></div></article></div>`).join("")}</div></div></section>
+    <section class="section"><div class="container">${sectionHead("District Central", "District Central News & Events", "Official news and events from the District Administration Central.")}<div class="row g-4">${[1, 2].map(() => `<div class="col-md-6"><div class="dc-news-slot"><div><i class="bi bi-newspaper"></i>District Central news will be published here.</div></div></div>`).join("")}</div></div></section>
+    <section class="section muted-section"><div class="container">${sectionHead("Commissioner Karachi", "Latest News from Commissioner Karachi", "Updated automatically from the Commissioner Karachi website.")}<div class="row g-4" id="ckNews"><p class="text-center text-muted">Loading news…</p></div><div class="text-center mt-4"><a class="btn btn-outline-primary" href="https://commissionerkarachi.gos.pk/media-gallery" target="_blank" rel="noopener">View all on Commissioner Karachi website</a></div></div></section>
+    <section class="section"><div class="container">${sectionHead("Government of Sindh", "Sindh Government News & Events", "Updated automatically from the Government of Sindh website.")}<div class="row g-4" id="sindhNews"><p class="text-center text-muted">Loading news…</p></div><div class="text-center mt-4"><a class="btn btn-outline-primary" href="https://www.sindh.gov.pk/notifications?show=news" target="_blank" rel="noopener">View all on Government of Sindh website</a></div><p class="text-center text-muted small mt-3" id="newsUpdated"></p></div></section>
     <section class="section"><div class="container">${sectionHead("Press", "Press Releases")}<div class="table-responsive"><table class="table press-table"><thead><tr><th>Date</th><th>Title</th><th>Category</th><th>Download/View</th></tr></thead><tbody><tr><td colspan="4" class="text-center text-muted">Press releases will appear here as they are issued.</td></tr></tbody></table></div></div></section>
     <section class="section muted-section"><div class="container">${sectionHead("Notices", "Public Notices")}<div class="notice-list">${sourcedNotices.map((notice) => `<article class="notice-item"><span><i class="bi bi-megaphone"></i></span><strong>${notice}</strong></article>`).join("")}</div></div></section>
     <section class="section"><div class="container">${sectionHead("Filter", "News Search & Filter")}<form class="filter-bar" id="newsFilter"><input type="search" id="newsSearch" placeholder="Search News" aria-label="Search News"><select id="newsCategory" aria-label="Category"><option value="">All Categories</option>${cats.map((x) => `<option>${x}</option>`).join("")}</select><select id="newsYear" aria-label="Year"><option value="">All Years</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option></select><button class="btn btn-primary-gradient" type="submit">Filter</button></form></div></section>

@@ -20,31 +20,31 @@
     "ac-1": {
       title: "Assistant Commissioner",
       subtitle: "Sub-Division Administration",
-      designation: "Assistant Commissioner-I",
+      designation: "Assistant Commissioner, Sub-Division Liaquatabad",
       icon: "bi-person-workspace"
     },
     "ac-2": {
       title: "Assistant Commissioner",
       subtitle: "Sub-Division Administration",
-      designation: "Assistant Commissioner-II",
+      designation: "Assistant Commissioner, Sub-Division Gulberg",
       icon: "bi-person-workspace"
     },
     "ac-3": {
       title: "Assistant Commissioner",
       subtitle: "Sub-Division Administration",
-      designation: "Assistant Commissioner-III",
+      designation: "Assistant Commissioner, Sub-Division Nazimabad",
       icon: "bi-person-workspace"
     },
     "ac-4": {
       title: "Assistant Commissioner",
       subtitle: "Sub-Division Administration",
-      designation: "Assistant Commissioner-IV",
+      designation: "Assistant Commissioner, Sub-Division North Nazimabad",
       icon: "bi-person-workspace"
     },
     "ac-5": {
       title: "Assistant Commissioner",
       subtitle: "Sub-Division Administration",
-      designation: "Assistant Commissioner-V",
+      designation: "Assistant Commissioner, Sub-Division New Karachi",
       icon: "bi-person-workspace"
     },
     "mukhtiarkar-liaquatabad": {
@@ -56,7 +56,7 @@
     "mukhtiarkar-gulberg": {
       title: "Mukhtiarkar",
       subtitle: "Sub-Division Revenue Office",
-      designation: "Assistant Mukhtiarkar Gulberg",
+      designation: "Mukhtiarkar Gulberg",
       icon: "bi-person-workspace"
     },
     "mukhtiarkar-nazimabad": {
@@ -74,25 +74,19 @@
     "mukhtiarkar-new-karachi": {
       title: "Mukhtiarkar",
       subtitle: "Sub-Division Revenue Office",
-      designation: "Assistant Mukhtiarkar New Karachi",
+      designation: "Mukhtiarkar New Karachi",
       icon: "bi-person-workspace"
     },
-    "superintendent-bilal-ahmed": {
-      title: "Superintendent",
+    "superintendent-revenue": {
+      title: "Office Superintendent",
       subtitle: "Official District Central Karachi Administration",
-      designation: "Superintendent",
-      icon: "bi-person-badge"
-    },
-    "superintendent-maria-shah": {
-      title: "Superintendent",
-      subtitle: "Official District Central Karachi Administration",
-      designation: "Superintendent",
+      designation: "Office Superintendent (Revenue)",
       icon: "bi-person-badge"
     },
     "ac-6": {
       title: "Assistant Commissioner",
       subtitle: "Sub-Division Administration",
-      designation: "Assistant Commissioner Revenue",
+      designation: "Assistant Commissioner (Revenue), District Central",
       icon: "bi-person-workspace"
     }
   };
@@ -101,13 +95,13 @@
       [
           "bi-bank",
           "Revenue Branch",
-          "In-charge: Mr. Umer Chandio, Assistant. Revenue administration is one of the principal statutory functions associated with the Deputy Commissioner / Collector in Sindh.",
+          "In-charge: Mr. Sajid. Revenue administration is one of the principal statutory functions associated with the Deputy Commissioner / Collector in Sindh.",
           "revenue.html"
       ],
       [
           "bi-cash-stack",
           "Accounts Branch",
-          "In-charge: Mr. Amjad Hussain Siddiqui, Assistant. The Accounts Branch manages the financial administration of the Deputy Commissioner's Office.",
+          "In-charge: Mr. Mazhar Shamshad. The Accounts Branch manages the financial administration of the Deputy Commissioner's Office.",
           "accounts-branch.html"
       ],
       [
@@ -119,13 +113,13 @@
       [
           "bi-scale",
           "Judicial Branch",
-          "In-charge: Miss Maryam, Senior Clerk. The Judicial Branch handles law-and-order matters and issues NOCs, licences and declarations within District Central, including NOCs for petrol pumps, CNG stations, public gatherings and marriage functions, and petroleum, fireworks and hotel licences.",
+          "In-charge: Mr. Naseem. The Judicial Branch handles law-and-order matters and issues NOCs, licences and declarations within District Central, including NOCs for petrol pumps, CNG stations, public gatherings and marriage functions, and petroleum, fireworks and hotel licences.",
           "judicial-branch.html"
       ],
       [
           "bi-people",
           "Establishment Branch",
-          "In-charge: Mr. Muhammad Ali Siddiqui, Office Superintendent. The Establishment Branch manages staff matters of the district administration: personal files of non-gazetted staff, appointments, transfers, postings and service matters, together with correspondence on government directions and Assembly questions.",
+          "In-charge: Mr. Zubair Aftab. The Establishment Branch manages staff matters of the district administration: personal files of non-gazetted staff, appointments, transfers, postings and service matters, together with correspondence on government directions and Assembly questions.",
           "establishment-branch.html"
       ],
       [
@@ -137,7 +131,7 @@
       [
           "bi-shield-check",
           "Arms Branch",
-          "In-charge: Mr. Mehboob Ali Rind, Senior Clerk. The Arms Branch processes new arms licence applications for residents of District Central, in line with the procedure and quota set by the Government of Sindh.",
+          "In-charge: Syed Rooh Ul Ameen. The Arms Branch processes new arms licence applications for residents of District Central, in line with the procedure and quota set by the Government of Sindh.",
           "arms-branch.html"
       ],
       [
@@ -161,7 +155,7 @@
       [
           "bi-broadcast",
           "Control Room",
-          "In-charge: Ghulam Hussain, Shoukat Ali and Qadir. The Control Room operates the district's wireless network and acts as the operational desk of the Complaint Cell, providing round-the-clock coordination and monitoring, especially during emergencies.",
+          "In-charge: Mr. Ghulam Hussain and Mr. Shoukat. The Control Room operates the district's wireless network and acts as the operational desk of the Complaint Cell, providing round-the-clock coordination and monitoring, especially during emergencies.",
           "control-room.html"
       ],
       [
@@ -186,39 +180,38 @@
 
   const officerContent = {
     "deputy-commissioner": {
-      name: "Taha Saleem",
+      name: "Taha Saleem (PAS)",
       kicker: "Deputy Commissioner Profile",
       message: "It is an honor to serve as the Deputy Commissioner of District Central, Karachi, a district that stands at the heart of the city's civic and economic life. My commitment remains steadfast: to ensure transparent governance, efficient public service delivery, and swift redressal of citizen grievances for every resident of District Central. Under the guidance of the Commissioner Karachi and the Government of Sindh, we are working to strengthen revenue administration, streamline the issuance of Domicile and Permanent Resident Certificates, improve market price monitoring, and expand digital facilitation across all branches of this office.",
       bio: "Taha Saleem serves as the Deputy Commissioner of District Central, Karachi, heading the district's civil administration, revenue management, and public facilitation functions on behalf of the Government of Sindh.",
       roles: ["Principal district-level representative of the Provincial Government", "Overall coordination of district administration and line departments", "Revenue administration as Collector under the Sindh Land Revenue Act, 1967", "Law-and-order coordination with police and allied agencies", "District Disaster Management Authority and relief coordination", "Price control, anti-hoarding, and essential commodity monitoring", "Election, census, polio, encroachment, traffic plan, and special-event duties", "Issuance of Domicile and PRC to district residents"]
     },
     "adc-1": {
-      name: "Muhammad Asim Abbasi",
+      name: "Mr. Muhammad Asim Abbasi (Ex-PCS)",
       kicker: "Additional Deputy Commissioner-I",
       message: "As Additional Deputy Commissioner-I, this office supports the Deputy Commissioner in establishment matters, revenue administration, accounts, Domicile/PRC facilitation, the P.A. Branch of ADC-I, and Arms Branch functions.",
       bio: "The Additional Deputy Commissioner works under the general supervision and control of the Deputy Commissioner and performs duties specifically assigned by the DC.",
       roles: ["Assist the DC in overall district administration", "Supervise assigned revenue matters and records", "Coordinate establishment and accounts branch work", "Support Domicile/PRC facilitation", "Coordinate price-control and anti-profiteering work where authorized", "Assist in disaster management and emergency response", "Monitor government instructions and submit reports", "Hear and dispose of delegated complaints"]
     },
     "adc-2": {
-      name: "Neha Shah",
+      name: "Mr. Rizwan Alam (PMS)",
       kicker: "Additional Deputy Commissioner-II",
       message: "As Additional Deputy Commissioner-II, this office oversees judicial coordination, general administration, Benevolent Fund matters, R&I, Control Room coordination, and district complaint-handling functions.",
       bio: "The Additional Deputy Commissioner supports the Deputy Commissioner in delegated administrative, legal, law-and-order, and public-service responsibilities.",
       roles: ["Assist the DC in maintaining law and order", "Coordinate with Police, Rangers, and other law-enforcement agencies", "Participate in law-and-order meetings and monitor decisions", "Assist arrangements for processions, public gatherings, religious events, and sensitive occasions", "Handle assigned magisterial or legal functions where conferred by law", "Conduct inspections and fact-finding inquiries when directed", "Coordinate with local government and municipal institutions", "Follow up public complaints and administrative issues"]
     },
-    "ac-1": { name: "Dr. Saira Khan", kicker: "Assistant Commissioner Liaquatabad", message: "It is my privilege to serve as Assistant Commissioner Liaquatabad, working closely with residents to ensure efficient administrative facilitation, timely grievance redressal, and coordinated municipal support across the sub-division.", bio: "Additional portfolio: Polio Focal Person, District Central and Public School Administration.", roles: ["Sub-divisional field administration", "Revenue administration within Liaquatabad", "Price control and market monitoring", "Public grievance review", "Polio campaign coordination", "Municipal coordination", "Field inspections", "Other duties assigned by DC/Government"] },
-    "ac-2": { name: "Neha Shah", kicker: "Assistant Commissioner Gulberg", message: "It is an honor to serve as Assistant Commissioner Gulberg. My priority is accessible administrative services, effective coordination with local authorities, and prompt resolution of citizen concerns across Gulberg Town.", bio: "The Assistant Commissioner acts as sub-divisional field administrator and revenue officer under the Deputy Commissioner.", roles: ["Revenue administration within Gulberg", "Land and revenue matters", "Law-and-order coordination", "Price control and market monitoring", "Anti-encroachment support", "Government department coordination", "Disaster management support", "Public grievance handling"] },
-    "ac-3": { name: "Rabia Syed", kicker: "Assistant Commissioner Nazimabad", message: "It is a privilege to serve as Assistant Commissioner Nazimabad, working to strengthen public facilitation, revenue coordination, and civic administration for the residents of Nazimabad Town.", bio: "The Assistant Commissioner works under the Deputy Commissioner and coordinates field administration at sub-division level.", roles: ["Revenue administration within Nazimabad", "Mutation, partition, demarcation, and authorized land-record proceedings", "Public order coordination", "Market inspections", "Coordination with line departments", "Development and municipal coordination", "Field assessments", "Reports to district administration"] },
-    "ac-4": { name: "Nematullah Chachar", kicker: "Assistant Commissioner North Nazimabad", message: "It is my responsibility, as Assistant Commissioner North Nazimabad, to ensure residents receive timely administrative facilitation, effective market monitoring, and responsive local governance.", bio: "The Assistant Commissioner functions as a field representative of the district administration.", roles: ["Revenue supervision", "Market monitoring", "Anti-hoarding and anti-profiteering coordination", "Public property and encroachment support", "Local government coordination", "Emergency response support", "Citizen complaint review", "Field inspections"] },
-    "ac-5": { name: "Captain (Retd.) Fareed Hanif", kicker: "Assistant Commissioner New Karachi", message: "It is an honor to serve as Assistant Commissioner New Karachi. Drawing on a background of disciplined public service, I am committed to maintaining law-and-order coordination, efficient administrative facilitation, and responsive governance for the residents of New Karachi Town.", bio: "The Assistant Commissioner performs duties assigned by the Deputy Commissioner, Commissioner, Board of Revenue, or Government.", roles: ["Sub-divisional administration in New Karachi", "Revenue and land-record supervision", "Law-and-order coordination", "Price control operations", "Anti-encroachment support", "Disaster management", "Public grievances", "Elections and government exercises"] },
+    "ac-1": { name: "Dr. Saira Khan (PMS)", kicker: "Assistant Commissioner Liaquatabad", message: "It is my privilege to serve as Assistant Commissioner Liaquatabad, working closely with residents to ensure efficient administrative facilitation, timely grievance redressal, and coordinated municipal support across the sub-division.", bio: "Additional portfolio: Polio Focal Person, District Central and Public School Administration.", roles: ["Sub-divisional field administration", "Revenue administration within Liaquatabad", "Price control and market monitoring", "Public grievance review", "Polio campaign coordination", "Municipal coordination", "Field inspections", "Other duties assigned by DC/Government"] },
+    "ac-2": { name: "Mr. Umar Iqbal (PAS)", kicker: "Assistant Commissioner Gulberg", message: "It is an honor to serve as Assistant Commissioner Gulberg. My priority is accessible administrative services, effective coordination with local authorities, and prompt resolution of citizen concerns across Gulberg Town.", bio: "The Assistant Commissioner acts as sub-divisional field administrator and revenue officer under the Deputy Commissioner.", roles: ["Revenue administration within Gulberg", "Land and revenue matters", "Law-and-order coordination", "Price control and market monitoring", "Anti-encroachment support", "Government department coordination", "Disaster management support", "Public grievance handling"] },
+    "ac-3": { name: "Ms. Rabia Syed (PMS)", kicker: "Assistant Commissioner Nazimabad", message: "It is a privilege to serve as Assistant Commissioner Nazimabad, working to strengthen public facilitation, revenue coordination, and civic administration for the residents of Nazimabad Town.", bio: "The Assistant Commissioner works under the Deputy Commissioner and coordinates field administration at sub-division level.", roles: ["Revenue administration within Nazimabad", "Mutation, partition, demarcation, and authorized land-record proceedings", "Public order coordination", "Market inspections", "Coordination with line departments", "Development and municipal coordination", "Field assessments", "Reports to district administration"] },
+    "ac-4": { name: "Mr. Naimat Ullah Chachar (PMS)", kicker: "Assistant Commissioner North Nazimabad", message: "It is my responsibility, as Assistant Commissioner North Nazimabad, to ensure residents receive timely administrative facilitation, effective market monitoring, and responsive local governance.", bio: "The Assistant Commissioner functions as a field representative of the district administration.", roles: ["Revenue supervision", "Market monitoring", "Anti-hoarding and anti-profiteering coordination", "Public property and encroachment support", "Local government coordination", "Emergency response support", "Citizen complaint review", "Field inspections"] },
+    "ac-5": { name: "Capt (R) Fareed Haneef (PAS)", kicker: "Assistant Commissioner New Karachi", message: "It is an honor to serve as Assistant Commissioner New Karachi. Drawing on a background of disciplined public service, I am committed to maintaining law-and-order coordination, efficient administrative facilitation, and responsive governance for the residents of New Karachi Town.", bio: "The Assistant Commissioner performs duties assigned by the Deputy Commissioner, Commissioner, Board of Revenue, or Government.", roles: ["Sub-divisional administration in New Karachi", "Revenue and land-record supervision", "Law-and-order coordination", "Price control operations", "Anti-encroachment support", "Disaster management", "Public grievances", "Elections and government exercises"] },
     "ac-6": { name: "Assistant Commissioner Revenue", kicker: "District Central", message: "As Assistant Commissioner Revenue, my office supports the Deputy Commissioner in revenue administration across District Central: land records, revenue cases, protection of government land and public facilitation on revenue matters. We aim to deal with every citizen's revenue matter fairly, transparently and on time.", bio: "<!-- AC information not found in provided DOCX sources -->", roles: ["Administrative Leadership", "District Governance", "Public Services", "Law & Order Coordination", "Revenue Administration", "Development Oversight", "Citizen Welfare", "Disaster Management"] },
-    "mukhtiarkar-liaquatabad": { name: "Abdul Hafeez Narejo", kicker: "Mukhtiarkar Liaquatabad", message: "The Mukhtiarkar office Liaquatabad is the revenue office closest to the residents of Liaquatabad. It maintains land records, processes mutation and demarcation, prepares verification reports for certificates such as Domicile and PRC, and works under the Assistant Commissioner Liaquatabad to resolve citizens' revenue matters fairly and on time.", bio: "Mukhtiarkar Liaquatabad. In post since April 2025. Works under the Assistant Commissioner Liaquatabad and the Deputy Commissioner, District Central.", roles: ["Land Record Maintenance", "Mutation (Dakhil-Kharij)", "Demarcation and Measurement", "Revenue Court Cases", "Government Land Protection", "Certificate Verification Reports", "Supervision of Field Staff", "Assigned Public Duties"] },
-    "mukhtiarkar-gulberg": { name: "Waseem Taj", kicker: "Assistant Mukhtiarkar Gulberg", message: "The Mukhtiarkar office Gulberg is the revenue office closest to the residents of Gulberg. It maintains land records, processes mutation and demarcation, prepares verification reports for certificates such as Domicile and PRC, and works under the Assistant Commissioner Gulberg to resolve citizens' revenue matters fairly and on time.", bio: "Assistant Mukhtiarkar Gulberg. In post since 10 August 2026. Works under the Assistant Commissioner Gulberg and the Deputy Commissioner, District Central.", roles: ["Land Record Maintenance", "Mutation (Dakhil-Kharij)", "Demarcation and Measurement", "Revenue Court Cases", "Government Land Protection", "Certificate Verification Reports", "Supervision of Field Staff", "Assigned Public Duties"] },
-    "mukhtiarkar-nazimabad": { name: "Saeed Ahmed", kicker: "Mukhtiarkar Nazimabad", message: "The Mukhtiarkar office Nazimabad is the revenue office closest to the residents of Nazimabad. It maintains land records, processes mutation and demarcation, prepares verification reports for certificates such as Domicile and PRC, and works under the Assistant Commissioner Nazimabad to resolve citizens' revenue matters fairly and on time.", bio: "Mukhtiarkar Nazimabad. Works under the Assistant Commissioner Nazimabad and the Deputy Commissioner, District Central.", roles: ["Land Record Maintenance", "Mutation (Dakhil-Kharij)", "Demarcation and Measurement", "Revenue Court Cases", "Government Land Protection", "Certificate Verification Reports", "Supervision of Field Staff", "Assigned Public Duties"] },
-    "mukhtiarkar-north-nazimabad": { name: "Syed Karar Hussain Shah", kicker: "Mukhtiarkar North Nazimabad", message: "The Mukhtiarkar office North Nazimabad is the revenue office closest to the residents of North Nazimabad. It maintains land records, processes mutation and demarcation, prepares verification reports for certificates such as Domicile and PRC, and works under the Assistant Commissioner North Nazimabad to resolve citizens' revenue matters fairly and on time.", bio: "Mukhtiarkar North Nazimabad. In post since March 2026. Works under the Assistant Commissioner North Nazimabad and the Deputy Commissioner, District Central.", roles: ["Land Record Maintenance", "Mutation (Dakhil-Kharij)", "Demarcation and Measurement", "Revenue Court Cases", "Government Land Protection", "Certificate Verification Reports", "Supervision of Field Staff", "Assigned Public Duties"] },
-    "mukhtiarkar-new-karachi": { name: "Rizwan Haider Memon", kicker: "Assistant Mukhtiarkar New Karachi", message: "The Mukhtiarkar office New Karachi is the revenue office closest to the residents of New Karachi. It maintains land records, processes mutation and demarcation, prepares verification reports for certificates such as Domicile and PRC, and works under the Assistant Commissioner New Karachi to resolve citizens' revenue matters fairly and on time.", bio: "Assistant Mukhtiarkar New Karachi. In post since 10 August 2026. Works under the Assistant Commissioner New Karachi and the Deputy Commissioner, District Central.", roles: ["Land Record Maintenance", "Mutation (Dakhil-Kharij)", "Demarcation and Measurement", "Revenue Court Cases", "Government Land Protection", "Certificate Verification Reports", "Supervision of Field Staff", "Assigned Public Duties"] },
-    "superintendent-bilal-ahmed": { name: "Mr. Bilal Ahmed", kicker: "Superintendent, District Central", message: "The Superintendent supervises the day-to-day office work of the District Administration Central, making sure that files, correspondence and public applications move through the office promptly and are dealt with in line with the rules.", bio: "Superintendent, District Central. Supervises office staff and the movement of files and correspondence.", roles: ["Office Supervision", "File Management", "Record Keeping", "Correspondence", "Staff Coordination", "Follow-up of Directions", "Public Dealing", "Branch Coordination"] },
-    "superintendent-maria-shah": { name: "Ms. Maria Shah", kicker: "Superintendent, District Central", message: "The Superintendent supervises the day-to-day office work of the District Administration Central, making sure that files, correspondence and public applications move through the office promptly and are dealt with in line with the rules.", bio: "Superintendent, District Central. Supervises office staff and the movement of files and correspondence.", roles: ["Office Supervision", "File Management", "Record Keeping", "Correspondence", "Staff Coordination", "Follow-up of Directions", "Public Dealing", "Branch Coordination"] }
+    "mukhtiarkar-liaquatabad": { name: "Mr. Abdul Hafeez Narejo", kicker: "Mukhtiarkar Liaquatabad", message: "The Mukhtiarkar office Liaquatabad is the revenue office closest to the residents of Liaquatabad. It maintains land records, processes mutation and demarcation, prepares verification reports for certificates such as Domicile and PRC, and works under the Assistant Commissioner Liaquatabad to resolve citizens' revenue matters fairly and on time.", bio: "Mukhtiarkar Liaquatabad. Works under the Assistant Commissioner Liaquatabad and the Deputy Commissioner, District Central.", roles: ["Land Record Maintenance", "Mutation (Dakhil-Kharij)", "Demarcation and Measurement", "Revenue Court Cases", "Government Land Protection", "Certificate Verification Reports", "Supervision of Field Staff", "Assigned Public Duties"] },
+    "mukhtiarkar-gulberg": { name: "Mr. Piyas Ali Pitafi", kicker: "Mukhtiarkar Gulberg", message: "The Mukhtiarkar office Gulberg is the revenue office closest to the residents of Gulberg. It maintains land records, processes mutation and demarcation, prepares verification reports for certificates such as Domicile and PRC, and works under the Assistant Commissioner Gulberg to resolve citizens' revenue matters fairly and on time.", bio: "Mukhtiarkar Gulberg. Works under the Assistant Commissioner Gulberg and the Deputy Commissioner, District Central.", roles: ["Land Record Maintenance", "Mutation (Dakhil-Kharij)", "Demarcation and Measurement", "Revenue Court Cases", "Government Land Protection", "Certificate Verification Reports", "Supervision of Field Staff", "Assigned Public Duties"] },
+    "mukhtiarkar-nazimabad": { name: "Mr. Saeed Ahmed Kohaao", kicker: "Mukhtiarkar Nazimabad", message: "The Mukhtiarkar office Nazimabad is the revenue office closest to the residents of Nazimabad. It maintains land records, processes mutation and demarcation, prepares verification reports for certificates such as Domicile and PRC, and works under the Assistant Commissioner Nazimabad to resolve citizens' revenue matters fairly and on time.", bio: "Mukhtiarkar Nazimabad. Works under the Assistant Commissioner Nazimabad and the Deputy Commissioner, District Central.", roles: ["Land Record Maintenance", "Mutation (Dakhil-Kharij)", "Demarcation and Measurement", "Revenue Court Cases", "Government Land Protection", "Certificate Verification Reports", "Supervision of Field Staff", "Assigned Public Duties"] },
+    "mukhtiarkar-north-nazimabad": { name: "Syed Karar Hussain", kicker: "Mukhtiarkar North Nazimabad", message: "The Mukhtiarkar office North Nazimabad is the revenue office closest to the residents of North Nazimabad. It maintains land records, processes mutation and demarcation, prepares verification reports for certificates such as Domicile and PRC, and works under the Assistant Commissioner North Nazimabad to resolve citizens' revenue matters fairly and on time.", bio: "Mukhtiarkar North Nazimabad. Works under the Assistant Commissioner North Nazimabad and the Deputy Commissioner, District Central.", roles: ["Land Record Maintenance", "Mutation (Dakhil-Kharij)", "Demarcation and Measurement", "Revenue Court Cases", "Government Land Protection", "Certificate Verification Reports", "Supervision of Field Staff", "Assigned Public Duties"] },
+    "mukhtiarkar-new-karachi": { name: "Mr. Arshad Hussain Chandio", kicker: "Mukhtiarkar New Karachi", message: "The Mukhtiarkar office New Karachi is the revenue office closest to the residents of New Karachi. It maintains land records, processes mutation and demarcation, prepares verification reports for certificates such as Domicile and PRC, and works under the Assistant Commissioner New Karachi to resolve citizens' revenue matters fairly and on time.", bio: "Mukhtiarkar New Karachi. Works under the Assistant Commissioner New Karachi and the Deputy Commissioner, District Central.", roles: ["Land Record Maintenance", "Mutation (Dakhil-Kharij)", "Demarcation and Measurement", "Revenue Court Cases", "Government Land Protection", "Certificate Verification Reports", "Supervision of Field Staff", "Assigned Public Duties"] },
+    "superintendent-revenue": { name: "Mr. Kailash B. Maheshwari", kicker: "Office Superintendent (Revenue), DC Office", message: "The Superintendent supervises the day-to-day office work of the District Administration Central, making sure that files, correspondence and public applications move through the office promptly and are dealt with in line with the rules.", bio: "Office Superintendent (Revenue) at the Deputy Commissioner Office, District Central. Supervises office staff and the movement of revenue files and correspondence.", roles: ["Office Supervision", "File Management", "Record Keeping", "Correspondence", "Staff Coordination", "Follow-up of Directions", "Public Dealing", "Branch Coordination"] }
   };
 
   const officerExtraMore = {
@@ -322,27 +315,7 @@
         "Field visits across New Karachi to check land records, government land and encroachments."
       ]
     },
-    "superintendent-bilal-ahmed": {
-      "photo": null,
-      "office": "the office of the Superintendent",
-      "roleText": [
-        "Supervises the day-to-day work of office staff.",
-        "Keeps track of the movement and disposal of files.",
-        "Maintains office records in good order.",
-        "Prepares letters, summaries and replies for the officers concerned.",
-        "Coordinates the work of clerks and support staff.",
-        "Follows up directions from senior officers and keeps deadlines.",
-        "Guides members of the public who visit the office.",
-        "Coordinates with the branches of the DC Office."
-      ],
-      "initiatives": [
-        "Helping visitors reach the right branch and officer quickly.",
-        "Supporting the district price monitoring work with office records.",
-        "Keeping track of complaints received in the office until they are disposed of.",
-        "Supporting field arrangements for district campaigns and events."
-      ]
-    },
-    "superintendent-maria-shah": {
+    "superintendent-revenue": {
       "photo": null,
       "office": "the office of the Superintendent",
       "roleText": [
@@ -412,7 +385,7 @@
       ]
     },
     "adc-2": {
-      "photo": "ADC II.jpeg",
+      "photo": null,
       "office": "the office of the Additional Deputy Commissioner-II",
       "roleText": [
         "Supports the Deputy Commissioner in keeping public order across the district.",
@@ -452,7 +425,7 @@
       ]
     },
     "ac-2": {
-      "photo": "ADC II.jpeg",
+      "photo": null,
       "office": "the office of the Assistant Commissioner Gulberg",
       "roleText": [
         "Supervises the Mukhtiarkar's office, land records and revenue matters in Gulberg.",
@@ -558,7 +531,7 @@
       "file": "revenue.html",
       "title": "Revenue Branch",
       "icon": "bi-bank",
-      "incharge": "Mr. Umer Chandio, Assistant",
+      "incharge": "Mr. Sajid",
       "reports": "ADC-I",
       "scope": "Land, records, revenue cases, encroachment matters.",
       "about": "Revenue administration is one of the principal statutory functions associated with the Deputy Commissioner / Collector in Sindh. The branch handles land and encroachment enquiries, anti-encroachment drives, civil suits and other court cases, revenue cases and appeals, and illegal or dangerous building matters referred through SBCA.",
@@ -569,7 +542,7 @@
       "file": "accounts-branch.html",
       "title": "Accounts Branch",
       "icon": "bi-cash-stack",
-      "incharge": "Mr. Amjad Hussain Siddiqui, Assistant",
+      "incharge": "Mr. Mazhar Shamshad",
       "reports": "ADC-I",
       "scope": "Salaries, pensions, budget, audit and development finance.",
       "about": "The Accounts Branch manages the financial administration of the Deputy Commissioner's Office. It handles staff salaries, GP Fund and pension cases, contingency bills, audit matters and relief-fund finance, and oversees the financial side of development schemes in the district.",
@@ -692,7 +665,7 @@
       "file": "judicial-branch.html",
       "title": "Judicial Branch",
       "icon": "bi-scale",
-      "incharge": "Miss Maryam, Senior Clerk",
+      "incharge": "Mr. Naseem",
       "reports": "ADC-II",
       "scope": "Law and order, NOCs, licences and declarations.",
       "about": "The Judicial Branch handles law-and-order matters and issues NOCs, licences and declarations within District Central, including NOCs for petrol pumps, CNG stations, public gatherings and marriage functions, and petroleum, fireworks and hotel licences.",
@@ -751,7 +724,7 @@
       "file": "establishment-branch.html",
       "title": "Establishment Branch",
       "icon": "bi-people",
-      "incharge": "Mr. Muhammad Ali Siddiqui, Office Superintendent",
+      "incharge": "Mr. Zubair Aftab",
       "reports": "ADC-I",
       "scope": "Staff appointments, postings, transfers and service matters.",
       "about": "The Establishment Branch manages staff matters of the district administration: personal files of non-gazetted staff, appointments, transfers, postings and service matters, together with correspondence on government directions and Assembly questions.",
@@ -838,7 +811,7 @@
       "file": "arms-branch.html",
       "title": "Arms Branch",
       "icon": "bi-shield-check",
-      "incharge": "Mr. Mehboob Ali Rind, Senior Clerk",
+      "incharge": "Syed Rooh Ul Ameen",
       "reports": "ADC-I",
       "scope": "New arms licence applications.",
       "about": "The Arms Branch processes new arms licence applications for residents of District Central, in line with the procedure and quota set by the Government of Sindh.",
@@ -965,7 +938,7 @@
       "file": "control-room.html",
       "title": "Control Room",
       "icon": "bi-broadcast",
-      "incharge": "Ghulam Hussain, Shoukat Ali and Qadir",
+      "incharge": "Mr. Ghulam Hussain and Mr. Shoukat",
       "reports": "ADC-II",
       "scope": "Wireless coordination and complaint desk.",
       "about": "The Control Room operates the district's wireless network and acts as the operational desk of the Complaint Cell, providing round-the-clock coordination and monitoring, especially during emergencies.",
@@ -1098,6 +1071,22 @@
       ],
       "services": []
     }
+  };
+
+  const officerPosted = {
+    "deputy-commissioner": "8 September 2024",
+    "adc-1": "4 July 2024",
+    "adc-2": "30 September 2026",
+    "ac-1": "30 September 2025",
+    "ac-2": "18 November 2026",
+    "ac-3": "8 June 2026",
+    "ac-4": "20 June 2026",
+    "ac-5": "23 September 2025",
+    "mukhtiarkar-liaquatabad": "13 April 2025",
+    "mukhtiarkar-nazimabad": "27 February 2026",
+    "mukhtiarkar-north-nazimabad": "2 March 2026",
+    "mukhtiarkar-new-karachi": "7 October 2026",
+    "superintendent-revenue": "1 December 2024"
   };
 
   function siteHeader() {
@@ -1295,7 +1284,7 @@
               <aside class="col-lg-4">
                 <div class="sidebar-card" data-aos="fade-left">
                   <h3>Office Snapshot</h3>
-                  <p><strong>Designation:</strong> ${page.designation}</p>
+                  <p><strong>Designation:</strong> ${page.designation}</p>${officerPosted[key] ? `<p><strong>Date of Posting:</strong> ${officerPosted[key]}</p>` : ""}
                   <p><strong>Public Hours:</strong> Monday to Friday, 9:00 AM - 5:00 PM</p>
                   <p><strong>Location:</strong> Deputy Commissioner Office, Sector 15-A/1, Buffer Zone, Karachi</p>
                   <a class="btn btn-primary-gradient w-100" href="#contact-card">Contact Office</a>
