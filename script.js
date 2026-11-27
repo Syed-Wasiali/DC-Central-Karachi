@@ -239,3 +239,37 @@ document.addEventListener("click", function (event) {
   window.addEventListener("load", balance);
   window.DC_balanceGrids = balance;
 })();
+
+// Live Karachi time, weather and map in the top bar and footer
+(function () {
+  var TZ = "Asia/Karachi";
+  var WX = { 0: ["Clear", "bi-sun"], 1: ["Mainly clear", "bi-sun"], 2: ["Partly cloudy", "bi-cloud-sun"], 3: ["Cloudy", "bi-clouds"], 45: ["Fog", "bi-cloud-fog"], 48: ["Fog", "bi-cloud-fog"], 51: ["Drizzle", "bi-cloud-drizzle"], 53: ["Drizzle", "bi-cloud-drizzle"], 55: ["Drizzle", "bi-cloud-drizzle"], 61: ["Light rain", "bi-cloud-rain"], 63: ["Rain", "bi-cloud-rain"], 65: ["Heavy rain", "bi-cloud-rain-heavy"], 80: ["Showers", "bi-cloud-rain"], 81: ["Showers", "bi-cloud-rain"], 82: ["Heavy showers", "bi-cloud-rain-heavy"], 95: ["Thunderstorm", "bi-cloud-lightning-rain"], 96: ["Thunderstorm", "bi-cloud-lightning-rain"], 99: ["Thunderstorm", "bi-cloud-lightning-rain"] };
+  function timeStr() { return new Date().toLocaleTimeString("en-US", { timeZone: TZ, hour: "numeric", minute: "2-digit", hour12: true }); }
+  function dateStr() { return new Date().toLocaleDateString("en-GB", { timeZone: TZ, weekday: "long", day: "numeric", month: "long", year: "numeric" }); }
+  function tick() { document.querySelectorAll("[data-live-time]").forEach(function (e) { e.textContent = timeStr(); }); document.querySelectorAll("[data-live-date]").forEach(function (e) { e.textContent = dateStr(); }); }
+  function showWeather(w) {
+    var c = WX[w.weather_code] || ["", "bi-cloud-sun"], t = Math.round(w.temperature_2m);
+    document.querySelectorAll("[data-live-weather]").forEach(function (e) { e.innerHTML = '<i class="bi ' + c[1] + '"></i> Karachi ' + t + "°C"; e.title = c[0]; });
+    document.querySelectorAll("[data-live-weather-full]").forEach(function (e) { e.innerHTML = '<i class="bi ' + c[1] + ' wx-icon"></i><div><strong>' + t + '°C</strong> <span>' + c[0] + '</span><small>Humidity ' + w.relative_humidity_2m + '% · Wind ' + Math.round(w.wind_speed_10m) + ' km/h</small></div>'; });
+  }
+  function loadWeather() {
+    try { var c = JSON.parse(sessionStorage.getItem("dcWx") || "null"); if (c && Date.now() - c.at < 15 * 60 * 1000) return showWeather(c.w); } catch (e) {}
+    fetch("https://api.open-meteo.com/v1/forecast?latitude=24.93&longitude=67.06&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&timezone=Asia%2FKarachi")
+      .then(function (r) { return r.json(); }).then(function (j) { if (!j.current) return; showWeather(j.current); try { sessionStorage.setItem("dcWx", JSON.stringify({ at: Date.now(), w: j.current })); } catch (e) {} }).catch(function () {});
+  }
+  function inject() {
+    var bar = document.querySelector(".top-gov-bar");
+    if (bar && !bar.querySelector("[data-live-time]")) {
+      var clock = [].slice.call(bar.querySelectorAll("span")).find(function (s) { return /Mon-Fri/.test(s.textContent); });
+      var html = '<span class="live-chip"><i class="bi bi-clock-history"></i> <span data-live-time></span> PKT</span><span class="live-chip" data-live-weather><i class="bi bi-cloud-sun"></i> Karachi</span>';
+      if (clock) clock.insertAdjacentHTML("beforebegin", html); else bar.querySelector(".d-flex:last-child, .container-fluid") && bar.querySelector(".d-flex:last-child").insertAdjacentHTML("afterbegin", html);
+    }
+    var fb = document.querySelector(".site-footer .footer-bottom");
+    if (fb && !document.querySelector(".footer-live")) {
+      fb.insertAdjacentHTML("beforebegin", '<div class="footer-live"><div class="footer-live-info"><div class="fl-block"><span class="fl-label">Karachi time</span><strong class="fl-time" data-live-time></strong><span data-live-date></span></div><div class="fl-block"><span class="fl-label">Weather now</span><div class="fl-weather" data-live-weather-full><i class="bi bi-cloud-sun wx-icon"></i><div><strong>Karachi</strong></div></div></div><div class="fl-block"><span class="fl-label">DC Office</span><span>Sector 15-A/1, Buffer Zone, Karachi</span><span>Mon–Fri, 9:00 AM – 5:00 PM</span><a href="https://www.google.com/maps/dir/?api=1&destination=Deputy+Commissioner+Office+District+Central+Buffer+Zone+Karachi" target="_blank" rel="noopener"><i class="bi bi-sign-turn-right"></i> Get directions</a></div></div><div class="footer-map"><iframe src="https://www.google.com/maps?q=Deputy+Commissioner+Office+District+Central+Buffer+Zone+Karachi&z=13&output=embed" title="Map of the DC Office, District Central" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div>');
+    }
+    tick(); loadWeather();
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", function () { setTimeout(inject, 0); }); else setTimeout(inject, 0);
+  setInterval(tick, 15000);
+})();

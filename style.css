@@ -1514,3 +1514,16 @@ input[type="checkbox"], input[type="radio"] {
 .social-feed{display:flex;flex-direction:column;height:100%}.social-feed .btn{margin-top:auto;align-self:flex-start}
 .initiative-card .cover-photo.logo-cover{background:#fff;border:1px solid #e3ece7}.initiative-card .cover-photo.logo-cover img{object-fit:contain;padding:12px}
 .dept-card a.btn-primary-gradient,.initiative-card a.btn-primary-gradient,.org-card a.btn-primary-gradient,.dept-card a.btn-primary-gradient:hover,.initiative-card a.btn-primary-gradient:hover,.org-card a.btn-primary-gradient:hover{color:#fff}
+
+/* Live time, weather and map */
+.live-chip{display:inline-flex;align-items:center;gap:.3rem;white-space:nowrap}
+.district-map{border-radius:20px;overflow:hidden;box-shadow:0 12px 30px rgba(11,93,59,.12);aspect-ratio:4/3;background:#e8f1ec}.district-map iframe{width:100%;height:100%;border:0}
+.footer-live{display:grid;grid-template-columns:1fr 1.4fr;gap:1.5rem;margin:2rem 0 1rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.15)}
+.footer-live-info{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fl-block{display:flex;flex-direction:column;gap:.2rem;color:rgba(255,255,255,.85);font-size:.9rem}.fl-block:last-child{grid-column:1/-1}
+.fl-block a{color:#ffd75e;text-decoration:none;margin-top:.2rem}.fl-label{text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;color:#ffd75e;font-weight:700}
+.fl-time{font-size:1.9rem;color:#fff;line-height:1.1}.fl-weather{display:flex;gap:.7rem;align-items:center}.fl-weather .wx-icon{font-size:2.2rem;color:#ffd75e}
+.fl-weather strong{font-size:1.5rem;color:#fff}.fl-weather small{display:block;color:rgba(255,255,255,.75)}
+.footer-map{border-radius:16px;overflow:hidden;min-height:220px}.footer-map iframe{width:100%;height:100%;min-height:220px;border:0}
+@media(max-width:991px){.footer-live{grid-template-columns:1fr}}
+@media(max-width:575px){.top-gov-bar .live-chip:first-child{display:none}}
