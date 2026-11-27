@@ -355,7 +355,7 @@ function plaquesPage() {
   const W = window.DC_WORK;
   return `${header("initiatives")}<main>${hero("plaques")}
     <section class="section"><div class="container">${sectionHead("About", "Celebrating Our Legends", W.initiatives[0].summary + " The initiative was launched in November 2026 with plaques in Block 13, Gulberg, Federal B Area.")}<div class="row g-4">${W.plaques.map(([name, years, field, text, place]) => `<div class="col-md-6 col-lg-4"><article class="dept-card h-100" data-aos="fade-up">${({ "Sadequain": "plaques-05", "Amjad Sabri": "plaques-07", "Umar Sharif": "plaques-08", "Umeed Fazli": "plaques-10" })[name] ? `<img class="plaque-photo" src="images/gallery/${({ "Sadequain": "plaques-05", "Amjad Sabri": "plaques-07", "Umar Sharif": "plaques-08", "Umeed Fazli": "plaques-10" })[name]}.jpg" alt="Blue plaque for ${name}" loading="lazy">` : `<i class="bi bi-award"></i>`}<span class="section-kicker">${field}</span><h3>${name}</h3><p class="fw-bold mb-1">${years}</p><p>${text}</p><p class="small text-muted mb-0"><i class="bi bi-geo-alt"></i> ${place}</p></article></div>`).join("")}</div></div></section>
-    <section class="section"><div class="container">${sectionHead("Map", "Blue Plaques Map")}${plaqueMap()}</div></section>
+    <section class="section"><div class="container">${sectionHead("Map", "Blue Plaques Map", "Explore the plaques by category. Tap a category to filter the map, or a name to find its plaque.")}${plaqueMap()}</div></section>
     <section class="section muted-section"><div class="container">${sectionHead("Photos", "Plaques and Ceremonies")}${W.photoGrid("plaques")}</div></section>
     <section class="section"><div class="container">${sectionHead("Timeline", "How the Initiative Began")}<div class="timeline-list">${W.initiatives[0].timeline.map(([m, t]) => `<article class="timeline-card"><span class="section-kicker">${m}</span><p class="mb-0">${t}</p></article>`).join("")}</div></div></section>
     <section class="complaint-cta"><div class="container"><div class="cta-panel"><div><span class="section-kicker">Suggest a Name</span><h2>Do You Know a Notable Resident?</h2><p>The District Administration welcomes suggestions of people from District Central who made significant contributions in sports, arts, music, education, science, public service and other fields. Call 021-99260038 or message us on Facebook.</p></div><div class="cta-actions"><a class="btn btn-primary-gradient" href="tel:02199260038"><i class="bi bi-telephone"></i> 021-99260038</a><a class="btn btn-outline-light" href="${W.source}" target="_blank" rel="noopener"><i class="bi bi-facebook"></i> Message on Facebook</a></div></div></div></section>
@@ -675,12 +675,53 @@ function personalitiesPage() {
   </main>${footer()}`;
 }
 
+const PLAQUE_CATS = {
+  artists: { label: "Artists & Painters", icon: "bi-palette-fill", color: "#7c3aed" },
+  poets: { label: "Poets & Writers", icon: "bi-feather", color: "#0f766e" },
+  music: { label: "Musicians & Qawwals", icon: "bi-music-note-beamed", color: "#c2410c" },
+  sports: { label: "Sportspeople", icon: "bi-trophy-fill", color: "#1d4ed8" },
+  entertainers: { label: "Entertainers", icon: "bi-mic-fill", color: "#be185d" }
+};
+// Area-level positions only (no house addresses), offset slightly so markers in the same block do not overlap.
+const PLAQUE_POINTS = [
+  { name: "Sadequain", cat: "artists", area: "Block 13, Federal B Area (Gulberg)", ll: [24.9262, 67.0728], photo: "plaques-05" },
+  { name: "Asad Shafiq", cat: "sports", area: "Block 13, Federal B Area (Gulberg)", ll: [24.9250, 67.0742] },
+  { name: "Syed Abbas Haider Bilgrami", cat: "sports", area: "Block 13, Federal B Area (Gulberg)", ll: [24.9243, 67.0722] },
+  { name: "Amjad Sabri", cat: "music", area: "Liaquatabad", ll: [24.9078, 67.0440], photo: "plaques-07" },
+  { name: "Umar Sharif", cat: "entertainers", area: "Liaquatabad", ll: [24.9062, 67.0462], photo: "plaques-08" },
+  { name: "Umeed Fazli", cat: "poets", area: "District Central", ll: null, photo: "plaques-10" }
+];
 function plaqueMap() {
-  const areas = [["New Karachi", 40, 20, 520, 110], ["North Nazimabad", 40, 150, 250, 140], ["Gulberg", 310, 150, 250, 140], ["Nazimabad", 40, 310, 250, 120], ["Liaquatabad", 310, 310, 250, 120]];
-  const pins = window.DC_DIR.plaqueMap;
-  const svg = `<svg viewBox="0 0 600 450" class="plaque-map" role="img" aria-label="Chart map of blue plaques by subdivision">${areas.map(([n, x, y, w, h]) => { const list = pins[n] || []; return `<g><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="14" class="${list.length ? "has-pin" : ""}"/><text x="${x + 16}" y="${y + 28}" class="area-name">${n}</text>${list.map((p, i) => `<g transform="translate(${x + 30},${y + 52 + i * 26})"><circle r="9" class="pin"/><text x="18" y="5" class="pin-label">${p}</text></g>`).join("")}${list.length ? "" : `<text x="${x + 16}" y="${y + 56}" class="area-note">More plaques coming soon</text>`}</g>`; }).join("")}</svg>`;
-  return `<div class="row g-4 align-items-center"><div class="col-lg-7">${svg}</div><div class="col-lg-5"><h3>Where Are the Plaques?</h3><p>The chart map shows District Central’s five subdivisions. The first three plaques, for Sadequain, Asad Shafiq and Syed Abbas Haider Bilgrami, are in Block 13, Gulberg, Federal B Area.</p><p>The plaques for Amjad Sabri, Umar Sharif and Umeed Fazli are installed at their former residences in District Central; their locations will be added to the map as they are published.</p></div></div>`;
+  const W = window.DC_WORK, info = Object.fromEntries((W.plaques || []).map((p) => [p[0], p]));
+  const counts = Object.fromEntries(Object.keys(PLAQUE_CATS).map((k) => [k, PLAQUE_POINTS.filter((p) => p.cat === k).length]));
+  const chips = `<div class="pm-chips" role="group" aria-label="Filter plaques by category"><button class="pm-chip on" data-cat="all"><i class="bi bi-grid-fill"></i> All <b>${PLAQUE_POINTS.length}</b></button>${Object.entries(PLAQUE_CATS).map(([k, c]) => `<button class="pm-chip" data-cat="${k}" style="--c:${c.color}"><i class="bi ${c.icon}"></i> ${c.label} <b>${counts[k]}</b></button>`).join("")}</div>`;
+  const list = `<div class="pm-list">${Object.entries(PLAQUE_CATS).map(([k, c]) => `<div class="pm-group" data-cat="${k}"><h4 style="--c:${c.color}"><i class="bi ${c.icon}"></i> ${c.label}</h4>${PLAQUE_POINTS.filter((p) => p.cat === k).map((p) => { const d = info[p.name] || []; return `<button class="pm-item" data-name="${p.name}" ${p.ll ? "" : "disabled"} style="--c:${c.color}"><span class="pm-dot"></span><span><strong>${p.name}</strong><small>${d[2] || ""}${d[1] ? " · " + d[1] : ""}</small><small class="pm-area"><i class="bi bi-geo-alt"></i> ${p.ll ? p.area : "Shown on the map once the plaque location is confirmed"}</small></span></button>`; }).join("")}</div>`).join("")}</div>`;
+  return `${chips}<div class="row g-4"><div class="col-lg-8"><div id="plaqueLeaflet" class="pm-map" aria-label="Map of blue plaques in District Central"></div><p class="small text-muted mt-2 mb-0">Markers show the neighbourhood of each plaque, not exact house addresses.</p></div><div class="col-lg-4">${list}</div></div>`;
 }
+function initPlaqueMap() {
+  const el = document.getElementById("plaqueLeaflet"); if (!el || !window.L) return;
+  const W = window.DC_WORK, info = Object.fromEntries((W.plaques || []).map((p) => [p[0], p]));
+  const map = L.map(el, { scrollWheelZoom: false }).setView([24.918, 67.06], 13);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 18, attribution: "&copy; OpenStreetMap contributors" }).addTo(map);
+  const markers = {};
+  PLAQUE_POINTS.filter((p) => p.ll).forEach((p) => {
+    const c = PLAQUE_CATS[p.cat], d = info[p.name] || [];
+    const icon = L.divIcon({ className: "pm-pin", html: `<span style="background:${c.color}"><i class="bi ${c.icon}"></i></span>`, iconSize: [36, 36], iconAnchor: [18, 36], popupAnchor: [0, -32] });
+    markers[p.name] = { cat: p.cat, m: L.marker(p.ll, { icon, title: p.name }).bindPopup(`<div class="pm-pop">${p.photo ? `<img src="images/gallery/${p.photo}.jpg" alt="Blue plaque for ${p.name}">` : ""}<span style="color:${c.color}"><i class="bi ${c.icon}"></i> ${c.label}</span><strong>${p.name}</strong><em>${d[2] || ""}${d[1] ? " · " + d[1] : ""}</em><small><i class="bi bi-geo-alt"></i> ${p.area}</small></div>`).addTo(map) };
+  });
+  const all = Object.values(markers).map((x) => x.m);
+  const fit = (ms) => ms.length && map.fitBounds(L.featureGroup(ms).getBounds().pad(0.35), { maxZoom: 15 });
+  fit(all);
+  document.querySelectorAll(".pm-chip").forEach((b) => b.addEventListener("click", () => {
+    document.querySelectorAll(".pm-chip").forEach((x) => x.classList.toggle("on", x === b));
+    const cat = b.dataset.cat, shown = [];
+    Object.values(markers).forEach((x) => { const on = cat === "all" || x.cat === cat; if (on) { x.m.addTo(map); shown.push(x.m); } else x.m.remove(); });
+    document.querySelectorAll(".pm-group").forEach((g) => (g.hidden = !(cat === "all" || g.dataset.cat === cat)));
+    map.closePopup(); fit(shown);
+  }));
+  document.querySelectorAll(".pm-item:not([disabled])").forEach((b) => b.addEventListener("click", () => { const x = markers[b.dataset.name]; if (!x) return; if (!map.hasLayer(x.m)) x.m.addTo(map); map.setView(x.m.getLatLng(), 16); x.m.openPopup(); el.scrollIntoView({ behavior: "smooth", block: "center" }); }));
+}
+document.addEventListener("DOMContentLoaded", () => setTimeout(initPlaqueMap, 0));
 
 
 function contactPage() {
