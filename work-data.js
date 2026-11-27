@@ -31,6 +31,30 @@ window.DC_WORK = {
         ["Nov 2026", "Initiative launched with plaques for Sadequain, Asad Shafiq and Syed Abbas Haider Bilgrami in Block 13, Gulberg, F.B. Area."],
         ["Nov 2026", "Plaques for Amjad Sabri and Umar Sharif, followed by the Urdu poet Umeed Fazli."]
       ] },
+    { id: "css-corner", icon: "bi-star-fill", category: "Education", title: "CSS Corner",
+      summary: "Free, merit-based preparation for the CSS examination, founded by Deputy Commissioner Taha Saleem. Around 100 volunteer teachers, including serving and retired CSS officers, teach candidates who could not afford private academies.",
+      link: "css-corner.html",
+      timeline: [
+        ["Dec 2019", "CSS Corner begins offering free CSS preparation courses."],
+        ["Oct 2020", "First CSS Corner opened at Frere Hall Library."],
+        ["Nov 2020", "Second CSS Corner opened at Al-Markaz-e-Islami, Ayesha Manzil, serving District Central."],
+        ["2021", "Fourteen candidates from the first year pass the CSS examination."],
+        ["2026", "Three branches running, including the Model Library, Korangi No. 5."]
+      ] },
+    { id: "100-parks", icon: "bi-tree", category: "Environment", title: "100 Parks Project",
+      summary: "A project launched by Taha Saleem as Administrator of the District Municipal Corporation Central to restore 100 neglected parks in the district with community and private partners.",
+      link: "parks.html",
+      timeline: [
+        ["Apr 2022", "Four parks reopened, including Parda Park, Liaquatabad, the 25th park of the project."],
+        ["May 2022", "Twenty-eight parks and an urban forest reopened in District Central."]
+      ] },
+    { id: "libraries", icon: "bi-book", category: "Education", title: "24-Hour Libraries",
+      summary: "The District Administration refurbished Naseerabad Public Library in Block 14, F.B. Area, as a round-the-clock library, and began refurbishing all the libraries in the district so students can study at any time.",
+      link: "libraries.html",
+      timeline: [
+        ["Opened", "Naseerabad Public Library reopened as a 24-hour library."],
+        ["Ongoing", "Refurbishment of the district's other public libraries begun."]
+      ] },
     { id: "community-policing", icon: "bi-shield-lock", category: "Public Safety", title: "Community Policing and Residents Welfare Associations",
       summary: "Residents are organising Residents Welfare Associations, block by block, to work with the District Administration and the police on security, sanitation and civic issues. The model began in Block 13, F.B. Area, and now includes an Access Monitoring System for neighbourhood security.",
       link: "residents-associations.html",
@@ -225,7 +249,7 @@ window.DC_WORK = {
 (function () {
   var W = window.DC_WORK;
   W.photoCats = { plaques: "Blue Plaques", rwa: "Community Policing", education: "Education", sports: "Sports", green: "Green District", fire: "Fire Safety", polio: "Polio", dc: "Deputy Commissioner", adc1: "ADC-I", adc2: "ADC-II", acgul: "AC Gulberg", acliaq: "AC Liaquatabad", acnaz: "AC Nazimabad", acnn: "AC North Nazimabad", acnk: "AC New Karachi", mukh: "Mukhtiarkars", gallery: "District at Work" };
-  W.initiativePhotoCat = { "blue-plaques": "plaques", "community-policing": "rwa", education: "education", sports: "sports", "green-district": "green", "fire-safety": "fire", polio: "polio" };
+  W.initiativePhotoCat = { "blue-plaques": "plaques", "100-parks": "green", "community-policing": "rwa", education: "education", sports: "sports", "green-district": "green", "fire-safety": "fire", polio: "polio" };
   W.officerPhotoCat = { "deputy-commissioner": ["dc", "plaques", "sports"], "adc-1": ["adc1"], "adc-2": ["adc2"], "ac-1": ["acliaq"], "ac-2": ["acgul"], "ac-3": ["acnaz"], "ac-4": ["acnn"], "ac-5": ["acnk"] };
   W.pick = function (cats, n) {
     var out = [];

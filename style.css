@@ -1477,3 +1477,12 @@ input[type="checkbox"], input[type="radio"] {
 .sitemap-card ul{list-style:none;padding:0;margin:0}.sitemap-card li{padding:.3rem 0;border-bottom:1px dashed #e3e8e5}.sitemap-card a{text-decoration:none}
 .site-search-form{display:flex;gap:.6rem;max-width:760px;margin:0 auto}.site-search-form input{flex:1;padding:.8rem 1rem;border:1px solid #cfd8d3;border-radius:12px;font-size:1.05rem}
 #siteSearchSummary{text-align:center}.search-results{max-width:860px;margin:1.5rem auto 0}.search-result{padding:1.1rem 0;border-bottom:1px solid #e6ebe8}.search-result h3{font-size:1.15rem;margin:0 0 .2rem;color:#0b5d3b}.search-result a{text-decoration:none}.search-url{font-size:.82rem;color:#6b7a72}.search-result p{margin:.35rem 0 0}.search-result mark{background:#fff2a8;padding:0}
+.dir-toolbar{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center;margin-bottom:1.5rem}
+.dir-toolbar .quick-links{justify-content:flex-start;margin:0}
+.dir-filter .btn{border:1px solid #0b5d3b;color:#0b5d3b;background:#fff}.dir-filter .btn.active{background:#0b5d3b;color:#fff}
+.dir-group{margin-top:2.5rem;scroll-margin-top:110px}.dir-group-title{font-size:1.35rem;color:#0b5d3b;border-bottom:2px solid #e3ece7;padding-bottom:.5rem;margin-bottom:1.25rem}
+.dir-badge{display:inline-block;align-self:flex-start;width:auto;font-size:.72rem;font-weight:600;padding:.15rem .55rem;border-radius:999px;margin-bottom:.5rem}
+.dir-badge.govt{background:#e3f2ea;color:#0b5d3b}.dir-badge.private{background:#fff1dc;color:#8a5300}
+.css-hero-badge{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:.35rem;min-height:220px;border-radius:18px;color:#fff;background:linear-gradient(135deg,#0b5d3b,#1f8a5b 60%,#c9a227);padding:1.5rem}
+.css-hero-badge i{font-size:2.6rem;color:#ffd75e}.css-hero-badge strong{font-size:1.8rem;letter-spacing:.5px}.css-hero-badge span{opacity:.9}
+.css-hero-badge.big{min-height:300px}.css-hero-badge.big strong{font-size:2.4rem}
