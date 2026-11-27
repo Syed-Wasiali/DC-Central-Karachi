@@ -1,4 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
+  if (!document.querySelector(".floating-gov-logo")) {
+    const badge = document.createElement("a");
+    badge.className = "floating-gov-logo";
+    badge.href = "https://www.sindh.gov.pk/";
+    badge.target = "_blank";
+    badge.rel = "noopener";
+    badge.setAttribute("aria-label", "Government of Sindh website");
+    badge.innerHTML = '<img src="images/sindh-govt-logo.png" alt="Government of Sindh logo">';
+    document.body.appendChild(badge);
+  }
+
   if (window.AOS) {
     AOS.init({
       duration: 750,

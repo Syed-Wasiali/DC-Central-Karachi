@@ -1380,10 +1380,9 @@ input[type="checkbox"], input[type="radio"] {
 
 /* Government of Sindh logo: rotating circle (left), static mark (top right, footer) */
 .gov-logo { background: #fff; border: 2px solid var(--line); border-radius: 50%; overflow: hidden; padding: 4px; }
-.gov-logo img { width: 100%; height: 100%; object-fit: contain; animation: govLogoSpin 18s linear infinite; }
-.brand-lockup:hover .gov-logo img { animation-play-state: paused; }
+.gov-logo img { width: 100%; height: 100%; object-fit: contain; }
 @keyframes govLogoSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-@media (prefers-reduced-motion: reduce) { .gov-logo img { animation: none; } }
+
 .header-gov-logo { width: 58px; height: 58px; object-fit: contain; margin-left: .4rem; }
 .footer-gov-mark { display: inline-flex; align-items: center; gap: .6rem; }
 .footer-gov-mark img { width: 44px; height: 44px; object-fit: contain; background: #fff; border-radius: 50%; padding: 3px; }
@@ -1405,3 +1404,11 @@ input[type="checkbox"], input[type="radio"] {
   .navbar .nav-link { padding-left: .3rem; padding-right: .3rem; font-size: .68rem; }
 }
 .header-actions .complaint-btn { white-space: nowrap; display: inline-flex; align-items: center; gap: .4rem; }
+
+/* Floating rotating Government of Sindh logo, bottom right (as on sindh.gov.pk) */
+.floating-gov-logo { position: fixed; right: 1rem; bottom: 4.5rem; z-index: 1100; width: 84px; height: 84px; border-radius: 50%; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,.18); display: grid; place-items: center; padding: 8px; }
+.floating-gov-logo img { width: 100%; height: 100%; object-fit: contain; animation: govLogoSpin 18s linear infinite; }
+.floating-gov-logo:hover img { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) { .floating-gov-logo img { animation: none; } }
+@media (max-width: 575px) { .floating-gov-logo { width: 60px; height: 60px; padding: 6px; bottom: 4rem; } }
+.main-header .gov-logo { border: 0; border-radius: 0; background: transparent; box-shadow: none; padding: 0; width: 66px; height: 66px; flex-basis: 66px; }
