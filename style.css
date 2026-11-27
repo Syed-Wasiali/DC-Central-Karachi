@@ -1513,3 +1513,4 @@ input[type="checkbox"], input[type="radio"] {
 .initiative-card .p-3 > .btn:last-child { margin-top: auto; align-self: flex-start; }
 .social-feed{display:flex;flex-direction:column;height:100%}.social-feed .btn{margin-top:auto;align-self:flex-start}
 .initiative-card .cover-photo.logo-cover{background:#fff;border:1px solid #e3ece7}.initiative-card .cover-photo.logo-cover img{object-fit:contain;padding:12px}
+.dept-card a.btn-primary-gradient,.initiative-card a.btn-primary-gradient,.org-card a.btn-primary-gradient,.dept-card a.btn-primary-gradient:hover,.initiative-card a.btn-primary-gradient:hover,.org-card a.btn-primary-gradient:hover{color:#fff}
