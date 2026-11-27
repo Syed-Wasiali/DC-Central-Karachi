@@ -7,6 +7,7 @@ const servicePages = {
     department: "Domicile / PRC Branch",
     source: "content/DC OFFICE CONTENT.docx",
     description: "Application facilitation and document verification for Domicile Certificate services.",
+    overview: "A Domicile Certificate confirms that a person is a permanent resident of a district in Sindh. It is required for admission to educational institutions on provincial and district quotas, for government jobs, and for many official purposes. Residents of District Central apply through the Domicile / PRC Branch of the DC Office, or online through the Sindh Domicile Portal.",
     eligibility: ["The permanent address on the CNIC must be District Central, Karachi.", "Applicants whose CNIC is registered outside Karachi should first contact the branch in-charge."],
     documents: ["CNIC of applicant and father", "Form B and birth certificate", "Educational certificate/documents of the last three years", "Utility bills of the last three years or rent agreement and supporting documents if a tenant", "Applicant's father's domicile, or mother's domicile if father's domicile is unavailable", "CNIC and marriage certificate of spouse if the applicant is married", "Mother's identity card if father is deceased or divorced, with father's death certificate or divorce decree", "Voter list entry for applicant, or father's voter list if applicant is under 18", "Resident Certificate from the relevant Union Council", "Report from the Mukhtiarkar of the relevant area", "Bank challan of Rs. 210/-", "Affidavit", "Original documents plus one set of certified photocopies"],
     procedure: ["Verify required documents before visiting the facilitation counter", "Submit the application and supporting documents", "Branch scrutiny and document verification", "Mukhtiarkar report where required", "Issuance after prescribed verification and approval"],
@@ -23,6 +24,7 @@ const servicePages = {
     department: "Domicile / PRC Branch",
     source: "content/DC OFFICE CONTENT.docx",
     description: "PRC is issued alongside the Domicile Certificate using the same verified document requirements.",
+    overview: "A Permanent Resident Certificate (PRC) confirms permanent residence in Sindh and is commonly required together with the Domicile Certificate for admissions and employment. In District Central the PRC is processed by the Domicile / PRC Branch alongside the Domicile Certificate, with the same document requirements.",
     eligibility: ["See Domicile Certificate requirements.", "Applicants whose CNIC is registered outside Karachi should first contact the branch in-charge."],
     documents: ["Same document checklist as Domicile Certificate."],
     procedure: ["Review Domicile/PRC requirements", "Submit application and supporting documents", "Branch scrutiny and verification", "Issuance after approval"],
@@ -39,6 +41,7 @@ const servicePages = {
     department: "Judicial Branch / ADC-I Office",
     source: "content/DC OFFICE CONTENT.docx; content/Departments and Mukhtiar kar.docx",
     description: "NOC facilitation for matters handled by the Judicial Branch and ADC-I office.",
+    overview: "A No-Objection Certificate (NOC) from the District Administration is needed before certain activities can take place in District Central, such as setting up a petrol pump or CNG station, holding a public gathering or marriage function, erecting tents in the street, or organising a Bachat Bazar. NOCs are issued after the concerned agencies confirm there is no objection.",
     eligibility: ["Individuals and organisations holding events, running businesses or using public places in District Central that need permission from the District Administration.", "Examples: petrol pumps and CNG stations, public gatherings and melas, marriage functions, street tents and shamianas, and Bachat Bazars."],
     documents: ["Application addressed to the Deputy Commissioner", "Copy of the applicant's CNIC", "Details of the event or site: location, date, time and expected attendance", "Proof of ownership of, or permission to use, the site", "Other NOCs required for the type of activity (the branch will advise)"],
     procedure: ["Contact the relevant branch for the specific NOC category", "Submit application and supporting documents", "Department review", "Decision under the prescribed administrative process"],
@@ -54,6 +57,7 @@ const servicePages = {
     department: "Arms Branch",
     source: "content/content.docx; content/Departments and Mukhtiar kar.docx",
     description: "Guidance for General Arms Licence (Non-Prohibited Bore) applications.",
+    overview: "Residents of Sindh can apply for a General Arms Licence for non-prohibited bore weapons through the Arms Branch of the DC Office. Applications are scrutinised and verified by the police before a licence is issued, within the monthly quota set for District Central.",
     eligibility: ["Applicant must be a resident of Sindh Province and possess a valid Sindh Domicile.", "Residents of any district of Sindh may apply, subject to the prescribed procedure and quota.", "District Central Karachi quota: 50 licences per month."],
     documents: ["Application addressed to the Deputy Commissioner concerned", "Copy of CNIC", "Copy of Sindh Domicile", "Utility bill / proof of residence", "One recent passport-size photograph", "Duly filled application form"],
     procedure: ["Submit application to the Deputy Commissioner concerned", "Application scrutiny and approval", "CRO / Police Verification", "Applicant appears for biometric verification and photograph at the concerned Arms Section", "Deposit government fee through prescribed National Bank of Pakistan challan", "Licence issuance after verification, biometric, photograph, fee payment and all prescribed formalities"],
@@ -69,6 +73,7 @@ const servicePages = {
     department: "Revenue Branch",
     source: "content/DC OFFICE CONTENT.docx; content/Departments and Mukhtiar kar.docx",
     description: "Revenue Certificate guidance through the Revenue Branch.",
+    overview: "Revenue certificates are issued by the Revenue Branch after checking the official land and revenue records. They are commonly needed for legal, banking and official purposes. Applicants should bring the supporting documents for their property or matter when they visit.",
     eligibility: ["Residents and property owners of District Central who need a revenue certificate for official, legal or banking purposes."],
     documents: ["Applicants are advised to verify required supporting documents before visiting the facilitation counter."],
     procedure: ["Visit the facilitation counter", "Verify required supporting documents", "Submit application for branch scrutiny", "Department review and response"],
@@ -84,6 +89,7 @@ const servicePages = {
     department: "Revenue Branch",
     source: "content/Functions and Powers of Deputy Commissioner.docx; content/Functions and Powers of Deputy Commissioner, ADC, AC, Mukhtiarkar.docx; content/Departments and Mukhtiar kar.docx",
     description: "Information related to land records, mutation, demarcation, revenue cases, government land and public revenue assistance.",
+    overview: "The Revenue Branch, the Assistant Commissioners and the Mukhtiarkars deal with land records in District Central, including record of rights, mutation after sale, gift or inheritance, demarcation, and the protection of government land. This page explains how to seek information or action on a land matter.",
     eligibility: ["Owners, legal heirs and authorised representatives seeking information or action on land and revenue records in District Central."],
     documents: ["Copy of CNIC", "Copy of title documents (registry, lease or allotment)", "Previous record extract or mutation entry, if available", "Legal heirship certificate, where applicable", "Authority letter if applying on someone else's behalf"],
     procedure: ["Submit land or revenue enquiry to the relevant revenue office", "Revenue staff review records and supporting documents", "Field report or verification where required", "Proceeding or response under delegated authority"],
@@ -99,6 +105,7 @@ const servicePages = {
     department: "Complaint Cell / Control Room",
     source: "content/DC OFFICE CONTENT.docx; content/Departments and Mukhtiar kar.docx",
     description: "Citizens may submit complaints online or in person for review and follow-up through the relevant branch.",
+    overview: "Any citizen can register a complaint with the District Administration Central about a public service or a matter within its jurisdiction. Complaints can be made online or in person, and each complaint is assigned to the branch or office responsible and followed up until it is resolved.",
     eligibility: ["Any citizen with a complaint about a public service or a matter within the jurisdiction of the District Administration Central."],
     documents: ["Full name", "CNIC number", "Mobile number", "Email address", "Subject", "Complaint details"],
     procedure: ["Submit complaint online or at the Complaint Cell / Control Room", "Complaint is reviewed and assigned to the relevant branch", "Follow-up continues through the complaint facilitation channel"],
@@ -114,6 +121,7 @@ const servicePages = {
     department: "District Administration / Assistant Commissioners",
     source: "content/DC OFFICE CONTENT.docx; content/Functions and Powers of Deputy Commissioner.docx",
     description: "Official district price lists are issued for public awareness and market monitoring.",
+    overview: "The District Administration issues official price lists for essential commodities so that citizens know the correct rates and traders are held to them. Assistant Commissioners and Mukhtiarkars inspect markets regularly and take action against overcharging, hoarding and profiteering.",
     eligibility: ["All citizens, traders and shopkeepers. The price list is public information and no application is needed."],
     documents: ["No documents are required.", "To report overcharging, give the shop name, location, item and price charged."],
     procedure: ["District price list is issued for public awareness", "Assistant Commissioners and Mukhtiarkars monitor markets", "Action may be taken against profiteering, hoarding and violations under applicable laws/rules"],
@@ -129,6 +137,7 @@ const servicePages = {
     department: "Deputy Commissioner Office",
     source: "content/DC OFFICE CONTENT.docx",
     description: "Access official forms, notifications, circulars, public documents and service-related downloads when available.",
+    overview: "Application forms, requirement lists, notifications and other official documents of the District Administration Central are published here as they become available. Downloading forms in advance helps you prepare your application before visiting the office.",
     eligibility: ["All citizens. Forms and documents can be downloaded freely."],
     documents: ["Domicile & PRC Requirement List", "Circular", "Tender", "Notification", "Price List"],
     procedure: ["Select the required service category", "Download available official documents", "If a form is not yet available online, collect it from the relevant counter at the DC Office"],
@@ -144,6 +153,7 @@ const servicePages = {
     department: "Deputy Commissioner Office",
     source: "content/DC OFFICE CONTENT.docx",
     description: "Public guidance for connecting with local authorities, departments, government schemes, social services, and complaint facilitation.",
+    overview: "If you are not sure which office deals with your matter, the DC Office can guide you to the right branch, department or service. Visit the facilitation counter during public hours with your CNIC and any documents related to your matter.",
     eligibility: ["Any citizen who needs guidance on a public matter or is not sure which office deals with it."],
     documents: ["Original CNIC and any documents related to your matter."],
     procedure: ["Review relevant service information", "Contact the relevant branch or facilitation counter", "Submit complete details for guidance or follow-up"],
@@ -200,7 +210,7 @@ function servicePage(key) {
     <div class="breadcrumb-band"><div class="container"><nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item"><a href="citizen-services.html">Citizen Services</a></li><li class="breadcrumb-item active" aria-current="page">${service.title}</li></ol></nav></div></div>
     <section class="hero-section page-hero"><div class="hero-bg placeholder-image"><i class="bi ${service.icon}"></i></div><div class="hero-overlay"></div><div class="container-fluid px-lg-5 hero-content"><div class="row align-items-center min-vh-hero"><div class="col-xl-7 col-lg-8" data-aos="fade-up"><span class="hero-badge"><i class="bi bi-stars"></i> ${service.category}</span><h1>${service.title}</h1><p>${service.description}</p><div class="hero-buttons"><a class="btn btn-primary-gradient" href="#requirements">View Requirements</a><a class="btn btn-outline-light" href="#contact-card">Contact Department</a></div></div></div></div></section>
     <!-- Source: ${service.source} -->
-    <section class="section"><div class="container"><div class="row g-5 align-items-center"><div class="col-lg-5"><div class="dc-portrait placeholder-image image-zoom"><i class="bi ${service.icon}"></i><span class="visually-hidden">${service.title}</span></div></div><div class="col-lg-7"><span class="section-kicker">Service Overview</span><h2>${service.title}</h2><p>${service.description}</p><div class="row g-3"><div class="col-md-6"><div class="mini-panel"><i class="bi bi-building"></i><strong>Department</strong><span>${service.department}</span></div></div><div class="col-md-6"><div class="mini-panel"><i class="bi bi-grid"></i><strong>Category</strong><span>${service.category}</span></div></div></div></div></div></div></section>
+    <section class="section"><div class="container"><div class="row g-5 align-items-center"><div class="col-lg-5"><div class="dc-portrait placeholder-image image-zoom"><i class="bi ${service.icon}"></i><span class="visually-hidden">${service.title}</span></div></div><div class="col-lg-7"><span class="section-kicker">Service Overview</span><h2>${service.title}</h2><p>${service.overview || service.description}</p><div class="row g-3"><div class="col-md-6"><div class="mini-panel"><i class="bi bi-building"></i><strong>Department</strong><span>${service.department}</span></div></div><div class="col-md-6"><div class="mini-panel"><i class="bi bi-grid"></i><strong>Category</strong><span>${service.category}</span></div></div></div></div></div></div></section>
     ${service.online ? `<section class="section" id="apply-online"><div class="container"><article class="feature-card" data-aos="fade-up"><div class="placeholder-image"><i class="bi bi-phone"></i></div><div><span class="section-kicker">Apply Online</span><h2>Sindh Domicile Portal</h2><p>Domicile and PRC applications can now be made online through the Sindh Domicile Portal app. Prepare and submit your application from your phone, without visiting the office for the first stage.</p><div class="row g-3">${[["bi-ui-checks", "Guided application form", "Step-by-step form with a built-in document checklist."], ["bi-camera", "Upload documents", "Upload your documents directly from your phone's camera or gallery."], ["bi-bell", "Track your status", "Follow your application and receive notifications on its progress."], ["bi-translate", "English and Urdu", "Use the app in English or Urdu, and save a draft to finish later."]].map(([icon, title, text]) => `<div class="col-md-6"><div class="mini-panel"><i class="bi ${icon}"></i><strong>${title}</strong><span>${text}</span></div></div>`).join("")}</div><div class="hero-buttons mt-3"><a class="btn btn-primary-gradient" href="${service.online.app}" target="_blank" rel="noopener"><i class="bi bi-apple"></i> Download on the App Store</a><a class="btn btn-outline-primary" href="${service.online.portal}" target="_blank" rel="noopener">Visit the Portal Website</a></div></div></article></div></section>` : ""}
     <section class="section muted-section"><div class="container"><div class="section-heading"><span class="section-kicker">Eligibility</span><h2>Who Can Apply</h2></div>${list(service.eligibility)}</div></section>
     <section class="section" id="requirements"><div class="container"><div class="section-heading"><span class="section-kicker">Documents</span><h2>Required Documents</h2></div>${list(service.documents)}</div></section>
