@@ -385,7 +385,7 @@
       ]
     },
     "adc-2": {
-      "photo": null,
+      "photo": "ADC II.jpeg",
       "office": "the office of the Additional Deputy Commissioner-II",
       "roleText": [
         "Supports the Deputy Commissioner in keeping public order across the district.",
@@ -425,7 +425,7 @@
       ]
     },
     "ac-2": {
-      "photo": null,
+      "photo": "Umar Iqbal.jpg",
       "office": "the office of the Assistant Commissioner Gulberg",
       "roleText": [
         "Supervises the Mukhtiarkar's office, land records and revenue matters in Gulberg.",

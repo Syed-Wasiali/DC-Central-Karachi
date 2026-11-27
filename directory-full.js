@@ -351,7 +351,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "bahria-foundation.png",
 "icon": "bi-building",
 "text": "Private college and Cambridge examination centre."
 },
@@ -585,7 +585,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Block A, North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "rangers.png",
 "icon": "bi-backpack",
 "text": "School and college."
 },
@@ -1013,7 +1013,7 @@ window.DC_DIRECTORY = {
 "phone": "021-36823045",
 "address": "ST-6D, Block 7, Shahrah-e-Pakistan, F.B. Area",
 "timing": "24/7 urgent care for women and children",
-"logo": "",
+"logo": "aku.png",
 "icon": "bi-gender-female",
 "text": "A 41-bed maternity hospital of the Aga Khan University Hospital."
 },
@@ -1026,7 +1026,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Plot 1-2, II-B, Block 2, Nazimabad",
 "timing": "24/7",
-"logo": "",
+"logo": "baqai.png",
 "icon": "bi-capsule",
 "text": "Specialist diabetes hospital and research institute."
 },
@@ -1039,7 +1039,7 @@ window.DC_DIRECTORY = {
 "phone": "0311-1222398",
 "address": "Block 3, Nazimabad",
 "timing": "24/7 emergency",
-"logo": "",
+"logo": "baqai.png",
 "icon": "bi-hospital",
 "text": "Private general hospital."
 },
@@ -1052,7 +1052,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "hamdard.png",
 "icon": "bi-hospital",
 "text": "Teaching hospital of Hamdard University, including dental services."
 },
@@ -1286,7 +1286,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": null,
 "timing": null,
-"logo": "",
+"logo": "aku.png",
 "icon": "bi-eyedropper",
 "text": "Clinical laboratory with sample collection points in the district."
 },
@@ -1318,7 +1318,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Main Rashid Minhas Road, opposite Lucky One Mall",
 "timing": null,
-"logo": "",
+"logo": "ubl.png",
 "icon": "bi-trophy",
 "text": "A 17-acre complex with a first-class cricket ground, hockey, basketball, tennis and table tennis."
 },
@@ -1526,7 +1526,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Naya Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "naya-nazimabad.png",
 "icon": "bi-trophy",
 "text": "Home ground of the Karachi Kings."
 },
@@ -2090,7 +2090,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": null,
 "timing": null,
-"logo": "",
+"logo": "cplc.png",
 "icon": "bi-people",
 "text": "Public–private body that helps citizens with police matters."
 },
@@ -2155,7 +2155,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": null,
 "timing": null,
-"logo": "",
+"logo": "alkhidmat.png",
 "icon": "bi-heart",
 "text": "Welfare, health and disaster relief."
 }
@@ -2336,7 +2336,7 @@ window.DC_DIRECTORY = {
 "phone": "021-36834388",
 "address": "ST-7, Block 22, F.B. Industrial Area",
 "timing": "Office hours",
-"logo": "",
+"logo": "fbati.png",
 "icon": "bi-buildings",
 "text": "Represents about 1,800 industrial units in F.B. Industrial Area. Email info@fbati.com."
 },
@@ -2362,7 +2362,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": null,
 "timing": null,
-"logo": "",
+"logo": "kcci.png",
 "icon": "bi-briefcase",
 "text": "The city's chamber, to which FBATI and NKATI are affiliated."
 },

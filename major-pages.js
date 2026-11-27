@@ -377,7 +377,7 @@ function rwaPage() {
 function teamPage() {
   const card = ([href, photo, name, role, area]) => `<div class="col-md-6 col-lg-4"><a class="text-decoration-none" href="${href}"><article class="dept-card h-100 team-card" data-aos="fade-up">${photo ? `<img class="team-photo" src="images/${photo}" alt="${name}" loading="lazy">` : `<span class="team-photo team-icon"><i class="bi bi-person"></i></span>`}<span class="section-kicker">${area}</span><h3>${name}</h3><p>${role}</p><span class="btn btn-outline-primary btn-sm">View profile</span></article></a></div>`;
   const lead = [["deputy-commissioner.html", "DC Central.jpg", "Mr. Taha Saleem (PAS)", "Deputy Commissioner, District Central", "Head of District"], ["adc-1.html", "ADC I.jpeg", "Mr. Muhammad Asim Abbasi (Ex-PCS)", "Additional Deputy Commissioner-I", "Revenue & Coordination"], ["adc-2.html", "ADC II.jpeg", "Mr. Rizwan Alam (PMS)", "Additional Deputy Commissioner-II", "General Administration"]];
-  const acs = [["ac-1.html", "Dr Saira.jpeg", "Dr. Saira Khan (PMS)", "Assistant Commissioner", "Liaquatabad"], ["ac-2.html", "", "Mr. Umar Iqbal (PAS)", "Assistant Commissioner", "Gulberg"], ["ac-3.html", "Rabia .jpeg", "Ms. Rabia Syed (PMS)", "Assistant Commissioner", "Nazimabad"], ["ac-4.html", "Naimat Ullah.jpeg", "Mr. Naimat Ullah Chachar (PMS)", "Assistant Commissioner", "North Nazimabad"], ["ac-5.html", "Fareed haneef.jpeg", "Capt (R) Fareed Haneef (PAS)", "Assistant Commissioner", "New Karachi"], ["ac-6.html", "", "Assistant Commissioner (Revenue)", "Revenue, District Central", "Revenue"]];
+  const acs = [["ac-1.html", "Dr Saira.jpeg", "Dr. Saira Khan (PMS)", "Assistant Commissioner", "Liaquatabad"], ["ac-2.html", "Umar Iqbal.jpg", "Mr. Umar Iqbal (PAS)", "Assistant Commissioner", "Gulberg"], ["ac-3.html", "Rabia .jpeg", "Ms. Rabia Syed (PMS)", "Assistant Commissioner", "Nazimabad"], ["ac-4.html", "Naimat Ullah.jpeg", "Mr. Naimat Ullah Chachar (PMS)", "Assistant Commissioner", "North Nazimabad"], ["ac-5.html", "Fareed haneef.jpeg", "Capt (R) Fareed Haneef (PAS)", "Assistant Commissioner", "New Karachi"], ["ac-6.html", "", "Assistant Commissioner (Revenue)", "Revenue, District Central", "Revenue"]];
   const mk = [["mukhtiarkar-liaquatabad.html", "", "Mr. Abdul Hafeez Narejo", "Mukhtiarkar", "Liaquatabad"], ["mukhtiarkar-gulberg.html", "", "Mr. Piyas Ali Pitafi", "Mukhtiarkar", "Gulberg"], ["mukhtiarkar-nazimabad.html", "", "Mr. Saeed Ahmed Kohaao", "Mukhtiarkar", "Nazimabad"], ["mukhtiarkar-north-nazimabad.html", "karrar Hussain.PNG", "Syed Karar Hussain", "Mukhtiarkar", "North Nazimabad"], ["mukhtiarkar-new-karachi.html", "", "Mr. Arshad Hussain Chandio", "Mukhtiarkar", "New Karachi"], ["superintendent-revenue.html", "", "Mr. Kailash B. Maheshwari", "Office Superintendent (Revenue)", "DC Office"]];
   return `${header("team")}<main>${hero("team")}
     <section class="section"><div class="container">${sectionHead("Leadership", "District Leadership", "The Deputy Commissioner heads the District Administration Central, supported by two Additional Deputy Commissioners.")}<div class="row g-4">${lead.map(card).join("")}</div></div></section>
@@ -607,7 +607,11 @@ const DIR_PAGES = [["css", "css-corner.html", "CSS Corner", "bi-star-fill"], ["e
 
 function dirLogo(o) {
   if (o.logo) return `<span class="org-logo${o.logo === "artscouncil.png" ? " dark" : ""}"><img src="images/logos/${o.logo}" alt="${o.name} logo" loading="lazy"></span>`;
-  return `<span class="org-logo"><i class="bi ${o.icon || "bi-building"}"></i></span>`;
+  const words = String(o.name || "").replace(/\(.*?\)/g, "").replace(/^(Dr\.?|The)\s+/i, "").split(/[\s,&\-–]+/).filter((w) => w && !/^(and|of|the|for|&)$/i.test(w));
+  const ini = (words.length > 1 ? words[0][0] + words[1][0] : (words[0] || "?").slice(0, 2)).toUpperCase();
+  const pal = ["#0b5d3b", "#1d4ed8", "#7c3aed", "#be185d", "#c2410c", "#0f766e", "#b45309", "#334155"];
+  const c = pal[[...String(o.name)].reduce((a, ch) => a + ch.charCodeAt(0), 0) % pal.length];
+  return `<span class="org-logo org-mono" style="--mono:${c}" aria-hidden="true"><b>${ini}<i class="bi ${o.icon || "bi-building"}"></i></b></span>`;
 }
 
 function dirCard(o) {
