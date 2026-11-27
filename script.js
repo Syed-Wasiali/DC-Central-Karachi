@@ -286,7 +286,7 @@ document.addEventListener("click", function (event) {
     var bg = document.querySelector(".page-hero .hero-bg");
     if (!bg) return;
     var page = (location.pathname.split("/").pop() || "index.html").replace(/\.html$/, "");
-    if (page !== "administrative-team") return; // banner photo only on the Administrative Team page
+    return; // banner photos switched off site-wide
     if (/^(branches|.*-branch|revenue|it-cell|complaint-cell|control-room|public-relations|benevolent-fund)$/.test(page)) return; // branch pages keep the plain green banner
     var pick = ["dc-09.jpg", "center 45%"];
     groups.some(function (g) { if (g[0].test(page)) { pick = [g[1], g[2]]; return true; } return false; });
