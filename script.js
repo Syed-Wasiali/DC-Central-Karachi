@@ -297,3 +297,24 @@ document.addEventListener("click", function (event) {
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", function () { setTimeout(apply, 0); }); else setTimeout(apply, 0);
 })();
+
+/* Cinematic video bands: load only when near the screen, play while visible, pause button, respect reduced motion */
+(function () {
+  const bands = document.querySelectorAll(".video-band");
+  if (!bands.length) return;
+  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  bands.forEach((band) => {
+    const v = band.querySelector("video"), btn = band.querySelector(".vb-toggle");
+    if (!v) return;
+    let userPaused = reduce;
+    const setBtn = () => { if (btn) { btn.innerHTML = v.paused ? '<i class="bi bi-play-fill"></i>' : '<i class="bi bi-pause-fill"></i>'; btn.setAttribute("aria-label", v.paused ? "Play background video" : "Pause background video"); } };
+    const load = () => { if (!v.src && v.dataset.src) { v.src = v.dataset.src; v.addEventListener("loadedmetadata", () => { const st = parseFloat(v.dataset.start || 0); if (st && st < v.duration) v.currentTime = st; }, { once: true }); } };
+    if (btn) btn.addEventListener("click", () => { load(); if (v.paused) { userPaused = false; v.play().catch(() => {}); } else { userPaused = true; v.pause(); } setTimeout(setBtn, 50); });
+    v.addEventListener("play", setBtn); v.addEventListener("pause", setBtn);
+    if (reduce) { setBtn(); return; }
+    if (!("IntersectionObserver" in window)) { load(); v.play().catch(() => {}); return; }
+    new IntersectionObserver((ents) => ents.forEach((e) => {
+      if (e.isIntersecting) { load(); if (!userPaused) v.play().catch(() => {}); } else if (!v.paused) v.pause();
+    }), { rootMargin: "200px 0px" }).observe(band);
+  });
+})();
