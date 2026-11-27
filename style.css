@@ -1535,3 +1535,32 @@ input[type="checkbox"], input[type="radio"] {
 .page-hero .hero-bg.hero-photo{background-size:cover!important;background-repeat:no-repeat!important}
 .page-hero.has-photo .hero-overlay{background:linear-gradient(90deg,rgba(0,77,44,.95) 0%,rgba(0,77,44,.84) 38%,rgba(0,107,63,.42) 75%,rgba(0,107,63,.2) 100%)!important}
 @media(max-width:767px){.page-hero.has-photo .hero-overlay{background:linear-gradient(180deg,rgba(0,77,44,.88),rgba(0,77,44,.78))!important}}
+
+/* Branch pages */
+.branch-tabs{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #e3ece7;box-shadow:0 4px 14px rgba(11,93,59,.05)}
+.branch-tabs .container{display:flex;gap:.25rem;overflow-x:auto;white-space:nowrap}
+.branch-tabs a{padding:.9rem 1rem;color:#0b5d3b;font-weight:600;text-decoration:none;border-bottom:3px solid transparent}.branch-tabs a:hover{border-color:#c9a227}
+.lead-text{font-size:1.08rem;color:#2c3a33}
+.branch-glance{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 14px 34px rgba(11,93,59,.1)}
+.branch-glance img{width:100%;height:220px;object-fit:cover;display:block}
+.branch-glance h3{font-size:1.15rem;color:#0b5d3b;margin-bottom:1rem}
+.branch-glance ul,.branch-contact ul{list-style:none;padding:0;margin:0}
+.branch-glance li,.branch-contact li{display:flex;gap:.8rem;align-items:flex-start;padding:.6rem 0;border-bottom:1px dashed #e3ece7}.branch-glance li:last-child{border-bottom:0}
+.branch-glance li i,.branch-contact li i{flex:0 0 36px;height:36px;border-radius:10px;background:#e8f3ee;color:#0b5d3b;display:flex;align-items:center;justify-content:center}
+.branch-glance li span,.branch-contact li span{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:#7a8a82}
+.branch-glance li strong,.branch-contact li strong{font-weight:600;color:#1d2b24}
+.function-card{display:flex;gap:1rem;align-items:flex-start;background:#fff;border-radius:16px;padding:1.4rem 1.4rem 1.2rem;box-shadow:0 8px 22px rgba(11,93,59,.06);position:relative}
+.fn-num{position:absolute;top:1rem;right:1.2rem;font-weight:800;color:#e3ece7;font-size:1.6rem}
+.fn-icon{flex:0 0 50px;height:50px;border-radius:14px;background:linear-gradient(135deg,#0b5d3b,#1f8a5b);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.35rem}
+.function-card h3,.service-tile h3{font-size:1.08rem;color:#0b5d3b;margin:0 0 .35rem}.function-card p,.service-tile p{margin:0;color:#4b5a53}
+.service-tile{display:flex;flex-direction:column;gap:.75rem;background:#fff;border-radius:16px;padding:1.5rem;border:1px solid #e3ece7;transition:transform .2s,box-shadow .2s}
+.service-tile:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(11,93,59,.1)}
+.tile-link{margin-top:auto;font-weight:700;color:#0b5d3b}
+.branch-contact{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 14px 34px rgba(11,93,59,.1)}
+.bc-info{padding:2rem}.bc-info h2{color:#0b5d3b;margin-bottom:1rem}.bc-info .hero-buttons{margin-top:1.25rem}
+.bc-map{min-height:360px;background:#e8f1ec}.bc-map iframe{width:100%;height:100%;border:0;min-height:360px}
+.branch-chips{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
+.branch-chips a{display:inline-flex;gap:.45rem;align-items:center;padding:.6rem 1rem;border-radius:999px;background:#fff;border:1px solid #d6e5dd;color:#0b5d3b;font-weight:600;text-decoration:none}
+.branch-chips a:hover{background:#0b5d3b;color:#fff}
+@media(max-width:991px){.branch-contact{grid-template-columns:1fr}}
+.service-tile .fn-icon{align-self:flex-start;width:50px}
