@@ -179,3 +179,21 @@ document.addEventListener("click", function (event) {
     });
   }
 });
+
+// Site-wide search and "coming soon" notices
+(function () {
+  const toast = (msg) => { const t = document.createElement("div"); t.className = "dc-toast"; t.textContent = msg; document.body.appendChild(t); setTimeout(() => t.remove(), 2600); };
+  document.addEventListener("submit", (e) => {
+    const form = e.target.closest(".header-search");
+    if (!form) return;
+    e.preventDefault();
+    const q = (form.querySelector("input").value || "").trim();
+    location.href = "search.html" + (q ? "?q=" + encodeURIComponent(q) : "");
+  });
+  document.addEventListener("click", (e) => {
+    if (e.target.closest(".lang-soon")) { toast("Urdu and Sindhi versions of the website are coming soon."); return; }
+    if (e.target.closest(".social-soon")) { toast("This account is coming soon. Follow us on Facebook for now."); return; }
+    const btn = e.target.closest('.top-link[aria-label="Search"]');
+    if (btn) { const inp = document.querySelector(".header-search input"); if (inp && inp.offsetParent) inp.focus(); else location.href = "search.html"; }
+  });
+})();

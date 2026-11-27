@@ -1116,7 +1116,7 @@
               <div class="d-flex flex-wrap align-items-center gap-3">
                 <span><i class="bi bi-clock"></i> Mon-Fri 9:00 AM - 5:00 PM</span>
                 <a href="tel:1122"><i class="bi bi-telephone"></i> Emergency Contact</a>
-                <button class="top-link" type="button">Urdu</button>
+                <button class="top-link lang-soon" type="button" title="Urdu and Sindhi versions are coming soon">Urdu</button>
                 <button class="top-link" type="button" aria-label="Search"><i class="bi bi-search"></i></button>
               </div>
             </div>
@@ -1140,9 +1140,9 @@
               </div>
               <div class="col-lg-3">
                 <div class="header-actions">
-                  <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                  <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                  <a href="https://www.facebook.com/deputycommissionerCentral" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                  <span class="social-soon" title="Instagram account coming soon" aria-label="Instagram (coming soon)"><i class="bi bi-instagram"></i></span>
+                  <span class="social-soon" title="YouTube account coming soon" aria-label="YouTube (coming soon)"><i class="bi bi-youtube"></i></span>
                   <a class="complaint-btn" href="#contact-cta"><i class="bi bi-chat-square-text"></i> Complaint</a>
                 </div>
               </div>
@@ -1169,7 +1169,7 @@
                 <li class="nav-item"><a class="nav-link" href="adc-1.html">ADC-I</a></li>
                 <li class="nav-item"><a class="nav-link" href="adc-2.html">ADC-II</a></li>
                 <li class="nav-item dropdown position-static">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Assistant Commissioners</a>
+                  <a class="nav-link dropdown-toggle" href="administrative-team.html" data-bs-toggle="dropdown">Assistant Commissioners</a>
                   <div class="dropdown-menu mega-menu">
                     <div class="mega-grid wide">
                       <a href="ac-1.html">AC-I</a><a href="ac-2.html">AC-II</a><a href="ac-3.html">AC-III</a><a href="ac-4.html">AC-IV</a><a href="ac-5.html">AC-V</a><a href="ac-6.html">AC-VI</a>
@@ -1197,12 +1197,12 @@
             <div class="col-lg-4">
               <a class="brand-lockup footer-brand" href="index.html"><span class="gov-logo"><img src="images/sindh-govt-logo.png" alt="Government of Sindh logo"></span><span><strong>District Central Karachi</strong><small>Government of Sindh</small></span></a>
               <p>Official district portal for public information, citizen services, administrative updates, and complaint facilitation.</p>
-              <div class="footer-social"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-youtube"></i></a></div>
+              <div class="footer-social"><a href="https://www.facebook.com/deputycommissionerCentral" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a><span class="social-soon" title="Instagram account coming soon" aria-label="Instagram (coming soon)"><i class="bi bi-instagram"></i></span><span class="social-soon" title="YouTube account coming soon" aria-label="YouTube (coming soon)"><i class="bi bi-youtube"></i></span></div>
             </div>
             <div class="col-6 col-lg-2"><h3>Quick Links</h3><a href="about.html">About</a><a href="news.html">News</a><a href="index.html#gallery">Gallery</a><a href="index.html#downloads">Downloads</a></div>
             <div class="col-6 col-lg-2"><h3>Branches</h3><a href="revenue.html">Revenue</a><a href="accounts-branch.html">Accounts</a><a href="it-cell.html">IT Cell</a><a href="complaint-cell.html">Complaint Cell</a></div>
             <div class="col-6 col-lg-2"><h3>Officers</h3><a href="deputy-commissioner.html">Deputy Commissioner</a><a href="adc-1.html">ADC-I</a><a href="adc-2.html">ADC-II</a><a href="ac-1.html">Assistant Commissioners</a></div>
-            <div class="col-6 col-lg-2"><h3>Important</h3><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="complaint-registration.html">Complaint</a><a href="#contact-card">Contact</a></div>
+            <div class="col-6 col-lg-2"><h3>Important</h3><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a> <a href="sitemap.html">Sitemap</a><a href="complaint-registration.html">Complaint</a><a href="#contact-card">Contact</a></div>
           </div>
           <div class="footer-bottom"><span>Copyright 2026 District Central Karachi. All rights reserved.</span><span class="footer-gov-mark"><img src="images/sindh-govt-logo.png" alt="Government of Sindh"> Official Government Website</span></div>
         </div>
