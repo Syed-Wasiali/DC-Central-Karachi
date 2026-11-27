@@ -67,7 +67,7 @@ function header(page) {
           <div class="row align-items-center g-3">
             <div class="col-lg-4">
               <a class="brand-lockup" href="index.html" aria-label="District Central Karachi home">
-                <span class="gov-logo"><i class="bi bi-bank2"></i></span>
+                <span class="gov-logo"><img src="images/sindh-govt-logo.png" alt="Government of Sindh logo"></span>
                 <span><strong>District Central Karachi</strong><small>Government of Sindh</small></span>
               </a>
             </div>
@@ -83,7 +83,7 @@ function header(page) {
                 <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                 <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                 <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-                <a class="complaint-btn" href="complaint-registration.html"><i class="bi bi-chat-square-text"></i> Complaint</a>
+                <a class="complaint-btn" href="complaint-registration.html"><i class="bi bi-chat-square-text"></i> Complaint</a><img class="header-gov-logo" src="images/sindh-govt-logo.png" alt="Government of Sindh">
               </div>
             </div>
           </div>
@@ -108,11 +108,11 @@ function header(page) {
               <li class="nav-item"><a class="nav-link" href="deputy-commissioner.html">Deputy Commissioner</a></li>
               <li class="nav-item dropdown position-static">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Administrative Team</a>
-                <div class="dropdown-menu mega-menu"><div class="mega-grid wide"><a href="deputy-commissioner.html">Deputy Commissioner</a><a href="adc-1.html">ADC-I</a><a href="adc-2.html">ADC-II</a><a href="ac-1.html">Assistant Commissioner Liaquatabad</a><a href="ac-2.html">Assistant Commissioner Gulberg</a><a href="ac-3.html">Assistant Commissioner Nazimabad</a><a href="ac-4.html">Assistant Commissioner North Nazimabad</a><a href="ac-5.html">Assistant Commissioner New Karachi</a><a href="ac-6.html">Assistant Commissioner Revenue</a><a href="branches.html">Mukhtiarkars</a></div></div>
+                <div class="dropdown-menu mega-menu"><div class="mega-grid wide"><a href="deputy-commissioner.html">Deputy Commissioner</a><a href="adc-1.html">ADC-I</a><a href="adc-2.html">ADC-II</a><a href="ac-1.html">Assistant Commissioner Liaquatabad</a><a href="ac-2.html">Assistant Commissioner Gulberg</a><a href="ac-3.html">Assistant Commissioner Nazimabad</a><a href="ac-4.html">Assistant Commissioner North Nazimabad</a><a href="ac-5.html">Assistant Commissioner New Karachi</a><a href="ac-6.html">Assistant Commissioner Revenue</a><a href="mukhtiarkar-liaquatabad.html">Mukhtiarkar Liaquatabad</a><a href="mukhtiarkar-gulberg.html">Mukhtiarkar Gulberg</a><a href="mukhtiarkar-nazimabad.html">Mukhtiarkar Nazimabad</a><a href="mukhtiarkar-north-nazimabad.html">Mukhtiarkar North Nazimabad</a><a href="mukhtiarkar-new-karachi.html">Mukhtiarkar New Karachi</a><a href="superintendent-bilal-ahmed.html">Superintendent Bilal Ahmed</a><a href="superintendent-maria-shah.html">Superintendent Maria Shah</a></div></div>
               </li>
               <li class="nav-item dropdown position-static">
                 <a class="nav-link dropdown-toggle" href="branches.html" data-bs-toggle="dropdown">Branches</a>
-                <div class="dropdown-menu mega-menu"><div class="mega-grid wide"><a href="revenue.html">Revenue</a><a href="branches.html">Accounts</a><a href="branches.html">General</a><a href="branches.html">Judicial</a><a href="branches.html">Establishment</a><a href="branches.html">Domicile</a><a href="branches.html">Arms</a><a href="branches.html">Control Room</a><a href="branches.html">IT Cell</a><a href="branches.html">Complaint Cell</a></div></div>
+                <div class="dropdown-menu mega-menu"><div class="mega-grid wide"><a href="revenue.html">Revenue</a><a href="accounts-branch.html">Accounts</a><a href="general-branch.html">General</a><a href="judicial-branch.html">Judicial</a><a href="establishment-branch.html">Establishment</a><a href="domicile-branch.html">Domicile / PRC</a><a href="arms-branch.html">Arms</a><a href="pa-branch.html">P.A. Branch of ADC-I</a><a href="benevolent-fund.html">Benevolent Fund</a><a href="ri-branch.html">R &amp; I</a><a href="control-room.html">Control Room</a><a href="it-cell.html">IT Cell</a><a href="complaint-cell.html">Complaint Cell</a><a href="public-relations.html">Public Relations</a></div></div>
               </li>
               <li class="nav-item dropdown position-static">
                 <a class="nav-link dropdown-toggle${active(page, "services")}" href="citizen-services.html" data-bs-toggle="dropdown">Citizen Services</a>
@@ -136,16 +136,16 @@ function footer() {
       <div class="container">
         <div class="row g-4">
           <div class="col-lg-4">
-            <a class="brand-lockup footer-brand" href="index.html"><span class="gov-logo"><i class="bi bi-bank2"></i></span><span><strong>District Central Karachi</strong><small>Government of Sindh</small></span></a>
+            <a class="brand-lockup footer-brand" href="index.html"><span class="gov-logo"><img src="images/sindh-govt-logo.png" alt="Government of Sindh logo"></span><span><strong>District Central Karachi</strong><small>Government of Sindh</small></span></a>
             <p>Official district portal for public information, citizen services, administrative updates, and complaint facilitation.</p>
             <div class="footer-social"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-youtube"></i></a></div>
           </div>
           <div class="col-6 col-lg-2"><h3>Quick Links</h3><a href="about.html">About</a><a href="news.html">News</a><a href="index.html#gallery">Gallery</a><a href="index.html#downloads">Downloads</a></div>
-          <div class="col-6 col-lg-2"><h3>Branches</h3><a href="revenue.html">Revenue</a><a href="branches.html">Accounts</a><a href="branches.html">IT Cell</a><a href="branches.html">Complaint Cell</a></div>
+          <div class="col-6 col-lg-2"><h3>Branches</h3><a href="revenue.html">Revenue</a><a href="accounts-branch.html">Accounts</a><a href="it-cell.html">IT Cell</a><a href="complaint-cell.html">Complaint Cell</a></div>
           <div class="col-6 col-lg-2"><h3>Services</h3><a href="domicile.html">Domicile</a><a href="prc.html">PRC</a><a href="noc.html">NOC</a><a href="price-list.html">Price List</a></div>
           <div class="col-6 col-lg-2"><h3>Important</h3><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="complaint-registration.html">Complaint</a><a href="contact.html">Contact</a></div>
         </div>
-        <div class="footer-bottom"><span>Copyright 2026 District Central Karachi. All rights reserved.</span><span>Official Government Website</span></div>
+        <div class="footer-bottom"><span>Copyright 2026 District Central Karachi. All rights reserved.</span><span class="footer-gov-mark"><img src="images/sindh-govt-logo.png" alt="Government of Sindh"> Official Government Website</span></div>
       </div>
     </footer>
     <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>`;

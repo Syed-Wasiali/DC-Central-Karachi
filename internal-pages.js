@@ -47,6 +47,48 @@
       designation: "Assistant Commissioner-V",
       icon: "bi-person-workspace"
     },
+    "mukhtiarkar-liaquatabad": {
+      title: "Mukhtiarkar",
+      subtitle: "Sub-Division Revenue Office",
+      designation: "Mukhtiarkar Liaquatabad",
+      icon: "bi-person-workspace"
+    },
+    "mukhtiarkar-gulberg": {
+      title: "Mukhtiarkar",
+      subtitle: "Sub-Division Revenue Office",
+      designation: "Assistant Mukhtiarkar Gulberg",
+      icon: "bi-person-workspace"
+    },
+    "mukhtiarkar-nazimabad": {
+      title: "Mukhtiarkar",
+      subtitle: "Sub-Division Revenue Office",
+      designation: "Mukhtiarkar Nazimabad",
+      icon: "bi-person-workspace"
+    },
+    "mukhtiarkar-north-nazimabad": {
+      title: "Mukhtiarkar",
+      subtitle: "Sub-Division Revenue Office",
+      designation: "Mukhtiarkar North Nazimabad",
+      icon: "bi-person-workspace"
+    },
+    "mukhtiarkar-new-karachi": {
+      title: "Mukhtiarkar",
+      subtitle: "Sub-Division Revenue Office",
+      designation: "Assistant Mukhtiarkar New Karachi",
+      icon: "bi-person-workspace"
+    },
+    "superintendent-bilal-ahmed": {
+      title: "Superintendent",
+      subtitle: "Official District Central Karachi Administration",
+      designation: "Superintendent",
+      icon: "bi-person-badge"
+    },
+    "superintendent-maria-shah": {
+      title: "Superintendent",
+      subtitle: "Official District Central Karachi Administration",
+      designation: "Superintendent",
+      icon: "bi-person-badge"
+    },
     "ac-6": {
       title: "Assistant Commissioner",
       subtitle: "Sub-Division Administration",
@@ -56,17 +98,90 @@
   };
 
   const branches = [
-    ["bi-bank", "Revenue", "In-charge: Mr. Umer Chandio, Assistant. Handles land and encroachment enquiries, anti-encroachment drives, civil suits, revenue appeals, and SBCA illegal or dangerous building matters."],
-    ["bi-cash-stack", "Accounts", "In-charge: Mr. Amjad Hussain Siddiqui, Assistant. Handles staff salaries, GP Fund and pension cases, contingency bills, audit matters, relief finance, service books, DC Office maintenance, development-scheme finance, and VIP movement support."],
-    ["bi-building", "General", "In-charge: Mr. Khalid Jameel, Assistant. Handles complaints regarding other departments, local government and TMC issues, election and census work, rain emergency, disaster response, heirship and domicile verification, blocked CNIC/DLC matters, price checking, and compensation cases."],
-    ["bi-scale", "Judicial", "In-charge: Miss Maryam, Senior Clerk. Handles law-and-order matters, petroleum and fireworks licences, NOCs for public gatherings, marriages, street tents and shamianas, NGO verification, hotel licences, Section 144 Cr.P.C. matters, and district or foreign-related coordination."],
-    ["bi-people", "Establishment", "In-charge: Mr. Muhammad Ali Siddiqui, Office Superintendent. Manages non-gazetted staff files, appointments, transfers, postings, service matters, DRC cases, subordinate office inspections, directives, and Assembly questions."],
-    ["bi-file-earmark-person", "Domicile", "In-charge: Mr. Farooq Afzal, Senior Clerk. Responsible for issuance, record keeping, verification, and related matters for Domicile and Permanent Resident Certificates."],
-    ["bi-shield-check", "Arms", "In-charge: Mr. Mehboob Ali Rind, Senior Clerk. Processes new arms licence applications for District Central residents."],
-    ["bi-broadcast", "Control Room", "Team: Ghulam Hussain, Shoukat Ali, and Qadir. Operates wireless coordination and the Complaint Cell operational desk."],
-    ["bi-cpu", "IT", "Manages the district website, digital services, data systems, and office technology support."],
-    ["bi-chat-left-text", "Complaint Cell", "Registers, tracks, and follows up on citizen complaints submitted online or in person, coordinating with the relevant branch through resolution."],
-    ["bi-megaphone", "Public Relations", "Manages press updates, public awareness campaigns, and media coordination for the Deputy Commissioner's Office."]
+      [
+          "bi-bank",
+          "Revenue Branch",
+          "In-charge: Mr. Umer Chandio, Assistant. Revenue administration is one of the principal statutory functions associated with the Deputy Commissioner / Collector in Sindh.",
+          "revenue.html"
+      ],
+      [
+          "bi-cash-stack",
+          "Accounts Branch",
+          "In-charge: Mr. Amjad Hussain Siddiqui, Assistant. The Accounts Branch manages the financial administration of the Deputy Commissioner's Office.",
+          "accounts-branch.html"
+      ],
+      [
+          "bi-building",
+          "General Branch",
+          "In-charge: Mr. Khalid Jameel, Assistant. The General Branch deals with a wide range of public matters: complaints about other departments, local government issues, election and census work, rain emergencies and disaster response, price checking, and financial assistance and compensation cases.",
+          "general-branch.html"
+      ],
+      [
+          "bi-scale",
+          "Judicial Branch",
+          "In-charge: Miss Maryam, Senior Clerk. The Judicial Branch handles law-and-order matters and issues NOCs, licences and declarations within District Central, including NOCs for petrol pumps, CNG stations, public gatherings and marriage functions, and petroleum, fireworks and hotel licences.",
+          "judicial-branch.html"
+      ],
+      [
+          "bi-people",
+          "Establishment Branch",
+          "In-charge: Mr. Muhammad Ali Siddiqui, Office Superintendent. The Establishment Branch manages staff matters of the district administration: personal files of non-gazetted staff, appointments, transfers, postings and service matters, together with correspondence on government directions and Assembly questions.",
+          "establishment-branch.html"
+      ],
+      [
+          "bi-file-earmark-person",
+          "Domicile / PRC Branch",
+          "In-charge: Mr. Farooq Afzal, Senior Clerk. The Domicile / PRC Branch issues and keeps records of Domicile Certificates and Permanent Resident Certificates for residents of District Central, and verifies certificates when requested.",
+          "domicile-branch.html"
+      ],
+      [
+          "bi-shield-check",
+          "Arms Branch",
+          "In-charge: Mr. Mehboob Ali Rind, Senior Clerk. The Arms Branch processes new arms licence applications for residents of District Central, in line with the procedure and quota set by the Government of Sindh.",
+          "arms-branch.html"
+      ],
+      [
+          "bi-briefcase",
+          "P.A. Branch of ADC-I",
+          "In-charge: Mr. Farhat Mirza, Assistant. The P.A.",
+          "pa-branch.html"
+      ],
+      [
+          "bi-heart",
+          "Benevolent Fund Branch",
+          "In-charge: Mr. Shahid Hussain, Senior Clerk. The Benevolent Fund Branch processes Benevolent Fund cases for government employees and their families, and handles related correspondence on government directions and Assembly questions.",
+          "benevolent-fund.html"
+      ],
+      [
+          "bi-envelope-paper",
+          "R & I Branch (Receipt & Issue)",
+          "In-charge: Mr. Sarwar, Senior Clerk. The Receipt & Issue (R & I) Branch receives all incoming correspondence of the DC Office and dispatches outgoing letters, making sure every letter reaches the right office.",
+          "ri-branch.html"
+      ],
+      [
+          "bi-broadcast",
+          "Control Room",
+          "In-charge: Ghulam Hussain, Shoukat Ali and Qadir. The Control Room operates the district's wireless network and acts as the operational desk of the Complaint Cell, providing round-the-clock coordination and monitoring, especially during emergencies.",
+          "control-room.html"
+      ],
+      [
+          "bi-cpu",
+          "IT Cell",
+          "The IT Cell manages the district's website, digital services and data systems, and supports the office's technology infrastructure.",
+          "it-cell.html"
+      ],
+      [
+          "bi-chat-left-text",
+          "Complaint Cell",
+          "The Complaint Cell registers, tracks and follows up citizen complaints submitted online or in person, working with the relevant branch until each complaint is resolved.",
+          "complaint-cell.html"
+      ],
+      [
+          "bi-megaphone",
+          "Public Relations",
+          "Public Relations manages press updates, public awareness campaigns and media coordination for the Deputy Commissioner's Office, including the district's social media pages.",
+          "public-relations.html"
+      ]
   ];
 
   const officerContent = {
@@ -96,9 +211,158 @@
     "ac-3": { name: "Rabia Syed", kicker: "Assistant Commissioner Nazimabad", message: "It is a privilege to serve as Assistant Commissioner Nazimabad, working to strengthen public facilitation, revenue coordination, and civic administration for the residents of Nazimabad Town.", bio: "The Assistant Commissioner works under the Deputy Commissioner and coordinates field administration at sub-division level.", roles: ["Revenue administration within Nazimabad", "Mutation, partition, demarcation, and authorized land-record proceedings", "Public order coordination", "Market inspections", "Coordination with line departments", "Development and municipal coordination", "Field assessments", "Reports to district administration"] },
     "ac-4": { name: "Nematullah Chachar", kicker: "Assistant Commissioner North Nazimabad", message: "It is my responsibility, as Assistant Commissioner North Nazimabad, to ensure residents receive timely administrative facilitation, effective market monitoring, and responsive local governance.", bio: "The Assistant Commissioner functions as a field representative of the district administration.", roles: ["Revenue supervision", "Market monitoring", "Anti-hoarding and anti-profiteering coordination", "Public property and encroachment support", "Local government coordination", "Emergency response support", "Citizen complaint review", "Field inspections"] },
     "ac-5": { name: "Captain (Retd.) Fareed Hanif", kicker: "Assistant Commissioner New Karachi", message: "It is an honor to serve as Assistant Commissioner New Karachi. Drawing on a background of disciplined public service, I am committed to maintaining law-and-order coordination, efficient administrative facilitation, and responsive governance for the residents of New Karachi Town.", bio: "The Assistant Commissioner performs duties assigned by the Deputy Commissioner, Commissioner, Board of Revenue, or Government.", roles: ["Sub-divisional administration in New Karachi", "Revenue and land-record supervision", "Law-and-order coordination", "Price control operations", "Anti-encroachment support", "Disaster management", "Public grievances", "Elections and government exercises"] },
-    "ac-6": { name: "Assistant Commissioner Revenue", kicker: "District Central", message: "As Assistant Commissioner Revenue, my office supports the Deputy Commissioner in revenue administration across District Central: land records, revenue cases, protection of government land and public facilitation on revenue matters. We aim to deal with every citizen's revenue matter fairly, transparently and on time.", bio: "<!-- AC information not found in provided DOCX sources -->", roles: ["Administrative Leadership", "District Governance", "Public Services", "Law & Order Coordination", "Revenue Administration", "Development Oversight", "Citizen Welfare", "Disaster Management"] }
+    "ac-6": { name: "Assistant Commissioner Revenue", kicker: "District Central", message: "As Assistant Commissioner Revenue, my office supports the Deputy Commissioner in revenue administration across District Central: land records, revenue cases, protection of government land and public facilitation on revenue matters. We aim to deal with every citizen's revenue matter fairly, transparently and on time.", bio: "<!-- AC information not found in provided DOCX sources -->", roles: ["Administrative Leadership", "District Governance", "Public Services", "Law & Order Coordination", "Revenue Administration", "Development Oversight", "Citizen Welfare", "Disaster Management"] },
+    "mukhtiarkar-liaquatabad": { name: "Abdul Hafeez Narejo", kicker: "Mukhtiarkar Liaquatabad", message: "The Mukhtiarkar office Liaquatabad is the revenue office closest to the residents of Liaquatabad. It maintains land records, processes mutation and demarcation, prepares verification reports for certificates such as Domicile and PRC, and works under the Assistant Commissioner Liaquatabad to resolve citizens' revenue matters fairly and on time.", bio: "Mukhtiarkar Liaquatabad. In post since April 2025. Works under the Assistant Commissioner Liaquatabad and the Deputy Commissioner, District Central.", roles: ["Land Record Maintenance", "Mutation (Dakhil-Kharij)", "Demarcation and Measurement", "Revenue Court Cases", "Government Land Protection", "Certificate Verification Reports", "Supervision of Field Staff", "Assigned Public Duties"] },
+    "mukhtiarkar-gulberg": { name: "Waseem Taj", kicker: "Assistant Mukhtiarkar Gulberg", message: "The Mukhtiarkar office Gulberg is the revenue office closest to the residents of Gulberg. It maintains land records, processes mutation and demarcation, prepares verification reports for certificates such as Domicile and PRC, and works under the Assistant Commissioner Gulberg to resolve citizens' revenue matters fairly and on time.", bio: "Assistant Mukhtiarkar Gulberg. In post since 10 August 2026. Works under the Assistant Commissioner Gulberg and the Deputy Commissioner, District Central.", roles: ["Land Record Maintenance", "Mutation (Dakhil-Kharij)", "Demarcation and Measurement", "Revenue Court Cases", "Government Land Protection", "Certificate Verification Reports", "Supervision of Field Staff", "Assigned Public Duties"] },
+    "mukhtiarkar-nazimabad": { name: "Saeed Ahmed", kicker: "Mukhtiarkar Nazimabad", message: "The Mukhtiarkar office Nazimabad is the revenue office closest to the residents of Nazimabad. It maintains land records, processes mutation and demarcation, prepares verification reports for certificates such as Domicile and PRC, and works under the Assistant Commissioner Nazimabad to resolve citizens' revenue matters fairly and on time.", bio: "Mukhtiarkar Nazimabad. Works under the Assistant Commissioner Nazimabad and the Deputy Commissioner, District Central.", roles: ["Land Record Maintenance", "Mutation (Dakhil-Kharij)", "Demarcation and Measurement", "Revenue Court Cases", "Government Land Protection", "Certificate Verification Reports", "Supervision of Field Staff", "Assigned Public Duties"] },
+    "mukhtiarkar-north-nazimabad": { name: "Syed Karar Hussain Shah", kicker: "Mukhtiarkar North Nazimabad", message: "The Mukhtiarkar office North Nazimabad is the revenue office closest to the residents of North Nazimabad. It maintains land records, processes mutation and demarcation, prepares verification reports for certificates such as Domicile and PRC, and works under the Assistant Commissioner North Nazimabad to resolve citizens' revenue matters fairly and on time.", bio: "Mukhtiarkar North Nazimabad. In post since March 2026. Works under the Assistant Commissioner North Nazimabad and the Deputy Commissioner, District Central.", roles: ["Land Record Maintenance", "Mutation (Dakhil-Kharij)", "Demarcation and Measurement", "Revenue Court Cases", "Government Land Protection", "Certificate Verification Reports", "Supervision of Field Staff", "Assigned Public Duties"] },
+    "mukhtiarkar-new-karachi": { name: "Rizwan Haider Memon", kicker: "Assistant Mukhtiarkar New Karachi", message: "The Mukhtiarkar office New Karachi is the revenue office closest to the residents of New Karachi. It maintains land records, processes mutation and demarcation, prepares verification reports for certificates such as Domicile and PRC, and works under the Assistant Commissioner New Karachi to resolve citizens' revenue matters fairly and on time.", bio: "Assistant Mukhtiarkar New Karachi. In post since 10 August 2026. Works under the Assistant Commissioner New Karachi and the Deputy Commissioner, District Central.", roles: ["Land Record Maintenance", "Mutation (Dakhil-Kharij)", "Demarcation and Measurement", "Revenue Court Cases", "Government Land Protection", "Certificate Verification Reports", "Supervision of Field Staff", "Assigned Public Duties"] },
+    "superintendent-bilal-ahmed": { name: "Mr. Bilal Ahmed", kicker: "Superintendent, District Central", message: "The Superintendent supervises the day-to-day office work of the District Administration Central, making sure that files, correspondence and public applications move through the office promptly and are dealt with in line with the rules.", bio: "Superintendent, District Central. Supervises office staff and the movement of files and correspondence.", roles: ["Office Supervision", "File Management", "Record Keeping", "Correspondence", "Staff Coordination", "Follow-up of Directions", "Public Dealing", "Branch Coordination"] },
+    "superintendent-maria-shah": { name: "Ms. Maria Shah", kicker: "Superintendent, District Central", message: "The Superintendent supervises the day-to-day office work of the District Administration Central, making sure that files, correspondence and public applications move through the office promptly and are dealt with in line with the rules.", bio: "Superintendent, District Central. Supervises office staff and the movement of files and correspondence.", roles: ["Office Supervision", "File Management", "Record Keeping", "Correspondence", "Staff Coordination", "Follow-up of Directions", "Public Dealing", "Branch Coordination"] }
   };
 
+  const officerExtraMore = {
+    "mukhtiarkar-liaquatabad": {
+      "photo": null,
+      "office": "the Mukhtiarkar office Liaquatabad",
+      "roleText": [
+        "Maintains the record of rights and land records for Liaquatabad.",
+        "Processes the transfer of land records after sale, gift or inheritance.",
+        "Supervises demarcation and measurement of land through field revenue staff.",
+        "Represents the Deputy Commissioner and Assistant Commissioner in revenue cases before the High Court and the lower courts.",
+        "Identifies and reports encroachment on government land.",
+        "Prepares the Mukhtiarkar's report required for Domicile, PRC and other certificates.",
+        "Supervises Tapedars and other field revenue staff.",
+        "Carries out election, census, price monitoring and other duties assigned by the Assistant Commissioner."
+      ],
+      "initiatives": [
+        "Helping residents of Liaquatabad with land record and certificate matters at the Mukhtiarkar office.",
+        "Supporting the Assistant Commissioner Liaquatabad in market inspections against overcharging.",
+        "Following up revenue complaints from Liaquatabad until they are resolved.",
+        "Field visits across Liaquatabad to check land records, government land and encroachments."
+      ]
+    },
+    "mukhtiarkar-gulberg": {
+      "photo": null,
+      "office": "the Mukhtiarkar office Gulberg",
+      "roleText": [
+        "Maintains the record of rights and land records for Gulberg.",
+        "Processes the transfer of land records after sale, gift or inheritance.",
+        "Supervises demarcation and measurement of land through field revenue staff.",
+        "Represents the Deputy Commissioner and Assistant Commissioner in revenue cases before the High Court and the lower courts.",
+        "Identifies and reports encroachment on government land.",
+        "Prepares the Mukhtiarkar's report required for Domicile, PRC and other certificates.",
+        "Supervises Tapedars and other field revenue staff.",
+        "Carries out election, census, price monitoring and other duties assigned by the Assistant Commissioner."
+      ],
+      "initiatives": [
+        "Helping residents of Gulberg with land record and certificate matters at the Mukhtiarkar office.",
+        "Supporting the Assistant Commissioner Gulberg in market inspections against overcharging.",
+        "Following up revenue complaints from Gulberg until they are resolved.",
+        "Field visits across Gulberg to check land records, government land and encroachments."
+      ]
+    },
+    "mukhtiarkar-nazimabad": {
+      "photo": null,
+      "office": "the Mukhtiarkar office Nazimabad",
+      "roleText": [
+        "Maintains the record of rights and land records for Nazimabad.",
+        "Processes the transfer of land records after sale, gift or inheritance.",
+        "Supervises demarcation and measurement of land through field revenue staff.",
+        "Represents the Deputy Commissioner and Assistant Commissioner in revenue cases before the High Court and the lower courts.",
+        "Identifies and reports encroachment on government land.",
+        "Prepares the Mukhtiarkar's report required for Domicile, PRC and other certificates.",
+        "Supervises Tapedars and other field revenue staff.",
+        "Carries out election, census, price monitoring and other duties assigned by the Assistant Commissioner."
+      ],
+      "initiatives": [
+        "Helping residents of Nazimabad with land record and certificate matters at the Mukhtiarkar office.",
+        "Supporting the Assistant Commissioner Nazimabad in market inspections against overcharging.",
+        "Following up revenue complaints from Nazimabad until they are resolved.",
+        "Field visits across Nazimabad to check land records, government land and encroachments."
+      ]
+    },
+    "mukhtiarkar-north-nazimabad": {
+      "photo": "karrar Hussain.PNG",
+      "office": "the Mukhtiarkar office North Nazimabad",
+      "roleText": [
+        "Maintains the record of rights and land records for North Nazimabad.",
+        "Processes the transfer of land records after sale, gift or inheritance.",
+        "Supervises demarcation and measurement of land through field revenue staff.",
+        "Represents the Deputy Commissioner and Assistant Commissioner in revenue cases before the High Court and the lower courts.",
+        "Identifies and reports encroachment on government land.",
+        "Prepares the Mukhtiarkar's report required for Domicile, PRC and other certificates.",
+        "Supervises Tapedars and other field revenue staff.",
+        "Carries out election, census, price monitoring and other duties assigned by the Assistant Commissioner."
+      ],
+      "initiatives": [
+        "Helping residents of North Nazimabad with land record and certificate matters at the Mukhtiarkar office.",
+        "Supporting the Assistant Commissioner North Nazimabad in market inspections against overcharging.",
+        "Following up revenue complaints from North Nazimabad until they are resolved.",
+        "Field visits across North Nazimabad to check land records, government land and encroachments."
+      ]
+    },
+    "mukhtiarkar-new-karachi": {
+      "photo": null,
+      "office": "the Mukhtiarkar office New Karachi",
+      "roleText": [
+        "Maintains the record of rights and land records for New Karachi.",
+        "Processes the transfer of land records after sale, gift or inheritance.",
+        "Supervises demarcation and measurement of land through field revenue staff.",
+        "Represents the Deputy Commissioner and Assistant Commissioner in revenue cases before the High Court and the lower courts.",
+        "Identifies and reports encroachment on government land.",
+        "Prepares the Mukhtiarkar's report required for Domicile, PRC and other certificates.",
+        "Supervises Tapedars and other field revenue staff.",
+        "Carries out election, census, price monitoring and other duties assigned by the Assistant Commissioner."
+      ],
+      "initiatives": [
+        "Helping residents of New Karachi with land record and certificate matters at the Mukhtiarkar office.",
+        "Supporting the Assistant Commissioner New Karachi in market inspections against overcharging.",
+        "Following up revenue complaints from New Karachi until they are resolved.",
+        "Field visits across New Karachi to check land records, government land and encroachments."
+      ]
+    },
+    "superintendent-bilal-ahmed": {
+      "photo": null,
+      "office": "the office of the Superintendent",
+      "roleText": [
+        "Supervises the day-to-day work of office staff.",
+        "Keeps track of the movement and disposal of files.",
+        "Maintains office records in good order.",
+        "Prepares letters, summaries and replies for the officers concerned.",
+        "Coordinates the work of clerks and support staff.",
+        "Follows up directions from senior officers and keeps deadlines.",
+        "Guides members of the public who visit the office.",
+        "Coordinates with the branches of the DC Office."
+      ],
+      "initiatives": [
+        "Helping visitors reach the right branch and officer quickly.",
+        "Supporting the district price monitoring work with office records.",
+        "Keeping track of complaints received in the office until they are disposed of.",
+        "Supporting field arrangements for district campaigns and events."
+      ]
+    },
+    "superintendent-maria-shah": {
+      "photo": null,
+      "office": "the office of the Superintendent",
+      "roleText": [
+        "Supervises the day-to-day work of office staff.",
+        "Keeps track of the movement and disposal of files.",
+        "Maintains office records in good order.",
+        "Prepares letters, summaries and replies for the officers concerned.",
+        "Coordinates the work of clerks and support staff.",
+        "Follows up directions from senior officers and keeps deadlines.",
+        "Guides members of the public who visit the office.",
+        "Coordinates with the branches of the DC Office."
+      ],
+      "initiatives": [
+        "Helping visitors reach the right branch and officer quickly.",
+        "Supporting the district price monitoring work with office records.",
+        "Keeping track of complaints received in the office until they are disposed of.",
+        "Supporting field arrangements for district campaigns and events."
+      ]
+    }
+  };
   const officerExtra = {
     "deputy-commissioner": {
       "photo": "DC Central.jpg",
@@ -289,6 +553,553 @@
     }
   };
 
+  const branchData = {
+    "revenue": {
+      "file": "revenue.html",
+      "title": "Revenue Branch",
+      "icon": "bi-bank",
+      "incharge": "Mr. Umer Chandio, Assistant",
+      "reports": "ADC-I",
+      "scope": "Land, records, revenue cases, encroachment matters.",
+      "about": "Revenue administration is one of the principal statutory functions associated with the Deputy Commissioner / Collector in Sindh. The branch handles land and encroachment enquiries, anti-encroachment drives, civil suits and other court cases, revenue cases and appeals, and illegal or dangerous building matters referred through SBCA.",
+      "functions": "REVENUE",
+      "services": "REVENUE"
+    },
+    "accounts": {
+      "file": "accounts-branch.html",
+      "title": "Accounts Branch",
+      "icon": "bi-cash-stack",
+      "incharge": "Mr. Amjad Hussain Siddiqui, Assistant",
+      "reports": "ADC-I",
+      "scope": "Salaries, pensions, budget, audit and development finance.",
+      "about": "The Accounts Branch manages the financial administration of the Deputy Commissioner's Office. It handles staff salaries, GP Fund and pension cases, contingency bills, audit matters and relief-fund finance, and oversees the financial side of development schemes in the district.",
+      "functions": [
+        [
+          "bi-person-vcard",
+          "Gazetted Officers' Records",
+          "Maintains the personal files of gazetted officers of the district administration."
+        ],
+        [
+          "bi-wallet2",
+          "Salaries and Pensions",
+          "Processes staff salaries, GP Fund cases and pension cases."
+        ],
+        [
+          "bi-receipt",
+          "Contingency Bills",
+          "Prepares and processes contingency bills for office expenditure."
+        ],
+        [
+          "bi-clipboard-check",
+          "Audit Matters",
+          "Deals with audit observations and maintains financial records for audit."
+        ],
+        [
+          "bi-life-preserver",
+          "Relief Fund Finance",
+          "Manages the financial side of relief funds and emergency assistance."
+        ],
+        [
+          "bi-journal-text",
+          "Service Books",
+          "Maintains service books of employees of the DC Office."
+        ],
+        [
+          "bi-graph-up-arrow",
+          "Development Schemes",
+          "Oversees the financial side of development schemes, including SDG and special development schemes, and monitors schemes of other departments."
+        ],
+        [
+          "bi-buildings",
+          "DC Complex and Events",
+          "Maintains the DC Complex and DC Office, and coordinates important events and VIP movements."
+        ]
+      ],
+      "services": []
+    },
+    "general": {
+      "file": "general-branch.html",
+      "title": "General Branch",
+      "icon": "bi-building",
+      "incharge": "Mr. Khalid Jameel, Assistant",
+      "reports": "ADC-II",
+      "scope": "Complaints, elections, disasters, price checking and assistance cases.",
+      "about": "The General Branch deals with a wide range of public matters: complaints about other departments, local government issues, election and census work, rain emergencies and disaster response, price checking, and financial assistance and compensation cases.",
+      "functions": [
+        [
+          "bi-chat-square-text",
+          "Complaints about Other Departments",
+          "Receives complaints about other departments and local government and TMC issues, and follows them up."
+        ],
+        [
+          "bi-check2-square",
+          "Elections and Census",
+          "Handles district work for elections and the census."
+        ],
+        [
+          "bi-cloud-rain",
+          "Rain Emergency and Disasters",
+          "Coordinates rain emergency arrangements and disaster response."
+        ],
+        [
+          "bi-people",
+          "Heirship and Domicile Verification",
+          "Verifies heirship certificates and domiciles when requested by other offices."
+        ],
+        [
+          "bi-tags",
+          "Price Checking",
+          "Supports market price checking and action against overcharging."
+        ],
+        [
+          "bi-person-x",
+          "Blocked CNIC Matters",
+          "Deals with blocked CNIC and related verification matters."
+        ],
+        [
+          "bi-heart",
+          "Financial Assistance",
+          "Processes financial assistance and socio-economic cases."
+        ],
+        [
+          "bi-shield-exclamation",
+          "Compensation Cases",
+          "Handles compensation cases arising from accidents, disasters, target killing or terrorism."
+        ]
+      ],
+      "services": [
+        [
+          "bi-chat-left-text",
+          "Complaint Registration",
+          "Register a complaint about a public service or another department.",
+          "complaint-registration.html"
+        ],
+        [
+          "bi-tags",
+          "Price List",
+          "Check official prices and report overcharging.",
+          "price-list.html"
+        ],
+        [
+          "bi-headset",
+          "Public Assistance",
+          "Guidance if you are not sure which office handles your matter.",
+          "public-assistance.html"
+        ]
+      ]
+    },
+    "judicial": {
+      "file": "judicial-branch.html",
+      "title": "Judicial Branch",
+      "icon": "bi-scale",
+      "incharge": "Miss Maryam, Senior Clerk",
+      "reports": "ADC-II",
+      "scope": "Law and order, NOCs, licences and declarations.",
+      "about": "The Judicial Branch handles law-and-order matters and issues NOCs, licences and declarations within District Central, including NOCs for petrol pumps, CNG stations, public gatherings and marriage functions, and petroleum, fireworks and hotel licences.",
+      "functions": [
+        [
+          "bi-shield-check",
+          "Law and Order",
+          "Handles law-and-order matters, including Section 144 Cr.P.C. orders and security matters."
+        ],
+        [
+          "bi-fuel-pump",
+          "Petrol Pump and CNG NOCs",
+          "Processes NOCs for petrol pumps and CNG stations."
+        ],
+        [
+          "bi-people",
+          "Gatherings and Functions",
+          "Issues NOCs for public gatherings, melas, marriage functions and street tents or shamianas."
+        ],
+        [
+          "bi-droplet-half",
+          "Petroleum Licences",
+          "Issues and renews dangerous and non-dangerous petroleum licences."
+        ],
+        [
+          "bi-stars",
+          "Fireworks Licences",
+          "Issues and renews fireworks licences."
+        ],
+        [
+          "bi-building",
+          "Hotel Licences",
+          "Issues hotel licences within District Central."
+        ],
+        [
+          "bi-newspaper",
+          "Newspaper Declarations",
+          "Processes declarations for newspapers and magazines."
+        ],
+        [
+          "bi-patch-check",
+          "NGO Verification",
+          "Verifies local NGOs on request of the competent authorities."
+        ]
+      ],
+      "services": [
+        [
+          "bi-file-check",
+          "No-Objection Certificate (NOC)",
+          "NOCs for petrol pumps, CNG stations, gatherings, functions and tents.",
+          "noc.html"
+        ]
+      ]
+    },
+    "establishment": {
+      "file": "establishment-branch.html",
+      "title": "Establishment Branch",
+      "icon": "bi-people",
+      "incharge": "Mr. Muhammad Ali Siddiqui, Office Superintendent",
+      "reports": "ADC-I",
+      "scope": "Staff appointments, postings, transfers and service matters.",
+      "about": "The Establishment Branch manages staff matters of the district administration: personal files of non-gazetted staff, appointments, transfers, postings and service matters, together with correspondence on government directions and Assembly questions.",
+      "functions": [
+        [
+          "bi-folder2-open",
+          "Staff Records",
+          "Maintains personal files of non-gazetted staff."
+        ],
+        [
+          "bi-person-plus",
+          "Appointments",
+          "Processes appointments against sanctioned posts."
+        ],
+        [
+          "bi-arrow-left-right",
+          "Transfers and Postings",
+          "Handles transfers, postings and other service matters."
+        ],
+        [
+          "bi-universal-access",
+          "Special Quotas",
+          "Processes cases for persons with disabilities and the deceased quota."
+        ],
+        [
+          "bi-search",
+          "Office Inspections",
+          "Inspects subordinate offices of the district administration."
+        ],
+        [
+          "bi-envelope-paper",
+          "Government Directions",
+          "Handles correspondence on directions from Governor House, the Prime Minister and the Chief Minister, and Assembly questions."
+        ]
+      ],
+      "services": []
+    },
+    "domicile": {
+      "file": "domicile-branch.html",
+      "title": "Domicile / PRC Branch",
+      "icon": "bi-file-earmark-person",
+      "incharge": "Mr. Farooq Afzal, Senior Clerk",
+      "reports": "ADC-I",
+      "scope": "Domicile and Permanent Resident Certificates.",
+      "about": "The Domicile / PRC Branch issues and keeps records of Domicile Certificates and Permanent Resident Certificates for residents of District Central, and verifies certificates when requested. Applications can now also be made online through the Sindh Domicile Portal.",
+      "functions": [
+        [
+          "bi-file-earmark-person",
+          "Domicile Certificates",
+          "Receives and processes Domicile Certificate applications."
+        ],
+        [
+          "bi-person-lines-fill",
+          "Permanent Resident Certificates",
+          "Processes PRC applications alongside Domicile."
+        ],
+        [
+          "bi-check2-circle",
+          "Verification",
+          "Verifies existing certificates when requested by other offices."
+        ],
+        [
+          "bi-archive",
+          "Record Keeping",
+          "Maintains the record of all certificates issued."
+        ]
+      ],
+      "services": [
+        [
+          "bi-file-earmark-person",
+          "Domicile Certificate",
+          "Who can apply, documents, fees and the online application.",
+          "domicile.html"
+        ],
+        [
+          "bi-person-lines-fill",
+          "Permanent Resident Certificate",
+          "Requirements and how to apply for a PRC.",
+          "prc.html"
+        ]
+      ]
+    },
+    "arms": {
+      "file": "arms-branch.html",
+      "title": "Arms Branch",
+      "icon": "bi-shield-check",
+      "incharge": "Mr. Mehboob Ali Rind, Senior Clerk",
+      "reports": "ADC-I",
+      "scope": "New arms licence applications.",
+      "about": "The Arms Branch processes new arms licence applications for residents of District Central, in line with the procedure and quota set by the Government of Sindh.",
+      "functions": [
+        [
+          "bi-file-earmark-text",
+          "Licence Applications",
+          "Receives and scrutinises new arms licence applications."
+        ],
+        [
+          "bi-shield-lock",
+          "Verification",
+          "Coordinates CRO and police verification of applicants."
+        ],
+        [
+          "bi-fingerprint",
+          "Biometric Verification",
+          "Arranges biometric verification and photographs of applicants."
+        ],
+        [
+          "bi-card-checklist",
+          "Licence Issuance",
+          "Processes licences after verification and fee payment."
+        ]
+      ],
+      "services": [
+        [
+          "bi-shield-check",
+          "Arms Licence",
+          "Eligibility, documents, procedure and fee.",
+          "arms-license.html"
+        ]
+      ]
+    },
+    "pa-branch": {
+      "file": "pa-branch.html",
+      "title": "P.A. Branch of ADC-I",
+      "icon": "bi-briefcase",
+      "incharge": "Mr. Farhat Mirza, Assistant",
+      "reports": "ADC-I",
+      "scope": "Polio coordination, Bachat Bazar NOCs and water tankers.",
+      "about": "The P.A. Branch of ADC-I supports the Additional Deputy Commissioner-I and handles polio campaign coordination, NOCs for Bachat Bazars and permissions for gratis water tankers.",
+      "functions": [
+        [
+          "bi-capsule",
+          "Polio Coordination",
+          "Supports the district's polio immunisation campaigns."
+        ],
+        [
+          "bi-shop",
+          "Bachat Bazar NOCs",
+          "Processes NOCs for Bachat Bazars."
+        ],
+        [
+          "bi-droplet",
+          "Gratis Water Tankers",
+          "Processes permissions for free water tanker supply in eligible cases."
+        ],
+        [
+          "bi-briefcase",
+          "ADC-I Office Support",
+          "Handles correspondence and appointments for the ADC-I office."
+        ]
+      ],
+      "services": [
+        [
+          "bi-file-check",
+          "Bachat Bazar NOC",
+          "How to apply for a Bachat Bazar NOC.",
+          "noc.html"
+        ]
+      ]
+    },
+    "benevolent-fund": {
+      "file": "benevolent-fund.html",
+      "title": "Benevolent Fund Branch",
+      "icon": "bi-heart",
+      "incharge": "Mr. Shahid Hussain, Senior Clerk",
+      "reports": "ADC-II",
+      "scope": "Benevolent Fund cases for government employees.",
+      "about": "The Benevolent Fund Branch processes Benevolent Fund cases for government employees and their families, and handles related correspondence on government directions and Assembly questions.",
+      "functions": [
+        [
+          "bi-heart",
+          "Benevolent Fund Cases",
+          "Processes Benevolent Fund cases for government employees and their families."
+        ],
+        [
+          "bi-envelope-paper",
+          "Correspondence",
+          "Handles correspondence on directions from Governor House, the Prime Minister and the Chief Minister, and Assembly questions."
+        ]
+      ],
+      "services": []
+    },
+    "ri-branch": {
+      "file": "ri-branch.html",
+      "title": "R & I Branch (Receipt & Issue)",
+      "icon": "bi-envelope-paper",
+      "incharge": "Mr. Sarwar, Senior Clerk",
+      "reports": "ADC-II",
+      "scope": "Inward and outward correspondence.",
+      "about": "The Receipt & Issue (R & I) Branch receives all incoming correspondence of the DC Office and dispatches outgoing letters, making sure every letter reaches the right office. Team: Mr. Sarwar (Senior Clerk), with Behzad Ahmed, Salman Ahmed and Jawad Siddiqui.",
+      "functions": [
+        [
+          "bi-inbox",
+          "Receipt of Correspondence",
+          "Receives and records all incoming letters and applications."
+        ],
+        [
+          "bi-send",
+          "Dispatch",
+          "Dispatches outgoing letters and mail to the offices concerned."
+        ],
+        [
+          "bi-journal-text",
+          "Registers",
+          "Maintains the inward and outward registers."
+        ]
+      ],
+      "services": []
+    },
+    "control-room": {
+      "file": "control-room.html",
+      "title": "Control Room",
+      "icon": "bi-broadcast",
+      "incharge": "Ghulam Hussain, Shoukat Ali and Qadir",
+      "reports": "ADC-II",
+      "scope": "Wireless coordination and complaint desk.",
+      "about": "The Control Room operates the district's wireless network and acts as the operational desk of the Complaint Cell, providing round-the-clock coordination and monitoring, especially during emergencies.",
+      "functions": [
+        [
+          "bi-broadcast",
+          "Wireless Network",
+          "Operates the district's wireless communication network."
+        ],
+        [
+          "bi-headset",
+          "Complaint Desk",
+          "Acts as the operational desk of the Complaint Cell."
+        ],
+        [
+          "bi-exclamation-triangle",
+          "Emergency Coordination",
+          "Coordinates information during rain emergencies and other incidents."
+        ]
+      ],
+      "services": [
+        [
+          "bi-chat-left-text",
+          "Complaint Registration",
+          "Register a complaint online or at the Control Room.",
+          "complaint-registration.html"
+        ]
+      ]
+    },
+    "it-cell": {
+      "file": "it-cell.html",
+      "title": "IT Cell",
+      "icon": "bi-cpu",
+      "incharge": "",
+      "reports": "Deputy Commissioner",
+      "scope": "Website, digital services and office technology.",
+      "about": "The IT Cell manages the district's website, digital services and data systems, and supports the office's technology infrastructure.",
+      "functions": [
+        [
+          "bi-globe",
+          "District Website",
+          "Manages and updates the District Central website."
+        ],
+        [
+          "bi-phone",
+          "Digital Services",
+          "Supports online services and complaint registration."
+        ],
+        [
+          "bi-database",
+          "Data Systems",
+          "Maintains office data systems and records."
+        ],
+        [
+          "bi-pc-display",
+          "Technology Support",
+          "Supports computers, networks and equipment in the DC Office."
+        ]
+      ],
+      "services": []
+    },
+    "complaint-cell": {
+      "file": "complaint-cell.html",
+      "title": "Complaint Cell",
+      "icon": "bi-chat-left-text",
+      "incharge": "",
+      "reports": "ADC-II",
+      "scope": "Citizen complaints and follow-up.",
+      "about": "The Complaint Cell registers, tracks and follows up citizen complaints submitted online or in person, working with the relevant branch until each complaint is resolved. The target response time is 48 hours on working days.",
+      "functions": [
+        [
+          "bi-pencil-square",
+          "Registration",
+          "Registers complaints received online and in person."
+        ],
+        [
+          "bi-diagram-3",
+          "Assignment",
+          "Assigns each complaint to the branch or office responsible."
+        ],
+        [
+          "bi-arrow-repeat",
+          "Follow-up",
+          "Follows up each complaint until it is resolved."
+        ],
+        [
+          "bi-bell",
+          "Response",
+          "Informs the complainant of the outcome."
+        ]
+      ],
+      "services": [
+        [
+          "bi-chat-left-text",
+          "Complaint Registration",
+          "How to register a complaint and what details to give.",
+          "complaint-registration.html"
+        ]
+      ]
+    },
+    "public-relations": {
+      "file": "public-relations.html",
+      "title": "Public Relations",
+      "icon": "bi-megaphone",
+      "incharge": "",
+      "reports": "Deputy Commissioner",
+      "scope": "Press, public awareness and media.",
+      "about": "Public Relations manages press updates, public awareness campaigns and media coordination for the Deputy Commissioner's Office, including the district's social media pages.",
+      "functions": [
+        [
+          "bi-newspaper",
+          "Press Releases",
+          "Prepares and issues press releases and news updates."
+        ],
+        [
+          "bi-megaphone",
+          "Public Awareness",
+          "Runs awareness campaigns on public services, health and safety."
+        ],
+        [
+          "bi-camera",
+          "Media Coordination",
+          "Coordinates media coverage of district events."
+        ],
+        [
+          "bi-share",
+          "Social Media",
+          "Manages the district's official social media pages."
+        ]
+      ],
+      "services": []
+    }
+  };
+
   function siteHeader() {
     return `
       <header class="site-header">
@@ -313,7 +1124,7 @@
             <div class="row align-items-center g-3">
               <div class="col-lg-4">
                 <a class="brand-lockup" href="index.html" aria-label="District Central Karachi home">
-                  <span class="gov-logo"><i class="bi bi-bank2"></i></span>
+                  <span class="gov-logo"><img src="images/sindh-govt-logo.png" alt="Government of Sindh logo"></span>
                   <span><strong>District Central Karachi</strong><small>Government of Sindh</small></span>
                 </a>
               </div>
@@ -329,7 +1140,7 @@
                   <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                   <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                   <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-                  <a class="complaint-btn" href="#contact-cta"><i class="bi bi-chat-square-text"></i> Complaint</a>
+                  <a class="complaint-btn" href="#contact-cta"><i class="bi bi-chat-square-text"></i> Complaint</a><img class="header-gov-logo" src="images/sindh-govt-logo.png" alt="Government of Sindh">
                 </div>
               </div>
             </div>
@@ -381,16 +1192,16 @@
         <div class="container">
           <div class="row g-4">
             <div class="col-lg-4">
-              <a class="brand-lockup footer-brand" href="index.html"><span class="gov-logo"><i class="bi bi-bank2"></i></span><span><strong>District Central Karachi</strong><small>Government of Sindh</small></span></a>
+              <a class="brand-lockup footer-brand" href="index.html"><span class="gov-logo"><img src="images/sindh-govt-logo.png" alt="Government of Sindh logo"></span><span><strong>District Central Karachi</strong><small>Government of Sindh</small></span></a>
               <p>Official district portal for public information, citizen services, administrative updates, and complaint facilitation.</p>
               <div class="footer-social"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-youtube"></i></a></div>
             </div>
             <div class="col-6 col-lg-2"><h3>Quick Links</h3><a href="about.html">About</a><a href="news.html">News</a><a href="index.html#gallery">Gallery</a><a href="index.html#downloads">Downloads</a></div>
-            <div class="col-6 col-lg-2"><h3>Branches</h3><a href="revenue.html">Revenue</a><a href="branches.html">Accounts</a><a href="branches.html">IT Cell</a><a href="branches.html">Complaint Cell</a></div>
+            <div class="col-6 col-lg-2"><h3>Branches</h3><a href="revenue.html">Revenue</a><a href="accounts-branch.html">Accounts</a><a href="it-cell.html">IT Cell</a><a href="complaint-cell.html">Complaint Cell</a></div>
             <div class="col-6 col-lg-2"><h3>Officers</h3><a href="deputy-commissioner.html">Deputy Commissioner</a><a href="adc-1.html">ADC-I</a><a href="adc-2.html">ADC-II</a><a href="ac-1.html">Assistant Commissioners</a></div>
             <div class="col-6 col-lg-2"><h3>Important</h3><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="complaint-registration.html">Complaint</a><a href="#contact-card">Contact</a></div>
           </div>
-          <div class="footer-bottom"><span>Copyright 2026 District Central Karachi. All rights reserved.</span><span>Official Government Website</span></div>
+          <div class="footer-bottom"><span>Copyright 2026 District Central Karachi. All rights reserved.</span><span class="footer-gov-mark"><img src="images/sindh-govt-logo.png" alt="Government of Sindh"> Official Government Website</span></div>
         </div>
       </footer>
       <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>`;
@@ -456,7 +1267,7 @@
   function officerMain(page) {
     const key = Object.keys(officerPages).find((item) => officerPages[item] === page);
     const content = officerContent[key] || {};
-    const extra = officerExtra[key] || {};
+    const extra = officerExtra[key] || officerExtraMore[key] || {};
     const roles = content.roles || ["Administrative Leadership", "District Governance", "Public Services", "Law & Order Coordination", "Revenue Administration", "Development Oversight", "Citizen Welfare", "Disaster Management"];
     return `
       ${siteHeader()}<main>${pageHero(page)}
@@ -542,8 +1353,8 @@ ${extra.announcements ? `        <section class="section">
     const page = { title: "District Central Branches", subtitle: "Departments & Administrative Branches" };
     return `${siteHeader()}<main>${pageHero(page)}
       <!-- Content sourced from: content/DC OFFICE CONTENT.docx; content/Departments and Mukhtiar kar.docx -->
-      <section class="section"><div class="container"><div class="section-heading" data-aos="fade-up"><span class="section-kicker">Branches</span><h2>District Central Branches</h2><p>District Central's administrative work is organized into branches, each responsible for a specific area of public service. Select a branch below for its functions and facilitation details.</p></div><div class="card-grid">${branches.map(([icon, name, desc], i) => `<article class="dept-card branch-card d-flex flex-column" data-aos="fade-up" data-aos-delay="${(i % 4) * 70}"><i class="bi ${icon}"></i><h3 class="mt-3">${name}</h3><p>${desc}</p><a class="btn btn-primary-gradient" href="${name === "Revenue" ? "revenue.html" : "#"}">View Department</a></article>`).join("")}</div></div></section>
-      <section class="section muted-section"><div class="container"><div class="section-heading" data-aos="fade-up"><span class="section-kicker">Workflow</span><h2>How Our Branches Work</h2></div><div class="branch-workflow">${["Citizen Request", "Department Review", "Verification", "Approval", "Service Delivery"].map((step, i) => `<div class="flow-card" data-aos="fade-up"><span class="avatar placeholder-image mx-auto"><i class="bi bi-${i === 4 ? "check2" : "arrow-down"}"></i></span><strong>${step}</strong></div>`).join("")}</div></div></section>
+      <section class="section"><div class="container"><div class="section-heading" data-aos="fade-up"><span class="section-kicker">Branches</span><h2>District Central Branches</h2><p>District Central's administrative work is organized into branches, each responsible for a specific area of public service. Select a branch below for its functions and facilitation details.</p></div><div class="card-grid">${branches.map(([icon, name, desc, file], i) => `<article class="dept-card branch-card d-flex flex-column" data-aos="fade-up" data-aos-delay="${(i % 4) * 70}"><i class="bi ${icon}"></i><h3 class="mt-3">${name}</h3><p>${desc}</p><a class="btn btn-primary-gradient" href="${file}">View Branch</a></article>`).join("")}</div></div></section>
+      <section class="section muted-section"><div class="container"><div class="section-heading" data-aos="fade-up"><span class="section-kicker">Workflow</span><h2>How Our Branches Work</h2></div><div class="branch-workflow">${[["Citizen Request", "Apply at the counter with your documents."], ["Department Review", "The branch checks your application and papers."], ["Verification", "Records are verified, with a field report if needed."], ["Approval", "The officer reviews and decides the case."], ["Service Delivery", "You receive your certificate, licence or reply."]].map(([step, text], i) => `<div class="flow-card" data-aos="fade-up"><span class="avatar placeholder-image mx-auto"><i class="bi bi-${i === 4 ? "check2" : "arrow-down"}"></i></span><strong>${step}</strong><p class="flow-text">${text}</p></div>`).join("")}</div></div></section>
       <section class="section" id="faq"><div class="container"><div class="section-heading" data-aos="fade-up"><span class="section-kicker">Citizen Support</span><h2>Frequently Asked Questions</h2></div>${faq("branchFaq")}</div></section>
       ${sharedSupport()}</main>${siteFooter()}`;
   }
@@ -559,31 +1370,30 @@ ${extra.announcements ? `        <section class="section">
     return `<div class="accordion help-accordion" id="revenueFaq">${items.map((q, index) => `<div class="accordion-item"><h4 class="accordion-header" id="revFaqH${index}"><button class="accordion-button ${index ? "collapsed" : ""}" type="button" data-bs-toggle="collapse" data-bs-target="#revFaqC${index}" aria-expanded="${index ? "false" : "true"}" aria-controls="revFaqC${index}">${q}</button></h4><div id="revFaqC${index}" class="accordion-collapse collapse ${index ? "" : "show"}" aria-labelledby="revFaqH${index}" data-bs-parent="#revenueFaq"><div class="accordion-body">Citizens may visit the relevant facilitation counter with complete documents. The department reviews each request through the prescribed administrative process and provides guidance through official contact channels.</div></div></div>`).join("")}</div>`;
   }
 
-  function revenueMain() {
+  const revenueFunctions = [["bi-map", "Land Record Management", "Maintenance and updating of land records, record-of-rights matters, mutation records, and revenue inspections."], ["bi-cash-stack", "Revenue Collection", "Assessment and collection of land revenue, recovery of government dues, rates, cesses, and arrears where authorized."], ["bi-files", "Mutation / Dakhil-Kharij", "Processing and supervision of mutation of land rights arising from lawful transactions, with notices and record maintenance where required."], ["bi-signpost", "Demarcation and Measurement", "Conduct or supervision of demarcation, land measurement, survey-related work, and boundary identification according to prescribed revenue procedure."], ["bi-shield-check", "Government Land Protection", "Identification and protection of government land, reporting unauthorized occupation and encroachment to competent authority."], ["bi-bank", "Revenue Proceedings", "Revenue cases, appeals, enquiries, civil suits, court cases, and proceedings within statutory or delegated jurisdiction."], ["bi-building", "SBCA / Building Matters", "Coordination on illegal portions, encroachment matters, and illegal or dangerous building references."], ["bi-people", "Public Assistance", "Guidance and complaint review for citizens on revenue matters within the office's delegated authority."]];
+  const revenueServices = [["bi-file-earmark-check", "Revenue Certificate", "Applicants are advised to verify required supporting documents before visiting the facilitation counter.", "revenue-certificate.html"], ["bi-folder2-open", "Land Record Information", "Information from land records for owners and legal heirs, after verification of identity and entitlement.", "land-revenue.html"], ["bi-signpost", "Mutation Guidance", "Guidance on transfer of land records after sale, gift or inheritance, and the documents needed.", "land-revenue.html"], ["bi-shield", "Government Land Matters", "Protection of government land and reporting of illegal occupation to the competent authority.", "land-revenue.html"], ["bi-building-check", "Encroachment Enquiries", "Complaints and enquiries about encroachment on public land, referred for inspection and action.", "land-revenue.html"], ["bi-headset", "Public Assistance", "Guidance for citizens on revenue procedures and the office that deals with their matter.", "public-assistance.html"]];
+
+  function branchMain(key) {
+    const b = branchData[key];
+    const functions = b.functions === "REVENUE" ? revenueFunctions : b.functions;
+    const services = b.services === "REVENUE" ? revenueServices : b.services;
     const page = {
-      title: "Revenue Department",
+      title: b.title,
       subtitle: "District Central Karachi",
-      badge: "Department",
+      badge: "Branch",
       parent: { label: "Branches", href: "branches.html" },
-      description: "The Revenue Department is responsible for land administration, revenue records, certificates, and public revenue-related services.",
-      actions: `<a class="btn btn-primary-gradient" href="#contact-card">Contact Department</a><a class="btn btn-outline-light" href="#downloads">Download Forms</a>`
+      description: b.about.split(". ")[0].replace(/\.$/, "") + ".",
+      actions: `<a class="btn btn-primary-gradient" href="#contact">Contact Branch</a>`
     };
-    const functions = [["bi-map", "Land Record Management", "Maintenance and updating of land records, record-of-rights matters, mutation records, and revenue inspections."], ["bi-cash-stack", "Revenue Collection", "Assessment and collection of land revenue, recovery of government dues, rates, cesses, and arrears where authorized."], ["bi-files", "Mutation / Dakhil-Kharij", "Processing and supervision of mutation of land rights arising from lawful transactions, with notices and record maintenance where required."], ["bi-signpost", "Demarcation and Measurement", "Conduct or supervision of demarcation, land measurement, survey-related work, and boundary identification according to prescribed revenue procedure."], ["bi-shield-check", "Government Land Protection", "Identification and protection of government land, reporting unauthorized occupation and encroachment to competent authority."], ["bi-bank", "Revenue Proceedings", "Revenue cases, appeals, enquiries, civil suits, court cases, and proceedings within statutory or delegated jurisdiction."], ["bi-building", "SBCA / Building Matters", "Coordination on illegal portions, encroachment matters, and illegal or dangerous building references."], ["bi-people", "Public Assistance", "Guidance and complaint review for citizens on revenue matters within the office's delegated authority."]];
-    const services = [["bi-file-earmark-check", "Revenue Certificate"], ["bi-folder2-open", "Land Record Information"], ["bi-signpost", "Mutation Guidance"], ["bi-shield", "Government Land Matters"], ["bi-building-check", "Encroachment Enquiries"], ["bi-headset", "Public Assistance"]];
-    const documents = ["Copy of CNIC", "Copy of title documents (registry, lease or allotment)", "Previous record extract or mutation entry, if available", "Legal heirship certificate, where applicable", "Application stating the matter", "Applicants are advised to verify required supporting documents with the Revenue Branch before visiting the facilitation counter."];
-    const steps = ["Submit application or enquiry at the relevant facilitation counter", "Branch scrutiny and document verification", "Revenue staff review or field report where required", "Decision, approval, or further lawful proceedings", "Certificate, response, or service delivery"];
-    const stepText = ["Submit your application with the required documents at the Revenue Branch counter.", "The branch checks your documents and tells you if anything is missing.", "Where needed, revenue staff check the record or visit the site and submit a report.", "The competent officer decides the matter or starts further proceedings under the law.", "You receive the certificate, decision or reply, or are told the next step."];
-    const hierarchy = ["Deputy Commissioner / Collector", "Additional Deputy Commissioner-I", "Assistant Commissioners", "Mukhtiarkars", "Tapedars and field revenue staff"];
-    const downloads = ["Revenue Application Form", "Revenue Certificate Sample", "Guidelines", "Government Notification", "Revenue Rules"];
+    document.title = `${b.title} | District Central Karachi`;
+    const nav = ["Overview", "Functions"].concat(services.length ? ["Services"] : [], ["Contact"]);
     return `${siteHeader()}<main>${pageHero(page)}
-      <!-- Content sourced from: content/Departments and Mukhtiar kar.docx; content/Functions and Powers of Deputy Commissioner.docx; content/Functions and Powers of Deputy Commissioner, ADC, AC, Mukhtiarkar.docx -->
-      <section class="section"><div class="container"><div class="row g-4 align-items-start"><aside class="col-lg-3 order-lg-2"><div class="sidebar-card department-sidebar" data-aos="fade-left"><h3>Quick Navigation</h3>${["Overview", "Functions", "Services", "Documents", "Procedure", "Hierarchy", "Downloads", "FAQ", "Contact"].map((item) => `<a href="#${item.toLowerCase()}"><i class="bi bi-arrow-right-circle"></i>${item}</a>`).join("")}</div></aside><div class="col-lg-9 order-lg-1">
-        <section id="overview" class="mb-5"><div class="row g-4 align-items-center"><div class="col-md-5" data-aos="zoom-in"><div class="dc-portrait placeholder-image image-zoom"><i class="bi bi-bank"></i></div></div><div class="col-md-7" data-aos="fade-left"><span class="section-kicker">Department Overview</span><h2>About Revenue Department</h2><p>Revenue administration is one of the principal statutory functions associated with the Deputy Commissioner / Collector in Sindh. The branch handles land and encroachment enquiries, anti-encroachment drives, civil suits and other court cases, revenue cases and appeals, and illegal or dangerous building matters referred through SBCA.</p><div class="row g-3 mt-2"><div class="col-md-4"><div class="mini-panel"><i class="bi bi-person"></i><strong>In-charge</strong><span>Mr. Umer Chandio, Assistant</span></div></div><div class="col-md-4"><div class="mini-panel"><i class="bi bi-diagram-3"></i><strong>Reports To</strong><span>ADC-I</span></div></div><div class="col-md-4"><div class="mini-panel"><i class="bi bi-list-check"></i><strong>Scope</strong><span>Land, records, revenue cases, encroachment matters.</span></div></div></div></div></div></section>
+      <section class="section"><div class="container"><div class="row g-4 align-items-start"><aside class="col-lg-3 order-lg-2"><div class="sidebar-card department-sidebar" data-aos="fade-left"><h3>Quick Navigation</h3>${nav.map((item) => `<a href="#${item.toLowerCase()}"><i class="bi bi-arrow-right-circle"></i>${item}</a>`).join("")}<a href="branches.html"><i class="bi bi-grid"></i>All Branches</a></div></aside><div class="col-lg-9 order-lg-1">
+        <section id="overview" class="mb-5"><div class="row g-4 align-items-center"><div class="col-md-5" data-aos="zoom-in"><div class="dc-portrait placeholder-image image-zoom"><i class="bi ${b.icon}"></i></div></div><div class="col-md-7" data-aos="fade-left"><span class="section-kicker">Branch Overview</span><h2>About ${b.title}</h2><p>${b.about}</p><div class="row g-3 mt-2">${b.incharge ? `<div class="col-md-4"><div class="mini-panel"><i class="bi bi-person"></i><strong>In-charge</strong><span>${b.incharge}</span></div></div>` : ""}<div class="col-md-4"><div class="mini-panel"><i class="bi bi-diagram-3"></i><strong>Reports To</strong><span>${b.reports}</span></div></div><div class="col-md-4"><div class="mini-panel"><i class="bi bi-list-check"></i><strong>Scope</strong><span>${b.scope}</span></div></div></div></div></div></section>
         <section id="functions" class="mb-5"><div class="section-heading text-start"><span class="section-kicker">Responsibilities</span><h2>Functions & Responsibilities</h2></div><div class="card-grid">${functions.map(([icon, title, text], i) => `<article class="dept-card" data-aos="fade-up" data-aos-delay="${(i % 4) * 70}"><i class="bi ${icon}"></i><h3>${title}</h3><p>${text}</p></article>`).join("")}</div></section>
-        <section id="services" class="mb-5"><div class="section-heading text-start"><span class="section-kicker">Citizen Services</span><h2>Public Facilitation Services</h2></div><div class="row g-4">${services.map(([icon, title]) => { const href = title === "Revenue Certificate" ? "revenue-certificate.html" : title === "Land Record Information" || title === "Mutation Guidance" || title === "Government Land Matters" || title === "Encroachment Enquiries" ? "land-revenue.html" : title === "Public Assistance" ? "public-assistance.html" : "citizen-services.html"; return `<div class="col-md-6 col-xl-4" data-aos="fade-up"><article class="news-card h-100"><div class="news-img placeholder-image"><i class="bi ${icon}"></i></div><div><h3>${title}</h3><p>${({"Revenue Certificate": "Applicants are advised to verify required supporting documents before visiting the facilitation counter.", "Land Record Information": "Information from land records for owners and legal heirs, after verification of identity and entitlement.", "Mutation Guidance": "Guidance on transfer of land records after sale, gift or inheritance, and the documents needed.", "Government Land Matters": "Protection of government land and reporting of illegal occupation to the competent authority.", "Encroachment Enquiries": "Complaints and enquiries about encroachment on public land, referred for inspection and action.", "Public Assistance": "Guidance for citizens on revenue procedures and the office that deals with their matter."})[title] || ""}</p><a href="${href}">Learn More</a></div></article></div>`; }).join("")}</div></section>
-        <section id="documents" class="mb-5"><div class="section-heading text-start"><span class="section-kicker">Documents</span><h2>Required Documents</h2></div><ul class="checklist">${documents.map((doc) => `<li data-aos="fade-up"><i class="bi bi-check-circle-fill"></i>${doc}</li>`).join("")}</ul></section>
-        <section id="procedure" class="mb-5"><div class="section-heading text-start"><span class="section-kicker">Procedure</span><h2>Application Procedure</h2></div><div class="timeline-list">${steps.map((step, i) => `<article class="timeline-card" data-aos="fade-up"><span class="section-kicker">Step ${i + 1}</span><h3>${step}</h3><p>${stepText[i]}</p></article>`).join("")}</div></section>
-        
+        ${services.length ? `<section id="services" class="mb-5"><div class="section-heading text-start"><span class="section-kicker">Citizen Services</span><h2>Public Facilitation Services</h2></div><div class="row g-4">${services.map(([icon, title, text, href]) => `<div class="col-md-6 col-xl-4" data-aos="fade-up"><article class="news-card h-100"><div class="news-img placeholder-image"><i class="bi ${icon}"></i></div><div><h3>${title}</h3><p>${text}</p><a href="${href}">Learn More</a></div></article></div>`).join("")}</div></section>` : ""}
+        <section id="contact" class="mb-5"><article class="contact-card" data-aos="fade-up"><span class="section-kicker">Contact</span><h2>Visit the ${b.title}</h2><p><strong>Location:</strong> Deputy Commissioner Office, Sector 15-A/1, Buffer Zone, Karachi 74600</p><p><strong>Public hours:</strong> Monday to Friday, 9:00 AM – 5:00 PM</p>${b.incharge ? `<p><strong>In-charge:</strong> ${b.incharge}</p>` : ""}<p><strong>Reports to:</strong> ${b.reports}</p><a class="btn btn-primary-gradient" href="complaint-registration.html">Submit a Complaint</a></article></section>
+      </div></div></div></section>
     </main>${siteFooter()}`;
   }
 
@@ -596,7 +1406,7 @@ ${extra.announcements ? `        <section class="section">
     if (!root) return;
 
     const pageKey = root.dataset.page;
-    root.innerHTML = pageKey === "branches" ? branchesMain() : pageKey === "revenue" ? revenueMain() : officerMain(officerPages[pageKey]);
+    root.innerHTML = pageKey === "branches" ? branchesMain() : branchData[pageKey] ? branchMain(pageKey) : officerMain(officerPages[pageKey]);
 
     document.querySelectorAll(".gallery-lightbox").forEach(function (button) {
       button.addEventListener("click", function () {
