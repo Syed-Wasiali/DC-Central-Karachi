@@ -1416,3 +1416,6 @@ input[type="checkbox"], input[type="radio"] {
 .news-card time { display: block; }
 .dc-news-slot { border: 2px dashed var(--line); border-radius: var(--radius); background: #fff; min-height: 220px; display: grid; place-items: center; text-align: center; padding: 1.5rem; color: var(--muted); }
 .dc-news-slot i { font-size: 2rem; color: var(--primary); display: block; margin-bottom: .5rem; }
+
+.fb-feed-frame{display:flex;justify-content:center;background:#fff;border-radius:16px;padding:.75rem;box-shadow:0 10px 30px rgba(11,93,59,.08)}
+.fb-feed-frame iframe{width:100%;max-width:500px}

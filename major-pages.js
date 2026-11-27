@@ -29,6 +29,18 @@ const pageInfo = {
     breadcrumb: "Contact Us",
     badge: "Citizen Support"
   },
+  plaques: {
+    title: "Commemorative Blue Plaques",
+    subtitle: "Honouring the remarkable people who lived in District Central.",
+    breadcrumb: "Blue Plaques",
+    badge: "District Heritage"
+  },
+  rwa: {
+    title: "Residents Welfare Associations",
+    subtitle: "Community policing and neighbourhood security across District Central.",
+    breadcrumb: "Residents Associations",
+    badge: "Community Policing"
+  },
   initiatives: {
     title: "Government Initiatives",
     subtitle: "District-level programs, development activities and public service initiatives.",
@@ -273,7 +285,7 @@ function newsPage() {
     "Applicants whose CNIC is registered outside Karachi must contact the branch in-charge before applying."
   ];
   return `${header("news")}<main>${hero("news")}
-    <section class="section"><div class="container">${sectionHead("District Central", "District Central News & Events", "Official news and events from the District Administration Central.")}<div class="row g-4">${[1, 2].map(() => `<div class="col-md-6"><div class="dc-news-slot"><div><i class="bi bi-newspaper"></i>District Central news will be published here.</div></div></div>`).join("")}</div></div></section>
+    <section class="section"><div class="container">${sectionHead("District Central", "District Central News & Events", "Latest posts from the official Facebook page of the Deputy Commissioner Central, and the main work of recent months.")}<div class="row g-4 align-items-start"><div class="col-lg-6" data-aos="fade-right"><div class="fb-feed-frame"><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FdeputycommissionerCentral&tabs=timeline&width=500&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false" width="500" height="700" style="border:none;overflow:hidden;max-width:100%" scrolling="no" frameborder="0" allowfullscreen="true" allow="encrypted-media" title="District Central on Facebook" loading="lazy"></iframe></div></div><div class="col-lg-6" data-aos="fade-left"><div class="timeline-list">${window.DC_WORK.months.slice().reverse().slice(0, 4).map(([m, t]) => `<article class="timeline-card"><span class="section-kicker">${m}</span><p class="mb-0">${t}</p></article>`).join("")}</div><a class="btn btn-primary-gradient mt-3" href="https://www.facebook.com/deputycommissionerCentral" target="_blank" rel="noopener"><i class="bi bi-facebook"></i> Follow us on Facebook</a></div></div></div></section>
     <section class="section muted-section"><div class="container">${sectionHead("Commissioner Karachi", "Latest News from Commissioner Karachi", "Updated automatically from the Commissioner Karachi website.")}<div class="row g-4" id="ckNews"><p class="text-center text-muted">Loading news…</p></div><div class="text-center mt-4"><a class="btn btn-outline-primary" href="https://commissionerkarachi.gos.pk/media-gallery" target="_blank" rel="noopener">View all on Commissioner Karachi website</a></div></div></section>
     <section class="section"><div class="container">${sectionHead("Government of Sindh", "Sindh Government News & Events", "Updated automatically from the Government of Sindh website.")}<div class="row g-4" id="sindhNews"><p class="text-center text-muted">Loading news…</p></div><div class="text-center mt-4"><a class="btn btn-outline-primary" href="https://www.sindh.gov.pk/notifications?show=news" target="_blank" rel="noopener">View all on Government of Sindh website</a></div><p class="text-center text-muted small mt-3" id="newsUpdated"></p></div></section>
     <section class="section"><div class="container">${sectionHead("Press", "Press Releases", "Official press releases issued by the District Administration Central.")}<div class="table-responsive"><table class="table press-table"><thead><tr><th>Date</th><th>Title</th><th>Category</th><th>Download/View</th></tr></thead><tbody><tr><td colspan="4" class="text-center text-muted">Press releases will appear here as they are issued.</td></tr></tbody></table></div></div></section>
@@ -284,6 +296,7 @@ function newsPage() {
 }
 
 function initiativesPage() {
+  const W = window.DC_WORK;
   const cats = ["Public Welfare", "Development", "Price Control", "Anti-Encroachment", "Environment", "Cleanliness", "Disaster Management", "Digital Services", "Citizen Facilitation", "Public Awareness"];
   const sourcedInitiatives = [
     ["Digital Service Desk", "An ongoing effort to move citizen-facing services, from Domicile/PRC applications to complaint registration, onto digital and semi-digital channels, reducing repeat visits and processing time.", "Digital Services"],
@@ -293,7 +306,10 @@ function initiativesPage() {
   ];
   return `${header("initiatives")}<main>${hero("initiatives")}
     <!-- Content sourced from: content/DC OFFICE CONTENT.docx; content/Functions and Powers of Deputy Commissioner.docx -->
-    <section class="section"><div class="container">${sectionHead("Featured", "Featured Initiative")}<article class="feature-card"><div class="placeholder-image"><i class="bi bi-building-gear"></i></div><div><span class="section-kicker">${sourcedInitiatives[0][2]}</span><h2>${sourcedInitiatives[0][0]}</h2><p>${sourcedInitiatives[0][1]}</p><a class="btn btn-primary-gradient" href="#initiative-list">View Initiatives</a></div></article></div></section>
+    <section class="section"><div class="container">${sectionHead("Featured", "Featured Initiative")}<article class="feature-card" data-aos="fade-up"><div class="placeholder-image"><i class="bi bi-award"></i></div><div><span class="section-kicker">District Heritage</span><h2>Commemorative Blue Plaques</h2><p>${W.initiatives[0].summary}</p><p>Six plaques have been installed so far, honouring Sadequain, Asad Shafiq, Syed Abbas Haider Bilgrami, Amjad Sabri, Umar Sharif and Umeed Fazli. Residents are invited to suggest more names.</p><a class="btn btn-primary-gradient" href="blue-plaques.html">View the Blue Plaques</a></div></article></div></section>
+    <section class="section"><div class="container">${sectionHead("2026", "Flagship Initiatives", "The main initiatives of the District Administration Central in 2026, taken from the district's official Facebook page.")}<div class="row g-4">${W.initiatives.map((x) => `<div class="col-md-6 col-lg-3"><a class="text-decoration-none" href="${x.link || "#" + x.id}"><article class="initiative-card h-100" data-aos="fade-up"><div class="placeholder-image"><i class="bi ${x.icon}"></i></div><div class="p-3"><span class="section-kicker">${x.category}</span><h3>${x.title}</h3><p>${x.summary.split(". ")[0]}.</p><span class="btn btn-outline-primary btn-sm">Read more</span></div></article></a></div>`).join("")}</div></div></section>
+    ${W.initiatives.map((x, n) => `<section class="section ${n % 2 ? "" : "muted-section"}" id="${x.id}"><div class="container"><div class="row g-4 align-items-start"><div class="col-lg-5" data-aos="fade-right"><span class="section-kicker">${x.category}</span><h2>${x.title}</h2><p>${x.summary}</p>${x.link ? `<a class="btn btn-primary-gradient" href="${x.link}">Find out more</a>` : ""}</div><div class="col-lg-7" data-aos="fade-left"><div class="timeline-list">${x.timeline.map(([m, t]) => `<article class="timeline-card"><span class="section-kicker">${m}</span><p class="mb-0">${t}</p></article>`).join("")}</div></div></div></div></section>`).join("")}
+    <section class="section"><div class="container">${sectionHead("Monthly Report", "District Central at Work – 2026", "The main focus of the District Administration each month, from the official Facebook page.")}<div class="table-responsive"><table class="table press-table"><thead><tr><th>Month</th><th>Main work</th></tr></thead><tbody>${W.months.map(([m, t]) => `<tr><td><strong>${m}</strong></td><td>${t}</td></tr>`).join("")}</tbody></table></div><p class="text-center mt-3"><a class="btn btn-outline-primary" href="${W.source}" target="_blank" rel="noopener"><i class="bi bi-facebook"></i> See all updates on Facebook</a></p></div></section>
     <section class="section muted-section"><div class="container">${sectionHead("Categories", "Initiative Categories", "The district administration's work is organised around ten areas of public service. Each category brings together the campaigns and programmes run in that area.")}<div class="card-grid">${cats.map((x, i) => iconCard("bi-grid", x, [
       "Programmes that support vulnerable citizens, including financial assistance and compensation cases.",
       "Monitoring of development schemes in the district to ensure quality and timely completion.",
@@ -305,12 +321,31 @@ function initiativesPage() {
       "Bringing public information, forms and complaint registration online.",
       "Clearer guidance and better counters so citizens can complete their work in fewer visits.",
       "Campaigns on polio, health, safety and citizens' rights."][i])).join("")}</div></div></section>
-    <section class="section"><div class="container">${sectionHead("Initiatives", "Initiative Cards", "Current initiatives of the District Administration Central to improve services and support residents.")}<div class="row g-4">${sourcedInitiatives.map((item) => `<div class="col-md-6 col-lg-3"><article class="initiative-card"><div class="placeholder-image"><i class="bi bi-building-gear"></i></div><span class="section-kicker">${item[2]}</span><h3>${item[0]}</h3><p>${item[1]}</p></article></div>`).join("")}</div></div></section>
     <!-- Ongoing and completed projects hidden until real project data is supplied by the DC Office. -->
     <section class="section muted-section"><div class="container">${sectionHead("Upcoming", "Upcoming Initiatives", "Campaigns and activities planned across the district. Dates will be announced on the News page and on the district's social media pages.")}<div class="timeline-list">${[["Polio Immunisation Campaign", "All sub-divisions", "Door-to-door vaccination of children under five, coordinated by the district Polio Focal Person."], ["Monsoon Preparedness Review", "DC Office", "Review of drain cleaning, dewatering arrangements and emergency response before the rains."], ["Ramazan Price Monitoring", "All markets", "Daily inspections to keep essential items at notified prices during Ramazan."], ["Tree Plantation Drive", "Parks and green belts", "Plantation with schools and community groups to improve the district's green cover."]].map(([t, loc, d]) => `<article class="timeline-card"><span class="section-kicker">Scheduled campaign</span><h3>${t}</h3><p><strong>Location:</strong> ${loc}. ${d}</p></article>`).join("")}</div></div></section>
-    <section class="section"><div class="container">${sectionHead("Impact", "Impact / Statistics", "The scale of the district administration's public service work.")}${stats([[5, "Sub-divisions Covered"], [10, "Citizen Services Online"], [14, "District Branches"], [48, "Complaint Response Target", "48 hrs"]], "Figures will be updated as initiative data is published.")}</div></section>
+    <section class="section"><div class="container">${sectionHead("Impact", "Results in 2026", "Some of the results of the District Administration's work this year.")}${stats(W.stats)}</div></section>
     <section class="section muted-section"><div class="container">${sectionHead("Gallery", "Initiative Photos")}${gallery(6)}</div></section>
     <section class="section"><div class="container">${sectionHead("FAQ", "Frequently Asked Questions")}${faq("initiativesFaq", [["What are government initiatives?", "Programmes and campaigns run by the District Administration Central to improve public services, protect consumers and support residents."], ["How are projects selected?", "Projects are chosen according to public need, government priorities and directions from the Government of Sindh and the Commissioner Karachi."], ["Can citizens suggest initiatives?", "Yes. Send your suggestion through the complaint form on this website, marking it as a suggestion."], ["Where can progress be checked?", "Progress updates are published on this page, on the News page and on the District Central social media pages."]])}</div></section>
+  </main>${footer()}`;
+}
+
+function plaquesPage() {
+  const W = window.DC_WORK;
+  return `${header("initiatives")}<main>${hero("plaques")}
+    <section class="section"><div class="container">${sectionHead("About", "Celebrating Our Legends", W.initiatives[0].summary + " The initiative was launched in November 2026 with plaques in Block 13, Gulberg, Federal B Area.")}<div class="row g-4">${W.plaques.map(([name, years, field, text, place]) => `<div class="col-md-6 col-lg-4"><article class="dept-card h-100" data-aos="fade-up"><i class="bi bi-award"></i><span class="section-kicker">${field}</span><h3>${name}</h3><p class="fw-bold mb-1">${years}</p><p>${text}</p><p class="small text-muted mb-0"><i class="bi bi-geo-alt"></i> ${place}</p></article></div>`).join("")}</div></div></section>
+    <section class="section muted-section"><div class="container">${sectionHead("Timeline", "How the Initiative Began")}<div class="timeline-list">${W.initiatives[0].timeline.map(([m, t]) => `<article class="timeline-card"><span class="section-kicker">${m}</span><p class="mb-0">${t}</p></article>`).join("")}</div></div></section>
+    <section class="complaint-cta"><div class="container"><div class="cta-panel"><div><span class="section-kicker">Suggest a Name</span><h2>Do You Know a Notable Resident?</h2><p>The District Administration welcomes suggestions of people from District Central who made significant contributions in sports, arts, music, education, science, public service and other fields. Call 021-99260038 or message us on Facebook.</p></div><div class="cta-actions"><a class="btn btn-primary-gradient" href="tel:02199260038"><i class="bi bi-telephone"></i> 021-99260038</a><a class="btn btn-outline-light" href="${W.source}" target="_blank" rel="noopener"><i class="bi bi-facebook"></i> Message on Facebook</a></div></div></div></section>
+  </main>${footer()}`;
+}
+
+function rwaPage() {
+  const W = window.DC_WORK;
+  const steps = [["bi-people", "Gather your neighbours", "Hold a meeting of the residents of your block and agree to form an association."], ["bi-journal-check", "Register the association", "Register with the Social Welfare Department. Officers from the DC Office can guide you through the process."], ["bi-shield-check", "Agree a security plan", "Work with the police and the District Administration on patrolling, CCTV and, where approved under the SOPs, manned barriers or gates."], ["bi-chat-dots", "Stay in touch", "Raise sanitation, water, roads and other civic issues through your association for quicker action by the departments concerned."]];
+  return `${header("initiatives")}<main>${hero("rwa")}
+    <section class="section"><div class="container">${sectionHead("Community Policing", "Safer Neighbourhoods, Together", W.initiatives[1].summary)}<div class="branch-workflow">${steps.map(([icon, title, text], i) => `<div class="flow-card"><span class="avatar placeholder-image mx-auto"><i class="bi ${icon}"></i></span><strong>${i + 1}. ${title}</strong><p class="flow-text">${text}</p></div>`).join("")}</div></div></section>
+    <section class="section muted-section"><div class="container">${sectionHead("Directory", "Associations Across District Central", "Blocks that have formed, or are forming, a Residents Welfare Association under the Deputy Commissioner's initiative.")}<div class="table-responsive"><table class="table press-table"><thead><tr><th>Block / Area</th><th>Subdivision</th><th>Progress</th></tr></thead><tbody>${W.rwas.map(([a, b, c]) => `<tr><td><strong>${a}</strong></td><td>${b}</td><td>${c}</td></tr>`).join("")}</tbody></table></div></div></section>
+    <section class="section"><div class="container">${sectionHead("Timeline", "How the Initiative Has Grown")}<div class="timeline-list">${W.initiatives[1].timeline.map(([m, t]) => `<article class="timeline-card"><span class="section-kicker">${m}</span><p class="mb-0">${t}</p></article>`).join("")}</div></div></section>
+    <section class="complaint-cta"><div class="container"><div class="cta-panel"><div><span class="section-kicker">Join</span><h2>Want to Start an Association in Your Block?</h2><p>Contact the office of the Assistant Commissioner of your subdivision, or the DC Office, and our team will help you get started.</p></div><div class="cta-actions"><a class="btn btn-primary-gradient" href="contact.html">Contact Us</a><a class="btn btn-outline-light" href="${W.source}" target="_blank" rel="noopener"><i class="bi bi-facebook"></i> Facebook</a></div></div></div></section>
   </main>${footer()}`;
 }
 
@@ -394,7 +429,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const root = document.getElementById("majorPage");
   if (!root) return;
   const page = root.dataset.page;
-  const renderers = { about: aboutPage, services: servicesPage, news: newsPage, initiatives: initiativesPage, jurisdiction: jurisdictionPage, contact: contactPage };
+  const renderers = { about: aboutPage, services: servicesPage, news: newsPage, initiatives: initiativesPage, plaques: plaquesPage, rwa: rwaPage, jurisdiction: jurisdictionPage, contact: contactPage };
   root.innerHTML = renderers[page]();
   initFilters();
   if (window.AOS) AOS.refreshHard();

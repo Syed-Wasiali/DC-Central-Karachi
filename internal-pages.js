@@ -1319,7 +1319,14 @@
             <div class="row g-4">${["Public Facilitation", "Price Monitoring", "Complaint Follow-up", "Field Coordination"].map((title, i) => `<div class="col-md-6 col-lg-3" data-aos="zoom-in"><article class="initiative-card"><div class="placeholder-image"><i class="bi bi-building-gear"></i></div><h3>${title}</h3><p>${(extra.initiatives || [])[i] || ""}</p><a href="initiatives.html">Read More</a></article></div>`).join("")}</div>
           </div>
         </section>
-        <section class="section muted-section">
+${((window.DC_WORK || {}).officers || {})[key] ? `        <section class="section">
+          <div class="container">
+            <div class="section-heading" data-aos="fade-up"><span class="section-kicker">2026</span><h2>Committees and Work in 2026</h2><p>Meetings chaired, committees led and work done by this office in 2026, as published on the official Facebook page of the District Administration Central.</p></div>
+            <div class="timeline-list">${window.DC_WORK.officers[key].map(([m, t]) => `<article class="timeline-card" data-aos="fade-up"><span class="section-kicker">${m}</span><p class="mb-0">${t}</p></article>`).join("")}</div>
+            <p class="text-center mt-3"><a class="btn btn-outline-primary" href="https://www.facebook.com/deputycommissionerCentral" target="_blank" rel="noopener"><i class="bi bi-facebook"></i> More updates on Facebook</a></p>
+          </div>
+        </section>
+` : ""}        <section class="section muted-section">
           <div class="container">
             <div class="row g-4 align-items-start">
               <div class="${(extra.timeline || []).length ? "col-lg-7" : "col-12"}" data-aos="fade-right">
