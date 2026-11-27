@@ -1439,3 +1439,27 @@ input[type="checkbox"], input[type="radio"] {
 .cover-photo{padding:0!important;overflow:hidden}
 .cover-photo img{width:100%;height:100%;object-fit:cover}
 .plaque-photo{width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:1rem}
+
+/* Directory and organisation cards */
+.org-card{background:#fff;border-radius:18px;padding:1.5rem;box-shadow:0 10px 28px rgba(11,93,59,.08);display:flex;flex-direction:column;gap:.5rem}
+.org-card h3{font-size:1.1rem;margin:0}
+.org-card p{margin:0;color:#4a5a52}
+.org-card .btn{align-self:flex-start;margin-top:auto}
+.org-logo{display:flex;align-items:center;justify-content:center;height:96px;border-radius:14px;background:#f4f8f5;padding:.6rem;margin-bottom:.5rem}
+.org-logo img{max-height:80px;max-width:100%;object-fit:contain}
+.org-logo.dark{background:#5a1a1a}
+.org-logo i{font-size:2.6rem;color:#0b5d3b}
+.org-contact{list-style:none;padding:0;margin:.25rem 0 .5rem;font-size:.9rem}
+.org-contact li{display:flex;gap:.4rem;align-items:baseline;flex-wrap:wrap;padding:.15rem 0}
+.org-contact i{color:#0b5d3b}
+.org-contact span{font-weight:600;color:#23332b}
+.org-area{font-size:.85rem;color:#6b7b73!important}
+.uc-no{display:inline-block;background:#0b5d3b;color:#fff;border-radius:999px;padding:.15rem .7rem;font-size:.8rem;font-weight:700;margin-bottom:.5rem}
+.uc-table td,.uc-table th{vertical-align:middle}
+.plaque-map{width:100%;height:auto}
+.plaque-map rect{fill:#eef4f0;stroke:#0b5d3b;stroke-width:1.5}
+.plaque-map rect.has-pin{fill:#dfeaf8;stroke:#1f3fb8}
+.plaque-map .area-name{font-weight:700;font-size:17px;fill:#0b5d3b}
+.plaque-map .area-note{font-size:13px;fill:#7a8a82}
+.plaque-map .pin{fill:#1f3fb8;stroke:#fff;stroke-width:2}
+.plaque-map .pin-label{font-size:14px;fill:#1b2a5e;font-weight:600}

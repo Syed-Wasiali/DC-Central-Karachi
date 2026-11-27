@@ -1161,7 +1161,7 @@
                   <a class="nav-link dropdown-toggle" href="about.html" data-bs-toggle="dropdown">About District</a>
                   <div class="dropdown-menu mega-menu">
                     <div class="mega-grid">
-                      <a href="about.html#vision">Vision</a><a href="about.html#mission">Mission</a><a href="about.html#history">History</a><a href="about.html#geography">District Profile</a><a href="about.html#map">Map</a>
+                      <a href="about.html#vision">Vision</a><a href="about.html#mission">Mission</a><a href="about.html#history">History</a><a href="about.html#geography">District Profile</a><a href="about.html#map">Map</a><a href="union-committees.html">Union Committees</a><a href="personalities.html">Personalities</a><a href="sports.html">Sports</a><a href="health.html">Health</a><a href="academic-institutions.html">Academic Institutions</a><a href="entertainment.html">Entertainment</a><a href="jurisdiction.html">Government Jurisdiction</a>
                     </div>
                   </div>
                 </li>

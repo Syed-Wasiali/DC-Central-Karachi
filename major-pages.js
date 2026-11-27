@@ -29,6 +29,12 @@ const pageInfo = {
     breadcrumb: "Contact Us",
     badge: "Citizen Support"
   },
+  ucs: { title: "Union Committees", subtitle: "The 45 Union Committees of District Central, with their Chairmen, Vice Chairmen and offices.", breadcrumb: "Union Committees", badge: "Local Government" },
+  sports: { title: "Sports Facilities", subtitle: "Grounds, stadiums and sports events in District Central.", breadcrumb: "Sports", badge: "District Directory" },
+  health: { title: "Health Services", subtitle: "Hospitals, dispensaries and laboratories serving District Central.", breadcrumb: "Health", badge: "District Directory" },
+  education: { title: "Academic Institutions", subtitle: "Universities, colleges, examination boards and schools in District Central.", breadcrumb: "Academic Institutions", badge: "District Directory" },
+  entertainment: { title: "Entertainment, Parks and Markets", subtitle: "Places to shop, eat, relax and enjoy culture in District Central.", breadcrumb: "Entertainment", badge: "District Directory" },
+  personalities: { title: "Notable Personalities", subtitle: "Celebrating the remarkable people associated with District Central.", breadcrumb: "Personalities", badge: "District Heritage" },
   plaques: {
     title: "Commemorative Blue Plaques",
     subtitle: "Honouring the remarkable people who lived in District Central.",
@@ -113,7 +119,7 @@ function header(page) {
                 <a class="nav-link dropdown-toggle${active(page, "about")}" href="about.html" data-bs-toggle="dropdown">About District</a>
                 <div class="dropdown-menu mega-menu">
                   <div class="mega-grid">
-                    <a href="about.html#vision">Vision</a><a href="about.html#mission">Mission</a><a href="about.html#history">History</a><a href="about.html#geography">District Profile</a><a href="about.html#map">Map</a>
+                    <a href="about.html#vision">Vision</a><a href="about.html#mission">Mission</a><a href="about.html#history">History</a><a href="about.html#geography">District Profile</a><a href="about.html#map">Map</a><a href="union-committees.html">Union Committees</a><a href="personalities.html">Personalities</a><a href="sports.html">Sports</a><a href="health.html">Health</a><a href="academic-institutions.html">Academic Institutions</a><a href="entertainment.html">Entertainment</a><a href="jurisdiction.html">Government Jurisdiction</a>
                   </div>
                 </div>
               </li>
@@ -335,6 +341,7 @@ function plaquesPage() {
   const W = window.DC_WORK;
   return `${header("initiatives")}<main>${hero("plaques")}
     <section class="section"><div class="container">${sectionHead("About", "Celebrating Our Legends", W.initiatives[0].summary + " The initiative was launched in November 2026 with plaques in Block 13, Gulberg, Federal B Area.")}<div class="row g-4">${W.plaques.map(([name, years, field, text, place]) => `<div class="col-md-6 col-lg-4"><article class="dept-card h-100" data-aos="fade-up">${({ "Sadequain": "plaques-05", "Amjad Sabri": "plaques-07", "Umar Sharif": "plaques-08", "Umeed Fazli": "plaques-10" })[name] ? `<img class="plaque-photo" src="images/gallery/${({ "Sadequain": "plaques-05", "Amjad Sabri": "plaques-07", "Umar Sharif": "plaques-08", "Umeed Fazli": "plaques-10" })[name]}.jpg" alt="Blue plaque for ${name}" loading="lazy">` : `<i class="bi bi-award"></i>`}<span class="section-kicker">${field}</span><h3>${name}</h3><p class="fw-bold mb-1">${years}</p><p>${text}</p><p class="small text-muted mb-0"><i class="bi bi-geo-alt"></i> ${place}</p></article></div>`).join("")}</div></div></section>
+    <section class="section"><div class="container">${sectionHead("Map", "Blue Plaques Map")}${plaqueMap()}</div></section>
     <section class="section muted-section"><div class="container">${sectionHead("Photos", "Plaques and Ceremonies")}${W.photoGrid("plaques")}</div></section>
     <section class="section"><div class="container">${sectionHead("Timeline", "How the Initiative Began")}<div class="timeline-list">${W.initiatives[0].timeline.map(([m, t]) => `<article class="timeline-card"><span class="section-kicker">${m}</span><p class="mb-0">${t}</p></article>`).join("")}</div></div></section>
     <section class="complaint-cta"><div class="container"><div class="cta-panel"><div><span class="section-kicker">Suggest a Name</span><h2>Do You Know a Notable Resident?</h2><p>The District Administration welcomes suggestions of people from District Central who made significant contributions in sports, arts, music, education, science, public service and other fields. Call 021-99260038 or message us on Facebook.</p></div><div class="cta-actions"><a class="btn btn-primary-gradient" href="tel:02199260038"><i class="bi bi-telephone"></i> 021-99260038</a><a class="btn btn-outline-light" href="${W.source}" target="_blank" rel="noopener"><i class="bi bi-facebook"></i> Message on Facebook</a></div></div></div></section>
@@ -357,34 +364,79 @@ function linkCards(items) {
   return `<div class="row g-4">${items.map(([icon, title, text, url, label]) => `<div class="col-md-6 col-lg-4"><article class="dept-card h-100" data-aos="fade-up"><i class="bi ${icon}"></i><h3>${title}</h3><p>${text}</p>${url ? `<a class="btn btn-primary-gradient" href="${url}" target="_blank" rel="noopener">${label || "Visit Website"}</a>` : ""}</article></div>`).join("")}</div>`;
 }
 
+function orgLogo(o) {
+  return o.logo ? `<span class="org-logo${o.logo === "artscouncil.png" ? " dark" : ""}"><img src="images/logos/${o.logo}" alt="${o.name} logo" loading="lazy"></span>` : `<span class="org-logo"><i class="bi ${o.icon || "bi-building"}"></i></span>`;
+}
+
+function orgCard(o) {
+  const web = o.web ? `<a class="btn btn-primary-gradient btn-sm" href="${o.web}"${o.internal ? "" : ' target="_blank" rel="noopener"'}>${o.internal ? "View list" : "Visit official website"} <i class="bi bi-box-arrow-up-right"></i></a>` : "";
+  return `<div class="col-md-6 col-xl-4"><article class="org-card h-100" data-aos="fade-up">${orgLogo(o)}<h3>${o.name}</h3><p>${o.text}</p><ul class="org-contact">${o.phones.map(([l, n]) => `<li><i class="bi bi-telephone"></i><span>${l}:</span> <a href="tel:${n.replace(/[^0-9+]/g, "")}">${n}</a></li>`).join("")}${o.timing ? `<li><i class="bi bi-clock"></i><span>Timings:</span> ${o.timing}</li>` : ""}${o.email ? `<li><i class="bi bi-envelope"></i><span>Email:</span> <a href="mailto:${o.email}">${o.email}</a></li>` : ""}${o.web && !o.internal ? `<li><i class="bi bi-globe"></i><span>Website:</span> <a href="${o.web}" target="_blank" rel="noopener">${o.web.replace(/^https?:\/\//, "").replace(/\/$/, "")}</a></li>` : ""}</ul>${web}</article></div>`;
+}
+
 function jurisdictionPage() {
-  const federal = [
-    ["bi-person-vcard", "NADRA", "CNIC, NICOP, Form-B and Family Registration Certificate. Helpline: 1777.", "https://www.nadra.gov.pk"],
-    ["bi-passport", "Directorate General of Immigration & Passports", "New passports and passport renewal, including online renewal.", "https://www.dgip.gov.pk"],
-    ["bi-receipt", "Federal Board of Revenue", "Income tax registration, returns and active taxpayer status.", "https://www.fbr.gov.pk"],
-    ["bi-check2-square", "Election Commission of Pakistan", "Voter registration and verification of your vote.", "https://www.ecp.gov.pk"],
-    ["bi-heart", "Benazir Income Support Programme", "Registration and eligibility for income support.", "https://www.bisp.gov.pk"],
-    ["bi-chat-square-text", "Pakistan Citizen's Portal", "Complaints to federal and provincial departments.", "https://www.citizenportal.gov.pk"]
-  ];
-  const provincial = [
-    ["bi-bank2", "Government of Sindh", "Official portal of the Government of Sindh.", "https://www.sindh.gov.pk"],
-    ["bi-shield-shaded", "Sindh Police", "Police emergency 15 and online police services.", "https://www.sindhpolice.gov.pk"],
-    ["bi-truck-front", "Sindh Emergency Rescue Service", "Rescue 1122 for emergencies.", "https://www.sers.gos.pk"],
-    ["bi-hospital", "Health Department, Sindh", "Tele Tabeeb 24/7 healthcare helpline: 1123.", "https://health.sindh.gov.pk"],
-    ["bi-car-front", "Excise, Taxation & Narcotics Control", "Vehicle registration and property tax.", "https://excise.gos.pk"],
-    ["bi-mortarboard", "Sindh Education Foundation", "Educational grants and scholarships.", "https://www.sef.org.pk"]
-  ];
-  const local = [
-    ["bi-buildings", "Karachi Metropolitan Corporation", "City-wide municipal services, including the Fire Brigade (16).", "https://home.kmc.gos.pk"],
-    ["bi-house-gear", "Town Municipal Corporations", "Gulberg, Liaquatabad, Nazimabad, New Karachi and North Nazimabad: local roads, streetlights, parks, sanitation, and birth and death registration.", ""],
-    ["bi-people", "Union Committees", "Your first point of contact for residence certificates and local civic issues. A full list of Union Committees will be added.", ""]
-  ];
+  const J = window.DC_DIR.jurisdiction;
   return `${header("jurisdiction")}<main>${hero("jurisdiction")}
-    <section class="section" id="federal"><div class="container">${sectionHead("Federal", "Federal Government Services", "Federal Government offices that serve residents of District Central. Use the links below to reach official services online or to find your nearest office.")}${linkCards(federal)}</div></section>
-    <section class="section muted-section" id="provincial"><div class="container">${sectionHead("Provincial", "Government of Sindh Services", "Government of Sindh departments and services available to residents of District Central.")}${linkCards(provincial)}</div></section>
-    <section class="section" id="local"><div class="container">${sectionHead("Local", "Local Government", "Local government in District Central is delivered by the Karachi Metropolitan Corporation, the Town Municipal Corporations and the Union Committees.")}${linkCards(local)}</div></section>
+    <section class="section"><div class="container">${sectionHead("Overview", "Who Does What?", "Public services in District Central are delivered by three tiers of government. The Federal Government handles national matters such as identity cards, passports, taxes and elections. The Government of Sindh runs the police, rescue services, health, education and provincial taxes. Local government – the Karachi Metropolitan Corporation, the five Town Municipal Corporations and 45 Union Committees – looks after roads, water, sanitation and neighbourhood services. Use the directory below to reach the right office directly.")}<div class="quick-links justify-content-center"><a class="btn btn-outline-primary" href="#federal">Federal</a><a class="btn btn-outline-primary" href="#provincial">Provincial</a><a class="btn btn-outline-primary" href="#local">Local</a><a class="btn btn-outline-primary" href="union-committees.html">Union Committees</a></div></div></section>
+    <section class="section muted-section" id="federal"><div class="container">${sectionHead("Federal", "Federal Government Services", "Federal Government departments serving residents of District Central. Helplines, timings and email addresses are taken from each department’s official channels – please check their website for the latest information.")}<div class="row g-4">${J.federal.map(orgCard).join("")}</div></div></section>
+    <section class="section" id="provincial"><div class="container">${sectionHead("Provincial", "Government of Sindh Services", "Government of Sindh departments and emergency services for the people of District Central.")}<div class="row g-4">${J.provincial.map(orgCard).join("")}</div></div></section>
+    <section class="section muted-section" id="local"><div class="container">${sectionHead("Local", "Local Government and Utilities", "Municipal bodies and utility companies responsible for everyday services in your neighbourhood.")}<div class="row g-4">${J.local.map(orgCard).join("")}</div></div></section>
+    <section class="complaint-cta"><div class="container"><div class="cta-panel"><div><span class="section-kicker">Need Help?</span><h2>Not Sure Which Office to Contact?</h2><p>Register your complaint with the District Administration Central and we will forward it to the department concerned.</p></div><div class="cta-actions"><a class="btn btn-primary-gradient" href="complaint-registration.html">Submit a Complaint</a><a class="btn btn-outline-light" href="contact.html">Contact Us</a></div></div></div></section>
   </main>${footer()}`;
 }
+
+function ucTable(t) {
+  return `<div class="table-responsive"><table class="table press-table uc-table"><thead><tr><th>UC No.</th><th>Union Committee</th><th>Chairman</th><th>Vice Chairman</th><th>Office / Location</th></tr></thead><tbody>${t.ucs.map(([n, name, loc, ch, vc]) => `<tr><td>${n}</td><td><strong>${name}</strong></td><td>${ch || "—"}</td><td>${vc || "—"}</td><td>${loc || "—"}</td></tr>`).join("")}</tbody></table></div>`;
+}
+
+function ucPage() {
+  const D = window.DC_DIR; const total = D.towns.reduce((a, t) => a + t.ucs.length, 0);
+  const roles = [["bi-file-earmark-check", "Residence certificates", "The UC issues the residence certificate needed for Domicile and PRC applications."], ["bi-person-vcard", "Civil registration", "Registration of births, deaths, marriages and divorces through the Sindh civil registration system."], ["bi-lightbulb", "Neighbourhood services", "Street lights, small roads, drains and parks are raised with the Town Municipal Corporation through the UC."], ["bi-heart-pulse", "Polio and health campaigns", "UC teams lead door-to-door polio vaccination, with morning assemblies attended by the Assistant Commissioners."], ["bi-people", "Community link", "Elected UC representatives work with Residents Welfare Associations, the police and the District Administration."], ["bi-chat-square-text", "Local complaints", "Residents can raise sanitation, water and encroachment issues with their UC Chairman."]];
+  return `${header("ucs")}<main>${hero("ucs")}
+    <section class="section"><div class="container">${sectionHead("Local Government", "Your Union Committee", `Union Committees are the closest tier of elected local government. District Central has ${total} Union Committees in five Town Municipal Corporations. Each UC has an elected Chairman and Vice Chairman and is your first point of contact for local civic matters and the residence certificate needed for Domicile and PRC.`)}${stats([[total, "Union Committees"], [5, "Town Municipal Corporations"], [5, "Sub-divisions"], [3820000, "Population (Census 2023)", "3.82 million"]])}</div></section>
+    <section class="section muted-section"><div class="container">${sectionHead("Role", "What Does a Union Committee Do?")}<div class="card-grid">${roles.map(([i, t, x]) => iconCard(i, t, x)).join("")}</div></div></section>
+    <section class="section"><div class="container">${sectionHead("Towns", "Union Committees by Town", "Select a town to see its Union Committees, elected representatives and office locations.")}<div class="row g-4">${D.towns.map((t) => `<div class="col-md-6 col-lg-4"><a class="text-decoration-none" href="uc-${t.slug}.html"><article class="dept-card h-100 uc-town-card" data-aos="fade-up"><i class="bi bi-geo-alt"></i><h3>TMC ${t.name}</h3><p><strong>${t.ucs.length} Union Committees</strong></p><p>${t.ucs.map((u) => u[1]).join(", ")}</p><span class="btn btn-outline-primary btn-sm">View UCs</span></article></a></div>`).join("")}</div></div></section>
+    ${D.towns.map((t, n) => `<section class="section ${n % 2 ? "" : "muted-section"}" id="${t.slug}"><div class="container">${sectionHead(`TMC ${t.name}`, `${t.name} – ${t.ucs.length} Union Committees`)}${ucTable(t)}<p class="text-center mt-3"><a class="btn btn-primary-gradient" href="uc-${t.slug}.html">Open the ${t.name} page</a></p></div></section>`).join("")}
+  </main>${footer()}`;
+}
+
+function ucTownPage(slug) {
+  const D = window.DC_DIR; const t = D.towns.find((x) => x.slug === slug);
+  pageInfo["uc-" + slug] = { title: `Union Committees – ${t.name}`, subtitle: `The ${t.ucs.length} Union Committees of TMC ${t.name}, District Central.`, breadcrumb: `UCs ${t.name}`, badge: "Local Government" };
+  const others = D.towns.filter((x) => x.slug !== slug);
+  return `${header("ucs")}<main>${hero("uc-" + slug)}
+    <section class="section"><div class="container">${sectionHead(`TMC ${t.name}`, `${t.ucs.length} Union Committees in ${t.name}`, `The Town Municipal Corporation ${t.name} is divided into ${t.ucs.length} Union Committees. Each UC is led by an elected Chairman and Vice Chairman. Contact your UC for residence certificates, civil registration and neighbourhood issues, or the Assistant Commissioner’s office for administrative matters in the subdivision.`)}<div class="row g-4">${t.ucs.map(([n, name, loc, ch, vc]) => `<div class="col-md-6 col-lg-4"><article class="dept-card h-100 uc-card" data-aos="fade-up"><span class="uc-no">UC ${n}</span><h3>${name}</h3><ul class="org-contact">${ch ? `<li><i class="bi bi-person-badge"></i><span>Chairman:</span> ${ch}</li>` : ""}${vc ? `<li><i class="bi bi-person"></i><span>Vice Chairman:</span> ${vc}</li>` : ""}${loc ? `<li><i class="bi bi-geo-alt"></i><span>Office:</span> ${loc}</li>` : ""}</ul></article></div>`).join("")}</div></div></section>
+    <section class="section muted-section"><div class="container">${sectionHead("Table", `All UCs of ${t.name}`)}${ucTable(t)}</div></section>
+    <section class="section"><div class="container">${sectionHead("Administration", "Your Subdivision Officers")}<div class="quick-links justify-content-center"><a class="btn btn-primary-gradient" href="${t.ac}.html">Assistant Commissioner ${t.name}</a><a class="btn btn-outline-primary" href="${t.mukhtiarkar}.html">Mukhtiarkar ${t.name}</a><a class="btn btn-outline-primary" href="union-committees.html">All Union Committees</a></div><p class="text-center mt-4">Other towns: ${others.map((x) => `<a href="uc-${x.slug}.html">${x.name}</a>`).join(" · ")}</p></div></section>
+  </main>${footer()}`;
+}
+
+function directoryPage(key) {
+  const d = window.DC_DIR.directory[key];
+  const other = [["sports", "Sports"], ["health", "Health"], ["education", "Academic Institutions"], ["entertainment", "Entertainment"]].filter(([k]) => k !== key);
+  const card = ([logo, icon, name, area, text, web]) => `<div class="col-md-6 col-xl-4"><article class="org-card h-100" data-aos="fade-up">${orgLogo({ logo, icon, name })}<h3>${name}</h3><p class="org-area"><i class="bi bi-geo-alt"></i> ${area}</p><p>${text}</p>${web ? `<a class="btn btn-primary-gradient btn-sm" href="${web}" target="_blank" rel="noopener">Visit website <i class="bi bi-box-arrow-up-right"></i></a>` : ""}</article></div>`;
+  const photoCat = { sports: "sports", education: "education", entertainment: "green" }[key];
+  return `${header(key)}<main>${hero(key)}
+    <section class="section"><div class="container">${sectionHead("Directory", d.title, d.intro)}<div class="row g-4">${d.items.map(card).join("")}</div><p class="text-center text-muted mt-4">Know a place that should be listed? Tell us through the <a href="contact.html">Contact page</a>.</p></div></section>
+    ${photoCat && window.DC_WORK ? `<section class="section muted-section"><div class="container">${sectionHead("Photos", "From District Central")}${window.DC_WORK.photoGrid(photoCat, 8)}</div></section>` : ""}
+    <section class="section"><div class="container">${sectionHead("More", "Other Directories")}<div class="quick-links justify-content-center">${other.map(([k, t]) => `<a class="btn btn-outline-primary" href="${k === "education" ? "academic-institutions" : k}.html">${t}</a>`).join("")}<a class="btn btn-outline-primary" href="personalities.html">Personalities</a><a class="btn btn-outline-primary" href="union-committees.html">Union Committees</a></div></div></section>
+  </main>${footer()}`;
+}
+
+function personalitiesPage() {
+  const P = window.DC_DIR.personalities;
+  return `${header("personalities")}<main>${hero("personalities")}
+    <section class="section"><div class="container">${sectionHead("Our Legends", "People Who Made District Central Proud", "District Central has been home to artists, poets, sportspeople and public figures who brought pride to Pakistan. Many are now honoured with blue plaques at the homes where they lived.")}<div class="row g-4">${P.map(([name, years, field, text, photo]) => `<div class="col-md-6 col-lg-4"><article class="dept-card h-100 person-card" data-aos="fade-up">${photo ? `<img class="plaque-photo" src="images/gallery/${photo}" alt="${name}" loading="lazy">` : `<i class="bi bi-person-circle"></i>`}<span class="section-kicker">${field}</span><h3>${name}</h3>${years ? `<p class="fw-bold mb-1">${years}</p>` : ""}<p>${text}</p></article></div>`).join("")}</div></div></section>
+    <section class="complaint-cta"><div class="container"><div class="cta-panel"><div><span class="section-kicker">Suggest a Name</span><h2>Do You Know a Notable Resident?</h2><p>Share details of people from District Central who made significant contributions in sports, arts, music, education, science and public service. Call 021-99260038.</p></div><div class="cta-actions"><a class="btn btn-primary-gradient" href="blue-plaques.html">Blue Plaques</a><a class="btn btn-outline-light" href="tel:02199260038">021-99260038</a></div></div></div></section>
+  </main>${footer()}`;
+}
+
+function plaqueMap() {
+  const areas = [["New Karachi", 40, 20, 520, 110], ["North Nazimabad", 40, 150, 250, 140], ["Gulberg", 310, 150, 250, 140], ["Nazimabad", 40, 310, 250, 120], ["Liaquatabad", 310, 310, 250, 120]];
+  const pins = window.DC_DIR.plaqueMap;
+  const svg = `<svg viewBox="0 0 600 450" class="plaque-map" role="img" aria-label="Chart map of blue plaques by subdivision">${areas.map(([n, x, y, w, h]) => { const list = pins[n] || []; return `<g><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="14" class="${list.length ? "has-pin" : ""}"/><text x="${x + 16}" y="${y + 28}" class="area-name">${n}</text>${list.map((p, i) => `<g transform="translate(${x + 30},${y + 52 + i * 26})"><circle r="9" class="pin"/><text x="18" y="5" class="pin-label">${p}</text></g>`).join("")}${list.length ? "" : `<text x="${x + 16}" y="${y + 56}" class="area-note">More plaques coming soon</text>`}</g>`; }).join("")}</svg>`;
+  return `<div class="row g-4 align-items-center"><div class="col-lg-7">${svg}</div><div class="col-lg-5"><h3>Where Are the Plaques?</h3><p>The chart map shows District Central’s five subdivisions. The first three plaques, for Sadequain, Asad Shafiq and Syed Abbas Haider Bilgrami, are in Block 13, Gulberg, Federal B Area.</p><p>The plaques for Amjad Sabri, Umar Sharif and Umeed Fazli are installed at their former residences in District Central; their locations will be added to the map as they are published.</p></div></div>`;
+}
+
 
 function contactPage() {
   return `${header("contact")}<main>${hero("contact")}
@@ -433,8 +485,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const root = document.getElementById("majorPage");
   if (!root) return;
   const page = root.dataset.page;
-  const renderers = { about: aboutPage, services: servicesPage, news: newsPage, initiatives: initiativesPage, plaques: plaquesPage, rwa: rwaPage, jurisdiction: jurisdictionPage, contact: contactPage };
-  root.innerHTML = renderers[page]();
+  const renderers = { about: aboutPage, services: servicesPage, news: newsPage, initiatives: initiativesPage, plaques: plaquesPage, rwa: rwaPage, ucs: ucPage, personalities: personalitiesPage, jurisdiction: jurisdictionPage, contact: contactPage };
+  root.innerHTML = renderers[page] ? renderers[page]() : page.startsWith("uc-") ? ucTownPage(page.slice(3)) : directoryPage(page);
   initFilters();
   if (window.AOS) AOS.refreshHard();
 });
