@@ -1707,3 +1707,31 @@ input[type="checkbox"], input[type="radio"] {
 .home-ticker .nr-ticker-label{text-decoration:none}
 .nr-ticker-move a{color:#fff;text-decoration:none}.nr-ticker-move a:hover{color:#f2c94c;text-decoration:underline}
 .nr-ticker-move a::after{content:"•";color:#d4a017;margin-left:42px}
+/* ---- Law & Order page ---- */
+.law-help{background:#0b3d28;padding:26px 0}
+.law-help-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.law-help-item{--c:#dc2626;background:#fff;border-radius:16px;padding:14px 12px;text-align:center;text-decoration:none;color:#1d2b24;border-top:4px solid var(--c);transition:transform .2s}
+.law-help-item:hover{transform:translateY(-3px)}.law-help-item i{font-size:1.5rem;color:var(--c)}.law-help-item strong{display:block;font-size:1.35rem;margin:4px 0 2px;color:var(--c)}.law-help-item span{font-size:.8rem;color:#4b5a52}
+.law-help-note{color:rgba(255,255,255,.85);text-align:center;margin:14px 0 0;font-size:.92rem}
+.law-hero-photos{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:200px 200px;gap:12px}.law-hero-photos img{width:100%;height:100%;object-fit:cover;border-radius:18px;box-shadow:0 10px 26px rgba(0,0,0,.12)}.law-hero-photos .a{grid-row:1/3}
+.law-ssp{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;background:linear-gradient(135deg,#0b3d28,#0b5d3b);color:#fff;border-radius:18px;padding:22px 26px;margin-bottom:20px}
+.law-ssp h3{color:#fff;margin:4px 0}.law-ssp p{margin:0;opacity:.85}.law-ssp .section-kicker{color:#f2c94c}.law-ssp-actions{display:flex;gap:10px;flex-wrap:wrap}.law-ssp .btn-outline-primary{color:#fff;border-color:rgba(255,255,255,.7)}.law-ssp .btn-outline-primary:hover{background:rgba(255,255,255,.15)}
+.law-search{max-width:420px;margin:0 auto 24px}
+.law-div{margin-bottom:28px}.law-div[hidden]{display:none}
+.law-div-head{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline;border-bottom:2px solid #e1ebe5;padding-bottom:8px;margin-bottom:14px}.law-div-head h3{font-size:1.2rem;margin:0;color:#0b5d3b}.law-div-head span{color:#5b6b63;font-size:.9rem}
+.law-ps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.law-ps{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #e1ebe5;border-radius:14px;padding:14px 16px;box-shadow:0 4px 14px rgba(11,93,59,.05)}.law-ps[hidden]{display:none}
+.law-ps-ico{width:44px;height:44px;border-radius:12px;background:#1e3a8a;color:#fff;display:grid;place-items:center;font-size:1.2rem;flex:none}
+.law-ps h4{font-size:1rem;margin:0 0 6px}.law-ps a{display:inline-flex;gap:6px;align-items:center;text-decoration:none;font-size:.88rem;font-weight:600;margin-right:14px}.law-ps-tel{color:#0b5d3b}.law-ps-map{color:#5b6b63}
+.law-gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:12px}
+.law-g{position:relative;margin:0;border-radius:16px;overflow:hidden}.law-g img{width:100%;height:100%;object-fit:cover;transition:transform .4s}.law-g:hover img{transform:scale(1.05)}
+.law-g figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 12px 10px;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#fff;font-size:.82rem;font-weight:600}
+.law-g.g0{grid-column:span 2;grid-row:span 2}.law-g.g3{grid-column:span 2}
+@media(max-width:991px){.law-help-grid{grid-template-columns:repeat(3,1fr)}.law-ps-grid{grid-template-columns:repeat(2,1fr)}.law-gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:575px){.law-help-grid{grid-template-columns:repeat(2,1fr)}.law-ps-grid{grid-template-columns:1fr}.law-hero-photos{grid-template-rows:150px 150px}.law-gallery{grid-auto-rows:150px}.law-g.g0,.law-g.g3{grid-column:span 2}}
+.home-law-help{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}.home-law-help a{background:#fff;border:1px solid #e1ebe5;border-radius:14px;padding:12px;text-align:center;text-decoration:none;color:#1d2b24;box-shadow:0 4px 14px rgba(11,93,59,.06)}.home-law-help strong{display:block;font-size:1.4rem;color:#b91c1c}.home-law-help span{font-size:.82rem;color:#5b6b63}
+.law-ssp .btn-outline-primary{background:transparent!important;color:#fff!important;border:1.5px solid rgba(255,255,255,.75)!important}
+.law-g.g9{grid-column:span 2}
+.home-law h2{font-weight:800;color:var(--primary,#0b5d3b)}
+.home-law .btn{display:inline-flex;align-items:center;gap:6px}
+.law-g.g6{grid-column:span 2}.law-gallery{grid-auto-flow:dense}
