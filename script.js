@@ -197,3 +197,45 @@ document.addEventListener("click", function (event) {
     if (btn) { const inp = document.querySelector(".header-search input"); if (inp && inp.offsetParent) inp.focus(); else location.href = "search.html"; }
   });
 })();
+
+// Balance card grids: pick a column count that avoids lonely last rows (e.g. 3 + 3 instead of 4 + 2) and centre any short last row.
+(function () {
+  function bestCols(n, max) {
+    if (n <= max) return max;
+    if (n % max === 0) return max;
+    var alt = max - 1;
+    if (max >= 4 && n % alt === 0) return alt;
+    if (max >= 4 && (n % alt) / alt > (n % max) / max) return alt;
+    return max;
+  }
+  function balance() {
+    if (window.innerWidth < 992) return;
+    document.querySelectorAll(".card-grid, .service-grid, .download-grid").forEach(function (g) {
+      if (g.dataset.balanced) return;
+      var items = Array.prototype.filter.call(g.children, function (c) { return c.offsetParent !== null || c.style.display !== "none"; });
+      var max = getComputedStyle(g).gridTemplateColumns.split(" ").length;
+      var n = items.length; if (n < 2 || max < 2) return;
+      var cols = Math.min(bestCols(n, max), n);
+      g.dataset.balanced = "1"; g.classList.add("balanced-grid"); g.style.setProperty("--cols", cols);
+    });
+    document.querySelectorAll(".row").forEach(function (r) {
+      if (r.dataset.balanced) return;
+      var items = Array.prototype.filter.call(r.children, function (c) { return /\bcol-/.test(c.className) && c.querySelector("article, .card, .org-card, .dept-card, .initiative-card, .price-card, .content-card, a > article"); });
+      if (items.length < 2 || items.length !== r.children.length) return;
+      var span = 12;
+      ["xl", "lg"].some(function (bp) { var m = items[0].className.match(new RegExp("col-" + bp + "-(\\d+)")); if (m) { span = +m[1]; return true; } return false; });
+      if (span === 12) { var m = items[0].className.match(/col-md-(\d+)/); if (m) span = +m[1]; }
+      var max = Math.round(12 / span); if (max < 2 || 12 % span) return;
+      var n = items.length, cols = bestCols(n, max);
+      if (12 % cols) cols = max;
+      items.forEach(function (c) {
+        c.className = c.className.replace(/\bcol-(lg|xl)-\d+\b/g, "").replace(/\s+/g, " ").trim() + " col-lg-" + (12 / cols);
+        if (!/col-md-/.test(c.className) && cols > 1) c.className += " col-md-6";
+      });
+      r.classList.add("justify-content-center"); r.dataset.balanced = "1";
+    });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", function () { setTimeout(balance, 0); }); else setTimeout(balance, 0);
+  window.addEventListener("load", balance);
+  window.DC_balanceGrids = balance;
+})();

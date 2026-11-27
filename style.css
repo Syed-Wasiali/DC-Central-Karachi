@@ -1497,3 +1497,19 @@ input[type="checkbox"], input[type="radio"] {
 .price-card h3{font-size:1.15rem;color:#0b5d3b}.price-help{background:#fff8e6;border-left:5px solid #c9a227;border-radius:12px;padding:1rem 1.25rem}
 .dir-menu{grid-template-columns:repeat(3,max-content)!important;column-gap:2.5rem}.dir-menu a{white-space:nowrap}
 @media(max-width:991px){.dir-menu{grid-template-columns:1fr!important}}
+/* Balanced, centred card grids with aligned content */
+@media (min-width: 992px) {
+  .balanced-grid { display: flex !important; flex-wrap: wrap; justify-content: center; }
+  .balanced-grid > * { flex: 0 0 calc((100% - (var(--cols) - 1) * 1rem) / var(--cols)); max-width: calc((100% - (var(--cols) - 1) * 1rem) / var(--cols)); }
+}
+.dept-card, .org-card, .initiative-card, .price-card, .content-card, .team-card { display: flex; flex-direction: column; height: 100%; }
+.org-card > .btn:last-child, .dept-card > .btn:last-child, .initiative-card > a:last-child, .initiative-card .btn:last-child, .content-card > .btn:last-child { margin-top: auto; align-self: flex-start; }
+.team-card > .btn:last-child { margin-top: auto; align-self: center; }
+.row > [class*="col-"] > a.text-decoration-none { display: block; height: 100%; }
+.initiative-card .cover-photo { overflow: hidden; }
+.initiative-card .cover-photo { height: 190px; min-height: 0; aspect-ratio: auto; }
+.initiative-card .cover-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.initiative-card .p-3 { display: flex; flex-direction: column; flex: 1; }
+.initiative-card .p-3 > .btn:last-child { margin-top: auto; align-self: flex-start; }
+.social-feed{display:flex;flex-direction:column;height:100%}.social-feed .btn{margin-top:auto;align-self:flex-start}
+.initiative-card .cover-photo.logo-cover{background:#fff;border:1px solid #e3ece7}.initiative-card .cover-photo.logo-cover img{object-fit:contain;padding:12px}

@@ -1141,7 +1141,7 @@
               <div class="col-lg-3">
                 <div class="header-actions">
                   <a href="https://www.facebook.com/deputycommissionerCentral" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                  <span class="social-soon" title="Instagram account coming soon" aria-label="Instagram (coming soon)"><i class="bi bi-instagram"></i></span>
+                  <a href="https://www.instagram.com/dcentralkarachi/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                   <span class="social-soon" title="YouTube account coming soon" aria-label="YouTube (coming soon)"><i class="bi bi-youtube"></i></span>
                   <a class="complaint-btn" href="#contact-cta"><i class="bi bi-chat-square-text"></i> Complaint</a>
                 </div>
@@ -1197,7 +1197,7 @@
             <div class="col-lg-4">
               <a class="brand-lockup footer-brand" href="index.html"><span class="gov-logo"><img src="images/sindh-govt-logo.png" alt="Government of Sindh logo"></span><span><strong>District Central Karachi</strong><small>Government of Sindh</small></span></a>
               <p>Official district portal for public information, citizen services, administrative updates, and complaint facilitation.</p>
-              <div class="footer-social"><a href="https://www.facebook.com/deputycommissionerCentral" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a><span class="social-soon" title="Instagram account coming soon" aria-label="Instagram (coming soon)"><i class="bi bi-instagram"></i></span><span class="social-soon" title="YouTube account coming soon" aria-label="YouTube (coming soon)"><i class="bi bi-youtube"></i></span></div>
+              <div class="footer-social"><a href="https://www.facebook.com/deputycommissionerCentral" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a><a href="https://www.instagram.com/dcentralkarachi/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a><span class="social-soon" title="YouTube account coming soon" aria-label="YouTube (coming soon)"><i class="bi bi-youtube"></i></span></div>
             </div>
             <div class="col-6 col-lg-2"><h3>Quick Links</h3><a href="about.html">About</a><a href="news.html">News</a><a href="index.html#gallery">Gallery</a><a href="index.html#downloads">Downloads</a></div>
             <div class="col-6 col-lg-2"><h3>Branches</h3><a href="revenue.html">Revenue</a><a href="accounts-branch.html">Accounts</a><a href="it-cell.html">IT Cell</a><a href="complaint-cell.html">Complaint Cell</a></div>

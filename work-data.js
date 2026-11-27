@@ -31,7 +31,7 @@ window.DC_WORK = {
         ["Nov 2026", "Initiative launched with plaques for Sadequain, Asad Shafiq and Syed Abbas Haider Bilgrami in Block 13, Gulberg, F.B. Area."],
         ["Nov 2026", "Plaques for Amjad Sabri and Umar Sharif, followed by the Urdu poet Umeed Fazli."]
       ] },
-    { id: "css-corner", icon: "bi-star-fill", category: "Education", title: "CSS Corner",
+    { id: "css-corner", icon: "bi-star-fill", cover: "images/logos/css-corner.png", category: "Education", title: "CSS Corner",
       summary: "Free, merit-based preparation for the CSS examination, founded by Deputy Commissioner Taha Saleem. Around 100 volunteer teachers, including serving and retired CSS officers, teach candidates who could not afford private academies.",
       link: "css-corner.html",
       timeline: [
