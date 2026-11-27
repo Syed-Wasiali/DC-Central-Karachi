@@ -424,10 +424,19 @@ function termsPage() {
     ["Changes", "These terms may be updated from time to time. The latest version will always be published on this page."]]);
 }
 
-const WM = (file, w = 1200) => `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=${w}`;
-const WMPAGE = (file) => `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(file.replace(/ /g, "_"))}`;
-function tpPhoto(file, alt, icon, cls = "") {
-  return `<figure class="tp-photo ${cls}"><img src="${WM(file)}" alt="${alt}" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('noimg')"><i class="bi ${icon}"></i><figcaption><a href="${WMPAGE(file)}" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figcaption></figure>`;
+const TP_PHOTOS = {
+  "downtown-nazimabad-2": ["Downtown Nazimabad 2.jpg", "King Eliot", "CC BY-SA 4.0"],
+  "downtown-nazimabad-3": ["Downtown Nazimabad 3.jpg", "King Eliot", "CC BY-SA 4.0"],
+  "greenline-station-karachi": ["Greenline Station Karachi.jpg", "King Eliot", "CC BY-SA 4.0"],
+  "greenline-metro-station-karachi": ["Greenline Metro Station Karachi.jpg", "King Eliot", "CC BY-SA 4.0"],
+  "orange-line-station-karachi": ["Orange Line Station Karachi.jpg", "King Eliot", "CC BY-SA 4.0"],
+  "peoples-bus-service-red-karachi": ["Peoples Bus Service (Red) Karachi.jpg", "King Eliot", "CC BY-SA 4.0"],
+  "karachi-circular-railway": ["Karachi Circular Railway.jpg", "Adnanrail", "CC BY-SA 3.0"],
+  "liaquatabad-railway-station-building-0288": ["Liaquatabad railway station building 0288.jpg", "Asad Razzaki", "CC BY-SA 4.0"]
+};
+function tpPhoto(slug, alt, icon, cls = "") {
+  const [file, by, lic] = TP_PHOTOS[slug];
+  return `<figure class="tp-photo ${cls}"><img src="images/transport/${slug}.jpg" alt="${alt}" loading="lazy" onerror="this.parentNode.classList.add('noimg')"><i class="bi ${icon}"></i><figcaption><a href="https://commons.wikimedia.org/wiki/File:${encodeURIComponent(file.replace(/ /g, "_"))}" target="_blank" rel="noopener">Photo: ${by}, ${lic}</a></figcaption></figure>`;
 }
 function transportPage() {
   const stations = [["Numaish", 0], ["Patel Para (Guru Mandir)", 0], ["Lasbela Chowk", 0], ["Sanitary Market (Gulbahar)", 0], ["Nazimabad No. 1", 1], ["Enquiry Office", 1], ["Annu Bhai Park", 1], ["Board Office (Orange Line)", 1], ["Hyderi", 1], ["Five Star Chowrangi", 1], ["Jumma Bazaar", 1], ["Erum Shopping Mall", 1], ["Nagan Chowrangi", 1], ["U.P. More", 1], ["Road 4200", 1], ["Power House Chowrangi", 1], ["Road 2400", 1], ["2 Minute Chowrangi", 1], ["Surjani Chowrangi (4K)", 0], ["Karimi Chowrangi", 0], ["KDA Flats", 0], ["Abdullah Chowk", 0]];
@@ -439,7 +448,7 @@ function transportPage() {
     <p>District Central sits on the main route between the city centre and the northern suburbs. Every day hundreds of thousands of people travel through Nazimabad, Liaquatabad, Gulberg, North Nazimabad and New Karachi to reach work, colleges, hospitals and markets across the city.</p>
     <p>The district is served by Karachi's first bus rapid transit line, the <strong>Green Line BRT</strong>, which runs through it for most of its length, and by the Sindh government's <strong>Peoples Bus Service</strong>, including women-only Pink buses and electric buses. Public <strong>EV charging</strong> points have opened in North Nazimabad and North Karachi, and two stations of the <strong>Karachi Circular Railway</strong>, Liaquatabad and North Nazimabad, are part of the plan to revive the city's rail loop.</p>
     <p>This page brings together what residents and visitors need to know: routes, stations, fares, timings and where to charge an electric vehicle.</p>
-  </div><div class="col-lg-6" data-aos="fade-up">${tpPhoto("Greenline Metro Station Karachi.jpg", "A Green Line BRT station in Karachi", "bi-bus-front-fill", "tp-hero")}</div></div>
+  </div><div class="col-lg-6" data-aos="fade-up">${tpPhoto("downtown-nazimabad-2", "A Green Line bus on its dedicated lane through Nazimabad", "bi-bus-front-fill", "tp-hero")}</div></div>
   <div class="tp-stats" data-aos="fade-up"><div><strong>22</strong><span>Green Line stations</span></div><div><strong>80</strong><span>Green Line buses</span></div><div><strong>Rs 15–55</strong><span>Green Line fare</span></div><div><strong>7 am – 10 pm</strong><span>BRT and Peoples Bus hours</span></div></div></div></section>
 
   <section class="section muted-section" id="green-line"><div class="container">${sectionHead("Bus Rapid Transit", "Green Line BRT", "The Green Line is Karachi's flagship metro bus. Its buses run on their own dedicated lane, so a journey that takes over an hour in traffic is much quicker.")}
@@ -447,12 +456,13 @@ function transportPage() {
       <h3>About the service</h3>
       <p>The Green Line opened in December 2021 and became fully operational in January 2022, with 80 modern 18-metre hybrid buses serving 22 stations between Numaish Chowrangi and Surjani Town, about 21 km. More than half of its stations are in District Central, from <strong>Nazimabad No. 1</strong> through <strong>Hyderi</strong> and <strong>North Nazimabad</strong> to <strong>Nagan Chowrangi</strong> and <strong>North Karachi</strong>.</p>
       <ul class="check-list"><li><strong>Timing:</strong> 7:00 am to 10:00 pm, every day</li><li><strong>Fare:</strong> Rs 15 to Rs 55 depending on distance; Rs 55 for the full route</li><li><strong>Metrobus card:</strong> available at station counters for Rs 100; rechargeable and quicker at the gates</li><li><strong>Orange Line:</strong> the Abdul Sattar Edhi (Orange) Line from Orangi Town connects with the Green Line at Board Office station</li><li><strong>Extension:</strong> a 1.8 km extension from Numaish to Municipal Park near Jama Cloth Market is under construction and expected to be completed in the 2026-27 financial year</li></ul>
-    </article></div><div class="col-lg-5"><div class="tp-stack">${tpPhoto("Greenline Station Karachi.jpg", "Green Line BRT station", "bi-signpost-2")}${tpPhoto("Orange Line Station Karachi.jpg", "Orange Line station, Karachi", "bi-sign-turn-right")}</div></div></div>
+    </article></div><div class="col-lg-5"><div class="tp-stack">${tpPhoto("greenline-station-karachi", "Green Line station and bus at night", "bi-signpost-2")}${tpPhoto("greenline-metro-station-karachi", "Platform inside a Green Line station", "bi-signpost-2")}</div></div></div>
+    <div class="row g-4 mt-1"><div class="col-md-6">${tpPhoto("downtown-nazimabad-3", "Green Line station and footbridge in Nazimabad", "bi-bus-front")}</div><div class="col-md-6">${tpPhoto("orange-line-station-karachi", "Orange Line station in Orangi Town", "bi-sign-turn-right")}</div></div>
     <article class="content-card mt-4" data-aos="fade-up"><h3>Green Line stations</h3><p class="text-muted mb-3">Stations in or bordering District Central are highlighted. Listed from south to north.</p><ol class="tp-stations">${stations.map(([s, d]) => `<li class="${d ? "in" : ""}">${s}</li>`).join("")}</ol></article>
   </div></section>
 
   <section class="section" id="peoples-bus"><div class="container">${sectionHead("Public Buses", "Peoples Bus Service", "Launched by the Government of Sindh in June 2022, the Peoples Bus Service runs air-conditioned buses on fixed routes across Karachi at a low, fixed fare.")}
-    <div class="row g-4 align-items-center mb-4"><div class="col-lg-5">${tpPhoto("Peoples Bus Service (Red) Karachi.jpg", "Red Peoples Bus in Karachi", "bi-bus-front")}</div><div class="col-lg-7">
+    <div class="row g-4 align-items-center mb-4"><div class="col-lg-5">${tpPhoto("peoples-bus-service-red-karachi", "A red Peoples Bus in Karachi", "bi-bus-front")}</div><div class="col-lg-7">
       <div class="row g-3"><div class="col-sm-4"><article class="tp-fleet red"><i class="bi bi-bus-front-fill"></i><h3>Red buses</h3><p>Air-conditioned hybrid buses for everyone, with a separate section for women.</p></article></div>
       <div class="col-sm-4"><article class="tp-fleet pink"><i class="bi bi-gender-female"></i><h3>Pink buses</h3><p>Pakistan's first women-only bus service, launched in 2023 and run with women drivers and conductors.</p></article></div>
       <div class="col-sm-4"><article class="tp-fleet white"><i class="bi bi-lightning-charge-fill"></i><h3>EV buses</h3><p>White electric buses with their own charging points: zero exhaust and a quieter ride.</p></article></div></div>
@@ -469,7 +479,7 @@ function transportPage() {
   </div></section>
 
   <section class="section" id="kcr"><div class="container">${sectionHead("Rail", "Karachi Circular Railway", "The KCR loop line once carried commuters around the city, and two of its stations are in District Central.")}
-    <div class="row g-4 align-items-center"><div class="col-lg-6"><div class="tp-stack two">${tpPhoto("Liaquatabad railway station building 0288.jpg", "Liaquatabad railway station building", "bi-train-front")}${tpPhoto("Liaquatabad railway station towards North Nazimabad 0299.jpg", "Track at Liaquatabad station towards North Nazimabad", "bi-train-front")}</div></div>
+    <div class="row g-4 align-items-center"><div class="col-lg-6"><div class="tp-stack two">${tpPhoto("karachi-circular-railway", "A KCR train at Karachi City station", "bi-train-front")}${tpPhoto("liaquatabad-railway-station-building-0288", "The old Liaquatabad railway station building", "bi-train-front")}</div></div>
     <div class="col-lg-6"><p>The Karachi Circular Railway was extended north-west in the 1970s to form a loop through <strong>Liaquatabad</strong> and <strong>North Nazimabad</strong>, whose station opened in 1970. Services on the loop stopped in 1999.</p>
     <p>The revival plan under the China–Pakistan Economic Corridor covers 43.2 km with 24 stations, 13 of them elevated and 11 at ground level, and is designed to carry about 650,000 passengers a day. Railway land has been cleared at several stations. Encroachments near Liaquatabad still need to be removed, and the District Administration supports the anti-encroachment work along the route.</p></div></div>
   </div></section>
@@ -488,7 +498,7 @@ function transportPage() {
     ["Who do I contact about a transport problem?", "For the Green Line and Peoples Bus Service, contact the Sindh Mass Transit Authority. For traffic, call 1915. For roads, encroachments and overcharging in the district, use the DC Office complaint form."]])}</div></div></div></section>
 
   <section class="complaint-cta"><div class="container"><div class="cta-panel"><div><span class="section-kicker">Report a Problem</span><h2>Broken road, encroached footpath or overcharging?</h2><p>Tell the District Administration and we will forward it to the department responsible.</p></div><div class="cta-actions"><a class="btn btn-primary-gradient" href="complaint-registration.html">Register a Complaint</a><a class="btn btn-outline-light" href="tel:1915">Traffic Helpline 1915</a></div></div></div></section>
-  <section class="section pt-4"><div class="container"><p class="text-muted small text-center mb-0">Information correct as of November 2026, from the Sindh Mass Transit Authority, NEECA and published news reports. Fares and routes can change. Photos are from Wikimedia Commons under their stated licences.</p></div></section>
+  <section class="section pt-4"><div class="container"><p class="text-muted small text-center mb-0">Information correct as of November 2026, from the Sindh Mass Transit Authority, NEECA and published news reports. Fares and routes can change. Photos from Wikimedia Commons under Creative Commons licences; photographers are credited on each image.</p></div></section>
   </main>${footer()}`;
 }
 
