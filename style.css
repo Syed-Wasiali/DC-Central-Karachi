@@ -1735,3 +1735,12 @@ input[type="checkbox"], input[type="radio"] {
 .home-law h2{font-weight:800;color:var(--primary,#0b5d3b)}
 .home-law .btn{display:inline-flex;align-items:center;gap:6px}
 .law-g.g6{grid-column:span 2}.law-gallery{grid-auto-flow:dense}
+.law-press-top{padding-bottom:2.5rem}
+.law-press-clips{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.law-press-clips figure{margin:0;background:#fff;border:1px solid #e1ebe5;border-radius:16px;padding:10px;box-shadow:0 10px 26px rgba(0,0,0,.08)}
+.law-press-clips img{width:100%;border-radius:10px;display:block;transition:transform .3s}.law-press-clips a:hover img{transform:scale(1.02)}
+.law-press-clips figcaption{font-size:.82rem;color:#4b5a52;padding:8px 4px 2px}
+@media(max-width:575px){.law-press-clips{grid-template-columns:1fr}}
+.law-g.g10{grid-column:span 2;grid-row:span 2}
+.law-g.g10{grid-column:span 2;grid-row:span 1}.law-g.g5{grid-column:span 2}
+.law-g.g8{grid-column:span 2}
