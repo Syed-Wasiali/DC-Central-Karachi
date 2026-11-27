@@ -1486,3 +1486,9 @@ input[type="checkbox"], input[type="radio"] {
 .css-hero-badge{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:.35rem;min-height:220px;border-radius:18px;color:#fff;background:linear-gradient(135deg,#0b5d3b,#1f8a5b 60%,#c9a227);padding:1.5rem}
 .css-hero-badge i{font-size:2.6rem;color:#ffd75e}.css-hero-badge strong{font-size:1.8rem;letter-spacing:.5px}.css-hero-badge span{opacity:.9}
 .css-hero-badge.big{min-height:300px}.css-hero-badge.big strong{font-size:2.4rem}
+.dir-menu a i{color:#0b5d3b;margin-right:.35rem}
+.css-home-card{display:flex;gap:1.75rem;align-items:center;background:#fff;border-radius:18px;padding:1.5rem;margin-bottom:1.5rem;box-shadow:0 10px 30px rgba(11,93,59,.08);border-left:6px solid #c9a227}
+.css-home-logo{flex:0 0 150px;height:150px;border-radius:16px;background:#f4f8f6;display:flex;align-items:center;justify-content:center;overflow:hidden}.css-home-logo img{max-width:100%;max-height:100%;object-fit:contain}
+.css-home-body h3{color:#0b5d3b;margin:.2rem 0 .5rem}.css-home-body p{color:#444}
+@media(max-width:767px){.css-home-card{flex-direction:column;text-align:center}}
+.css-logo-img{width:170px;height:170px;object-fit:contain;border-radius:18px;background:#fff;padding:8px}

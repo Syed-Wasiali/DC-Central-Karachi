@@ -26,7 +26,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Street 2, Block M, North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "kmc.png",
 "icon": "bi-heart-pulse",
 "text": "Public university of the Karachi Metropolitan Corporation. Karachi Medical & Dental College and Abbasi Shaheed Hospital are its constituent units."
 },
@@ -39,7 +39,7 @@ window.DC_DIRECTORY = {
 "phone": "021-36619902",
 "address": "ST-1, 5-C, Nazimabad, Karachi 74600",
 "timing": null,
-"logo": "",
+"logo": "juw.png",
 "icon": "bi-mortarboard",
 "text": "Pakistan's first university for women, established in 1998, offering BS, Pharm-D, physical therapy, MS/M.Phil and PhD programmes."
 },
@@ -52,7 +52,7 @@ window.DC_DIRECTORY = {
 "phone": "021-36362046",
 "address": "ST-2, Block 4, F.B. Area, near Karimabad",
 "timing": null,
-"logo": "",
+"logo": "nhu.png",
 "icon": "bi-mortarboard",
 "text": "HEC-recognised university offering pharmacy, physical therapy, architecture, design, engineering and computer science."
 },
@@ -65,7 +65,7 @@ window.DC_DIRECTORY = {
 "phone": "021-36721027",
 "address": "ST-3, Block K, North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "numl.png",
 "icon": "bi-translate",
 "text": "Karachi campus of the National University of Modern Languages, offering languages, English, management sciences and psychology."
 },
@@ -91,7 +91,7 @@ window.DC_DIRECTORY = {
 "phone": "021-36631986",
 "address": "D-3, First Floor, Block D, North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "vu.png",
 "icon": "bi-laptop",
 "text": "Study centre of the Virtual University of Pakistan for distance-learning degree programmes."
 },
@@ -104,7 +104,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Near KDA Chowrangi, North Nazimabad",
 "timing": "Evening and weekend classes",
-"logo": "",
+"logo": "kiet.png",
 "icon": "bi-mortarboard",
 "text": "Campus of the Karachi Institute of Economics & Technology offering master's, M.Phil and PhD programmes."
 },
@@ -117,7 +117,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Next to the Nazimabad flyover",
 "timing": null,
-"logo": "",
+"logo": "gcmen.png",
 "icon": "bi-bank",
 "text": "Degree college established in 1953, affiliated with BIEK and the University of Karachi."
 },
@@ -130,7 +130,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-bank",
 "text": "Government degree college for women."
 },
@@ -143,7 +143,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-bank",
 "text": "Government college for boys."
 },
@@ -156,7 +156,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-bank",
 "text": "Government college for women."
 },
@@ -169,7 +169,7 @@ window.DC_DIRECTORY = {
 "phone": "021-99230696",
 "address": "Qasimabad, Liaquatabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-bank",
 "text": "Government degree science college."
 },
@@ -182,7 +182,7 @@ window.DC_DIRECTORY = {
 "phone": "021-99333295",
 "address": "KMC Park, Sindhi Hotel, Liaquatabad",
 "timing": null,
-"logo": "",
+"logo": "kmc.png",
 "icon": "bi-bank",
 "text": "Government degree college for women."
 },
@@ -195,7 +195,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Liaquatabad",
 "timing": "Morning and evening",
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-bank",
 "text": "Government college running morning and evening shifts."
 },
@@ -208,7 +208,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Liaquatabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-bank",
 "text": "Government college in Liaquatabad."
 },
@@ -221,7 +221,7 @@ window.DC_DIRECTORY = {
 "phone": "021-99246095",
 "address": "Karimabad, F.B. Area",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-bank",
 "text": "Government degree college for women."
 },
@@ -234,7 +234,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Block 15, F.B. Area",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-bank",
 "text": "Co-educational teacher-training college affiliated with the University of Karachi."
 },
@@ -247,7 +247,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Hussainabad, F.B. Area",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-bank",
 "text": "Teacher-training college for women."
 },
@@ -260,7 +260,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "7D-2, Anda Mor, Buffer Zone",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-bank",
 "text": "Government degree science college."
 },
@@ -273,7 +273,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Buffer Zone",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-bank",
 "text": "Government degree college for women."
 },
@@ -286,7 +286,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Block K, North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-bank",
 "text": "Government degree college for women."
 },
@@ -299,7 +299,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-bank",
 "text": "Government college in North Nazimabad."
 },
@@ -312,7 +312,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-bank",
 "text": "Government college and an HSC examination centre."
 },
@@ -325,7 +325,7 @@ window.DC_DIRECTORY = {
 "phone": "021-36952147",
 "address": "Sector 11-I, North Karachi",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-bank",
 "text": "Government degree college for women."
 },
@@ -338,7 +338,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "North Karachi",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-bank",
 "text": "Government degree college for boys."
 },
@@ -377,7 +377,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "beaconhouse.png",
 "icon": "bi-building",
 "text": "A Level campus of the Beaconhouse School System."
 },
@@ -390,7 +390,7 @@ window.DC_DIRECTORY = {
 "phone": "0342-2893306",
 "address": "North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "fps.png",
 "icon": "bi-building",
 "text": "Purpose-built O Level campus of the Foundation Public School."
 },
@@ -403,7 +403,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "North Karachi",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-mortarboard",
 "text": "Subsidised school chaired by the Deputy Commissioner, being upgraded with a floodlit cricket ground, gymnasium and football ground."
 },
@@ -416,7 +416,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Block 16, F.B. Area",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-mortarboard",
 "text": "Home of the new Youth Hockey Field developed in 2026."
 },
@@ -429,7 +429,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "S.M. Taufiq Road, near Super Market, Liaquatabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-mortarboard",
 "text": "Government higher secondary school for girls."
 },
@@ -442,7 +442,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-mortarboard",
 "text": "Government higher secondary school for girls."
 },
@@ -455,7 +455,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": null,
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-building",
 "text": "Schools run by the Town Municipal Corporations. Fourteen are being adopted and refurbished by the Momina & Duraid Foundation."
 },
@@ -468,7 +468,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "F-109, Block B, North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "fps.png",
 "icon": "bi-backpack",
 "text": "Pre-nursery to Grade VI."
 },
@@ -481,7 +481,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Block B, North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "beaconhouse.png",
 "icon": "bi-backpack",
 "text": "KG and primary branches of Beaconhouse."
 },
@@ -494,7 +494,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "cityschool.png",
 "icon": "bi-backpack",
 "text": "Boys campus of The City School."
 },
@@ -507,7 +507,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Block B, North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "generations.png",
 "icon": "bi-backpack",
 "text": "Private school in North Nazimabad."
 },
@@ -637,7 +637,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Al-Markaz-e-Islami, Ayesha Manzil, F.B. Area",
 "timing": null,
-"logo": "",
+"logo": "css-corner.png",
 "icon": "bi-star",
 "text": "Free CSS exam preparation founded by Deputy Commissioner Taha Saleem."
 }
@@ -656,7 +656,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Block 14, F.B. Area",
 "timing": "Open round the clock",
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-book",
 "text": "Refurbished and opened as a 24-hour library by the District Administration to promote reading among young people."
 },
@@ -669,7 +669,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Corner of Shahrah-e-Sher Shah Suri and Shahrah-e-Jahangir, Block L",
 "timing": "9 AM – 9 PM (closed Saturday and Sunday)",
-"logo": "",
+"logo": "kmc.png",
 "icon": "bi-book",
 "text": "One of the city's best-kept public libraries, with a women's section and a law section. Free membership. Rehabilitated in 2026."
 },
@@ -695,7 +695,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Liaquatabad No. 9",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-book",
 "text": "Municipal library opened in 1985 and renovated in 2017."
 },
@@ -721,7 +721,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-book",
 "text": "Municipal library."
 },
@@ -734,7 +734,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Nazimabad No. 4",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-book",
 "text": "Municipal library named after the poet Sehba Akhtar."
 },
@@ -747,7 +747,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Dastagir Society, F.B. Area",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-book",
 "text": "Municipal library."
 },
@@ -760,7 +760,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": null,
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-book",
 "text": "Municipal library of District Central."
 },
@@ -773,7 +773,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": null,
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-book",
 "text": "Municipal library of District Central."
 },
@@ -786,7 +786,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Near Hadi Market, Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "kmc.png",
 "icon": "bi-balloon",
 "text": "Library for children."
 },
@@ -799,7 +799,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-person-hearts",
 "text": "The first library for women, established in 2005."
 },
@@ -825,7 +825,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "5-C, Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "juw.png",
 "icon": "bi-book",
 "text": "Central library of Jinnah University for Women."
 }
@@ -909,7 +909,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Gulberg",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-droplet-half",
 "text": "Specialist kidney care and dialysis."
 },
@@ -922,7 +922,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": null,
 "timing": "Office hours",
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-bandaid",
 "text": "Mother and child health centres and dispensaries in every subdivision."
 },
@@ -961,7 +961,7 @@ window.DC_DIRECTORY = {
 "phone": "021-36789400",
 "address": "ST-1, Block F, Saifee Road, North Nazimabad",
 "timing": "24/7",
-"logo": "",
+"logo": "saifee.png",
 "icon": "bi-hospital",
 "text": "A 200-bed general hospital run by the Saifee Hospital Trust."
 },
@@ -974,7 +974,7 @@ window.DC_DIRECTORY = {
 "phone": "021-36333036",
 "address": "ST-1, Block 2, F.B. Area (Azizabad)",
 "timing": "24/7 emergency",
-"logo": "",
+"logo": "tabba.png",
 "icon": "bi-heart-pulse",
 "text": "A 120-bed not-for-profit cardiac hospital."
 },
@@ -987,7 +987,7 @@ window.DC_DIRECTORY = {
 "phone": "021-36333036",
 "address": "ST-26, Block 7, F.B. Area",
 "timing": null,
-"logo": "",
+"logo": "tabba.png",
 "icon": "bi-droplet-half",
 "text": "Not-for-profit kidney and dialysis centre."
 },
@@ -1247,7 +1247,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "APWA building, Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "siut.png",
 "icon": "bi-droplet-half",
 "text": "Free dialysis satellite centre of SIUT."
 },
@@ -1260,7 +1260,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": null,
 "timing": null,
-"logo": "",
+"logo": "chughtai.png",
 "icon": "bi-eyedropper",
 "text": "Diagnostic laboratory with collection centres in District Central."
 },
@@ -1331,7 +1331,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Under the Nazimabad No. 1 flyover, Nawab Siddique Ali Khan Road",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-dribbble",
 "text": "Artificial-turf courts for cricket, football and padel, and an area for life-size board games (2026)."
 },
@@ -1344,7 +1344,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Under the Sakhi Hasan flyover",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-dribbble",
 "text": "Basketball, badminton and indoor games with a café, built under the flyover by the AC North Nazimabad."
 },
@@ -1357,7 +1357,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Block 16, F.B. Area",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-trophy",
 "text": "A new hockey field developed in 2026."
 },
@@ -1370,7 +1370,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "North Karachi",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-dribbble",
 "text": "Renovated cricket ground with floodlights."
 },
@@ -1383,7 +1383,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Block 19, F.B. Area (UC Shafiq Colony)",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-flag",
 "text": "Community stadium serving the residents of Gulberg."
 },
@@ -1409,7 +1409,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Azizabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-flag",
 "text": "Sports ground and gymkhana in Azizabad."
 },
@@ -1435,7 +1435,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "F.B. Area",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-flag",
 "text": "Open ground used for cricket and community events."
 },
@@ -1448,7 +1448,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Blocks 11, 18, 15 and N, F.B. Area",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-flag",
 "text": "Neighbourhood sports grounds in F.B. Area."
 },
@@ -1461,7 +1461,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Rizvia Society",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-flag",
 "text": "Public ground restored in July 2026 in compliance with court orders."
 },
@@ -1474,7 +1474,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Gulberg",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-flag",
 "text": "Public ground."
 },
@@ -1487,7 +1487,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Block F, North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-flag",
 "text": "Public playgrounds."
 },
@@ -1500,7 +1500,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "New Karachi",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-flag",
 "text": "Public playground."
 },
@@ -1584,7 +1584,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-tree",
 "text": "Dedicated to the Ghazis of Marka-e-Haq, inaugurated in July 2026."
 },
@@ -1610,7 +1610,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Buffer Zone",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-tree",
 "text": "Restored under the 100 Parks Project (2022)."
 },
@@ -1623,7 +1623,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Liaquatabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-tree",
 "text": "The 25th park restored under the 100 Parks Project (2022)."
 },
@@ -1636,7 +1636,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "North Karachi",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-tree",
 "text": "Restored under the 100 Parks Project (2022)."
 },
@@ -1649,7 +1649,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Sector 11-E, North Karachi",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-tree",
 "text": "Restored under the 100 Parks Project (2022)."
 },
@@ -1662,7 +1662,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Block H, North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-tree",
 "text": "Named in 2026 after the horticulturist Tofiq Pasha Mooraj."
 },
@@ -1675,7 +1675,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Block N, North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-tree",
 "text": "Neighbourhood park and walking track."
 },
@@ -1688,7 +1688,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-tree",
 "text": "Neighbourhood park."
 },
@@ -1701,7 +1701,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Block F, North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-tree",
 "text": "Family park with children's rides."
 },
@@ -1714,7 +1714,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Block F, North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-tree",
 "text": "Neighbourhood park."
 },
@@ -1727,7 +1727,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "North Nazimabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-tree",
 "text": "Neighbourhood parks."
 },
@@ -1740,7 +1740,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Sector 11-C, North Karachi",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-tree",
 "text": "Neighbourhood park."
 },
@@ -1753,7 +1753,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Sharifabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-tree",
 "text": "Community park, home of the UC Sharifabad office."
 },
@@ -1766,7 +1766,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Block 8, Azizabad",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-tree",
 "text": "Municipal park."
 },
@@ -1805,7 +1805,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "F.B. Area",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-tree",
 "text": "Neighbourhood park."
 },
@@ -1818,7 +1818,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Paposh Nagar",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-tree",
 "text": "Neighbourhood parks."
 },
@@ -1831,7 +1831,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Nazimabad No. 4",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-tree",
 "text": "Start point of the District Central Independence Day Marathon."
 },
@@ -1844,7 +1844,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": null,
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-tree-fill",
 "text": "Ten dense urban forests planned under the MoU signed in January 2026."
 },
@@ -1889,7 +1889,7 @@ window.DC_DIRECTORY = {
 "phone": "021-111-362-111",
 "address": "Shahrah-e-Sher Shah Suri, Block C, North Nazimabad",
 "timing": "Daily (see website for timings)",
-"logo": "",
+"logo": "dolmen.png",
 "icon": "bi-bag",
 "text": "Branded shopping mall serving the north of the city."
 },
@@ -1915,7 +1915,7 @@ window.DC_DIRECTORY = {
 "phone": "021-37171745",
 "address": "Lucky One Mall",
 "timing": null,
-"logo": "",
+"logo": "carrefour.png",
 "icon": "bi-cart",
 "text": "Hypermarket."
 },
@@ -1941,7 +1941,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Five Star Chowrangi; Shahrah-e-Pakistan",
 "timing": null,
-"logo": "",
+"logo": "chasevalue.png",
 "icon": "bi-cart",
 "text": "Department stores."
 },
@@ -2006,7 +2006,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": null,
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-controller",
 "text": "Cricket, football, padel, badminton and life-size board games under the flyovers."
 },
@@ -2019,7 +2019,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": null,
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-tree",
 "text": "See the Parks page."
 }
@@ -2077,7 +2077,7 @@ window.DC_DIRECTORY = {
 "phone": "1101",
 "address": "WhatsApp 0347-9001111",
 "timing": "24/7",
-"logo": "",
+"logo": "rangers.png",
 "icon": "bi-shield-check",
 "text": "Rangers helpline."
 },
@@ -2103,7 +2103,7 @@ window.DC_DIRECTORY = {
 "phone": "1736",
 "address": "Emergency Operations Centre: 021-99332003",
 "timing": "24/7 in emergencies",
-"logo": "",
+"logo": "pdma.png",
 "icon": "bi-exclamation-triangle",
 "text": "Provincial Disaster Management Authority."
 },
@@ -2116,7 +2116,7 @@ window.DC_DIRECTORY = {
 "phone": "021-99260049",
 "address": "DC Office, Sector 15-A/1, Buffer Zone",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-broadcast",
 "text": "District control room, and rain emergency desk during the monsoon."
 },
@@ -2129,7 +2129,7 @@ window.DC_DIRECTORY = {
 "phone": "115",
 "address": null,
 "timing": "24/7",
-"logo": "",
+"logo": "edhi.png",
 "icon": "bi-truck",
 "text": "Ambulance and welfare services."
 },
@@ -2142,7 +2142,7 @@ window.DC_DIRECTORY = {
 "phone": "1020",
 "address": null,
 "timing": "24/7",
-"logo": "",
+"logo": "chhipa.png",
 "icon": "bi-truck",
 "text": "Ambulance service across Pakistan."
 },
@@ -2174,7 +2174,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": null,
 "timing": "24/7",
-"logo": "",
+"logo": "pmd.png",
 "icon": "bi-cloud-rain",
 "text": "Weather forecasts and rain warnings."
 },
@@ -2187,7 +2187,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": null,
 "timing": null,
-"logo": "",
+"logo": "ndma.png",
 "icon": "bi-exclamation-diamond",
 "text": "National Disaster Management Authority monsoon advisories."
 },
@@ -2200,7 +2200,7 @@ window.DC_DIRECTORY = {
 "phone": "1736",
 "address": "021-99332003, 021-99332005",
 "timing": "24/7 during the monsoon",
-"logo": "",
+"logo": "pdma.png",
 "icon": "bi-exclamation-triangle",
 "text": "Provincial disaster management and flood response."
 },
@@ -2213,7 +2213,7 @@ window.DC_DIRECTORY = {
 "phone": "021-99260049",
 "address": "DC Office, Sector 15-A/1, Buffer Zone",
 "timing": "24/7 during rain emergencies",
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-broadcast",
 "text": "District control room; rain desks are also set up in each subdivision."
 },
@@ -2304,7 +2304,7 @@ window.DC_DIRECTORY = {
 "phone": "1135",
 "address": null,
 "timing": "During floods",
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-shield",
 "text": "Army support during floods."
 },
@@ -2317,7 +2317,7 @@ window.DC_DIRECTORY = {
 "phone": "115",
 "address": null,
 "timing": "24/7",
-"logo": "",
+"logo": "edhi.png",
 "icon": "bi-truck",
 "text": "Ambulance and rescue."
 }
@@ -2375,7 +2375,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Blocks 21–22, F.B. Area",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-gear",
 "text": "One of Karachi's seven industrial zones."
 },
@@ -2388,7 +2388,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "North Karachi",
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-gear",
 "text": "Industrial zone of New Karachi."
 },
@@ -2531,7 +2531,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "4K Chowrangi, North Karachi",
 "timing": "Weekly",
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-basket",
 "text": "Weekly low-price bazaar."
 },
@@ -2544,7 +2544,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": "Sangam Ground, F.B. Area",
 "timing": "Weekly",
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-basket",
 "text": "Weekly low-price bazaar."
 },
@@ -2557,7 +2557,7 @@ window.DC_DIRECTORY = {
 "phone": null,
 "address": null,
 "timing": null,
-"logo": "",
+"logo": "../sindh-govt-logo.png",
 "icon": "bi-tags",
 "text": "Notified prices of essential commodities."
 }
