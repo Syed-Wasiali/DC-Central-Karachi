@@ -192,7 +192,7 @@ function hero(key) {
       </div>
     </div>
     <section class="hero-section page-hero major-hero">
-      <div class="hero-bg placeholder-image"><i class="bi bi-building"></i></div>
+      <div class="hero-bg placeholder-image"></div>
       <div class="hero-overlay"></div>
       <div class="container-fluid px-lg-5 hero-content">
         <div class="row align-items-center min-vh-hero">
