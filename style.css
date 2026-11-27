@@ -1702,3 +1702,8 @@ input[type="checkbox"], input[type="radio"] {
 .officers-band>.vb-toggle{position:sticky;top:calc(100vh - 60px);margin-left:calc(100% - 56px);margin-bottom:-38px;display:grid}
 .officers-band{overflow:clip}
 .officers-band>.vb-toggle{margin-left:16px}
+/* home page headline bar under the header video */
+.home-ticker{position:relative;z-index:5}
+.home-ticker .nr-ticker-label{text-decoration:none}
+.nr-ticker-move a{color:#fff;text-decoration:none}.nr-ticker-move a:hover{color:#f2c94c;text-decoration:underline}
+.nr-ticker-move a::after{content:"•";color:#d4a017;margin-left:42px}

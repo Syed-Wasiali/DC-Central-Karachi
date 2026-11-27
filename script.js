@@ -318,3 +318,11 @@ document.addEventListener("click", function (event) {
     }), { rootMargin: "200px 0px" }).observe(band);
   });
 })();
+
+/* Home page: moving "Latest" headline bar from the newsroom stories */
+(function () {
+  const bar = document.getElementById("homeTicker"); if (!bar) return;
+  const N = (window.DC_NEWS || []).slice(0, 12); if (!N.length) { bar.remove(); return; }
+  const item = (n) => `<a href="${n.link || "news.html#newsroom"}"><b>${n.d}</b> ${n.title}</a>`;
+  bar.querySelector(".nr-ticker-move").innerHTML = N.map(item).join("") + N.map(item).join("");
+})();
