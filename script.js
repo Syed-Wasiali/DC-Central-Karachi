@@ -273,3 +273,26 @@ document.addEventListener("click", function (event) {
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", function () { setTimeout(inject, 0); }); else setTimeout(inject, 0);
   setInterval(tick, 15000);
 })();
+
+// Inner page banners: a real District Central photo for each type of page
+(function () {
+  var P = "images/gallery/";
+  var groups = [
+    [/^(branches|.*-branch|revenue|it-cell|complaint-cell|control-room|public-relations|benevolent-fund)$/, "dc-01.jpg", "center 30%"],
+    [/^(citizen-services|domicile|prc|noc|arms-license|revenue-certificate|land-revenue|complaint-registration|track-complaint|downloads|public-assistance|price-list)$/, "dc-a1.jpg", "center 35%"],
+    [/^(directory|academic-institutions|libraries|health|sports|parks|entertainment|emergency-safety|monsoon|markets-commerce|union-committees|uc-.*|personalities)$/, "gallery-10.jpg", "center 40%"],
+    [/^(initiatives|news|residents-associations|blue-plaques|css-corner)$/, "dc-12.jpg", "center 40%"]
+  ];
+  function apply() {
+    var bg = document.querySelector(".page-hero .hero-bg");
+    if (!bg) return;
+    var page = (location.pathname.split("/").pop() || "index.html").replace(/\.html$/, "");
+    var pick = ["dc-09.jpg", "center 45%"];
+    groups.some(function (g) { if (g[0].test(page)) { pick = [g[1], g[2]]; return true; } return false; });
+    bg.classList.add("hero-photo");
+    bg.style.backgroundImage = 'url("' + P + pick[0] + '")';
+    bg.style.backgroundPosition = pick[1];
+    var hero = bg.closest(".page-hero"); if (hero) hero.classList.add("has-photo");
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", function () { setTimeout(apply, 0); }); else setTimeout(apply, 0);
+})();

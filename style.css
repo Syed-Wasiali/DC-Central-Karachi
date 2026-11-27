@@ -1531,3 +1531,7 @@ input[type="checkbox"], input[type="radio"] {
 .row.justify-content-center{margin-top:0;row-gap:var(--bs-gutter-y,1.5rem)}
 .row.justify-content-center>*{margin-top:0}
 .person-card{height:100%;display:flex;flex-direction:column;align-items:center}.person-card>a:last-child{margin-top:auto}
+/* Inner page banner photos (Option A: photo with green fade) */
+.page-hero .hero-bg.hero-photo{background-size:cover!important;background-repeat:no-repeat!important}
+.page-hero.has-photo .hero-overlay{background:linear-gradient(90deg,rgba(0,77,44,.95) 0%,rgba(0,77,44,.84) 38%,rgba(0,107,63,.42) 75%,rgba(0,107,63,.2) 100%)!important}
+@media(max-width:767px){.page-hero.has-photo .hero-overlay{background:linear-gradient(180deg,rgba(0,77,44,.88),rgba(0,77,44,.78))!important}}
