@@ -156,35 +156,15 @@ const servicePages = {
     docsIntro: "No documents are needed to view the price list. To report overcharging, note the shop name and exact location, the item, the price you were charged and the date and time, and keep any receipt. These details help the Assistant Commissioner's team take action quickly.",
     procIntro: "Price lists are issued for public awareness and market monitoring. Field teams led by the Assistant Commissioners and Mukhtiarkars inspect markets against the list, and fines or other action are taken where violations are found. Complaints from citizens are referred to the Assistant Commissioner of the area for inspection.",
     note: "There is no fee. You can report overcharging through the complaint form on this website or at the Assistant Commissioner's office of your sub-division.",
-    faq: [["Where can I see the current price list?", "On this page and in the Downloads section, as soon as each list is notified."], ["What should I do if a shop overcharges?", "Note the shop name, location, item and price, and report it through the complaint form or to your Assistant Commissioner's office."], ["Who checks the markets?", "Assistant Commissioners and Mukhtiarkars carry out regular inspections in every sub-division."]],
+    faq: [["Where can I see the current price list?", "On this page, as soon as each list is notified by the Commissioner Karachi."], ["What should I do if a shop overcharges?", "Note the shop name, location, item and price, and report it through the complaint form or to your Assistant Commissioner's office."], ["Who checks the markets?", "Assistant Commissioners and Mukhtiarkars carry out regular inspections in every sub-division."]],
     eligibility: ["All citizens, traders and shopkeepers. The price list is public information and no application is needed."],
     documents: ["No documents are required.", "To report overcharging, give the shop name, location, item and price charged."],
     procedure: ["District price list is issued for public awareness", "Assistant Commissioners and Mukhtiarkars monitor markets", "Action may be taken against profiteering, hoarding and violations under applicable laws/rules"],
     fees: ["No fee."],
     processing: "Price lists are published as soon as they are notified. Overcharging complaints are referred to the Assistant Commissioner of the area for inspection.",
-    where: "Citizen Services and Downloads sections for public reference."
+    where: "This page, and the Citizen Services section, for public reference."
   },
-  downloads: {
-    title: "Downloads / Forms",
-    file: "downloads.html",
-    icon: "bi-download",
-    category: "Forms & Documents",
-    department: "Deputy Commissioner Office",
-    source: "content/DC OFFICE CONTENT.docx",
-    description: "Access official forms, notifications, circulars, public documents and service-related downloads when available.",
-    overview: "This section brings together the official forms, requirement lists, notifications, circulars, tenders and price lists of the District Administration Central. Downloading a form in advance lets you fill it in at home and prepare your documents before visiting the office, which saves time at the counter. New documents are added as they are issued, and the most important ones are also announced on the News page. For Domicile and PRC, you can now apply directly online through the Sindh Domicile Portal.",
-    whoIntro: "All citizens can download forms and documents free of charge. No registration is needed.",
-    docsIntro: "Documents are published in PDF format and grouped by category, so you can find what you need quickly. If a form you need is not yet online, you can collect it from the relevant counter at the DC Office.",
-    procIntro: "Select the category you need, download the document, and read the instructions on it carefully. Each form shows where it should be submitted and which documents to attach.",
-    note: "There is no fee for downloading forms. Always use the latest version of a form from this website or the counter, as older versions may not be accepted.",
-    faq: [["Do I have to pay for forms?", "No. Forms are free to download."], ["The form I need is not listed. What should I do?", "Collect it from the relevant counter at the DC Office, or ask the branch concerned."], ["Can I apply for a Domicile online instead?", "Yes. Domicile and PRC applications can be made through the Sindh Domicile Portal app or website."]],
-    eligibility: ["All citizens. Forms and documents can be downloaded freely."],
-    documents: ["Domicile & PRC Requirement List", "Circular", "Tender", "Notification", "Price List"],
-    procedure: ["Select the required service category", "Download available official documents", "If a form is not yet available online, collect it from the relevant counter at the DC Office"],
-    fees: ["No fee for downloading forms."],
-    processing: "Not applicable. Each form shows where it should be submitted.",
-    where: "Downloads section of the District Central Karachi portal."
-  },
+
   "public-assistance": {
     title: "General Public Assistance",
     file: "public-assistance.html",
@@ -228,7 +208,7 @@ function header(current) {
 }
 
 function footer() {
-  return `<footer class="site-footer" id="contact"><div class="container"><div class="row g-4"><div class="col-lg-4"><a class="brand-lockup footer-brand" href="index.html"><span class="gov-logo"><img src="images/sindh-govt-logo.png" alt="Government of Sindh logo"></span><span><strong>District Central Karachi</strong><small>Government of Sindh</small></span></a><p>Official district portal for public information, citizen services, administrative updates, and complaint facilitation.</p></div><div class="col-6 col-lg-2"><h3>Quick Links</h3><a href="about.html">About</a><a href="news.html">News</a><a href="initiatives.html">Initiatives</a><a href="downloads.html">Downloads</a></div><div class="col-6 col-lg-2"><h3>Branches</h3><a href="revenue.html">Revenue</a><a href="accounts-branch.html">Accounts</a><a href="it-cell.html">IT Cell</a><a href="complaint-cell.html">Complaint Cell</a></div><div class="col-6 col-lg-2"><h3>Services</h3><a href="domicile.html">Domicile</a><a href="prc.html">PRC</a><a href="noc.html">NOC</a><a href="price-list.html">Price List</a></div><div class="col-6 col-lg-2"><h3>Important</h3><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a> <a href="sitemap.html">Sitemap</a><a href="complaint-registration.html">Complaint</a><a href="contact.html">Contact</a></div></div><div class="footer-bottom"><span>Copyright 2026 District Central Karachi. All rights reserved.</span><span class="footer-gov-mark"><img src="images/sindh-govt-logo.png" alt="Government of Sindh"> Official Government Website</span></div></div></footer><button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>`;
+  return `<footer class="site-footer" id="contact"><div class="container"><div class="row g-4"><div class="col-lg-4"><a class="brand-lockup footer-brand" href="index.html"><span class="gov-logo"><img src="images/sindh-govt-logo.png" alt="Government of Sindh logo"></span><span><strong>District Central Karachi</strong><small>Government of Sindh</small></span></a><p>Official district portal for public information, citizen services, administrative updates, and complaint facilitation.</p></div><div class="col-6 col-lg-2"><h3>Quick Links</h3><a href="about.html">About</a><a href="news.html">News</a><a href="initiatives.html">Initiatives</a></div><div class="col-6 col-lg-2"><h3>Branches</h3><a href="revenue.html">Revenue</a><a href="accounts-branch.html">Accounts</a><a href="it-cell.html">IT Cell</a><a href="complaint-cell.html">Complaint Cell</a></div><div class="col-6 col-lg-2"><h3>Services</h3><a href="domicile.html">Domicile</a><a href="prc.html">PRC</a><a href="noc.html">NOC</a><a href="price-list.html">Price List</a></div><div class="col-6 col-lg-2"><h3>Important</h3><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a> <a href="sitemap.html">Sitemap</a><a href="complaint-registration.html">Complaint</a><a href="contact.html">Contact</a></div></div><div class="footer-bottom"><span>Copyright 2026 District Central Karachi. All rights reserved.</span><span class="footer-gov-mark"><img src="images/sindh-govt-logo.png" alt="Government of Sindh"> Official Government Website</span></div></div></footer><button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>`;
 }
 
 function list(items) {
