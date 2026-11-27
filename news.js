@@ -18,9 +18,19 @@
       <h3>${esc(item.title)}</h3><a href="${esc(item.link)}" target="_blank" rel="noopener">Read on ${esc(source)} <i class="bi bi-box-arrow-up-right"></i></a></div></article></div>`;
   }
 
+  function row(item) {
+    const img = item.image ? `<img src="${esc(item.image)}" alt="" loading="lazy" onerror="this.remove()">` : `<span class="nr-feed-ico"><i class="bi bi-newspaper"></i></span>`;
+    return `<a class="nr-feed-item" href="${esc(item.link)}" target="_blank" rel="noopener">${img}<span><strong>${esc(item.title)}</strong>${item.date ? `<time>${esc(item.date)}</time>` : ""}</span></a>`;
+  }
+
   function fill(id, items, source, colClass) {
     const box = document.getElementById(id);
     if (!box) return;
+    items = items.filter((i) => !/vacan/i.test(i.title || ""));
+    if (box.classList.contains("nr-feed-list")) {
+      box.innerHTML = items.length ? items.slice(0, 8).map(row).join("") : `<p class="text-muted">News will appear here shortly.</p>`;
+      return;
+    }
     box.innerHTML = items.length
       ? items.map((item) => card(item, source, colClass)).join("")
       : `<p class="text-center text-muted">News will appear here shortly.</p>`;
