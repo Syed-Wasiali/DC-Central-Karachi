@@ -1331,7 +1331,7 @@ ${((window.DC_WORK || {}).officers || {})[key] ? `        <section class="sectio
             <div class="row g-4 align-items-start">
               <div class="${(extra.timeline || []).length ? "col-lg-7" : "col-12"}" data-aos="fade-right">
                 <div class="section-heading text-start"><span class="section-kicker">Gallery</span><h2>Photo Gallery</h2></div>
-                <div class="gallery-grid">${[1, 2, 3, 4, 5, 6].map(() => `<button class="placeholder-image image-zoom border-0 gallery-lightbox" type="button" aria-label="Open gallery image"><i class="bi bi-image"></i></button>`).join("")}</div>
+                ${((window.DC_WORK || {}).officerPhotoCat || {})[key] ? window.DC_WORK.photoGrid(window.DC_WORK.officerPhotoCat[key], 12) : `<div class="gallery-grid">${[1, 2, 3, 4, 5, 6].map(() => `<button class="placeholder-image image-zoom border-0 gallery-lightbox" type="button" aria-label="Open gallery image"><i class="bi bi-image"></i></button>`).join("")}</div>`}
               </div>
               ${(extra.timeline || []).length ? `<div class="col-lg-5" data-aos="fade-left">
                 <div class="section-heading text-start"><span class="section-kicker">Achievements</span><h2>Timeline</h2></div>

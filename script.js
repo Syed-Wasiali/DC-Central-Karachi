@@ -146,3 +146,36 @@ document.addEventListener("DOMContentLoaded", function () {
     counterObserver.observe(counter);
   });
 });
+
+/* Photo lightbox and gallery filters */
+document.addEventListener("click", function (event) {
+  const filter = event.target.closest(".dc-photo-filters button");
+  if (filter) {
+    const wrap = filter.parentElement;
+    wrap.querySelectorAll("button").forEach((b) => b.classList.toggle("active", b === filter));
+    const grid = wrap.nextElementSibling;
+    grid.querySelectorAll(".dc-photo").forEach((tile) => {
+      tile.classList.toggle("d-none", filter.dataset.filter !== "all" && tile.dataset.cat !== filter.dataset.filter);
+    });
+    return;
+  }
+  const tile = event.target.closest(".dc-photo");
+  if (tile) {
+    const tiles = [...tile.parentElement.querySelectorAll(".dc-photo:not(.d-none)")];
+    let index = tiles.indexOf(tile);
+    const box = document.createElement("div");
+    box.className = "dc-lightbox";
+    box.innerHTML = '<button class="dc-lb-close" aria-label="Close">&times;</button><button class="dc-lb-prev" aria-label="Previous">&#8249;</button><figure><img alt=""><figcaption></figcaption></figure><button class="dc-lb-next" aria-label="Next">&#8250;</button>';
+    const show = () => { const img = tiles[index].querySelector("img"); box.querySelector("img").src = img.src; box.querySelector("img").alt = img.alt; box.querySelector("figcaption").textContent = img.alt; };
+    show();
+    document.body.appendChild(box);
+    const close = () => { box.remove(); document.removeEventListener("keydown", keys); };
+    const keys = (e) => { if (e.key === "Escape") close(); if (e.key === "ArrowRight") { index = (index + 1) % tiles.length; show(); } if (e.key === "ArrowLeft") { index = (index - 1 + tiles.length) % tiles.length; show(); } };
+    document.addEventListener("keydown", keys);
+    box.addEventListener("click", (e) => {
+      if (e.target.closest(".dc-lb-next")) { index = (index + 1) % tiles.length; show(); }
+      else if (e.target.closest(".dc-lb-prev")) { index = (index - 1 + tiles.length) % tiles.length; show(); }
+      else if (e.target === box || e.target.closest(".dc-lb-close")) close();
+    });
+  }
+});
